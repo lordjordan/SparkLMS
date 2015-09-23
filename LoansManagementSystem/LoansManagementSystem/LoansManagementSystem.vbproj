@@ -113,6 +113,12 @@
     <Compile Include="Forms\frmClientRequirement.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\frmComaker.Designer.vb">
+      <DependentUpon>frmComaker.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmComaker.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\frmMainPanel.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -187,6 +193,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Forms\frmClientRequirement.resx">
       <DependentUpon>frmClientRequirement.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmComaker.resx">
+      <DependentUpon>frmComaker.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmMainPanel.resx">
       <DependentUpon>frmMainPanel.vb</DependentUpon>
