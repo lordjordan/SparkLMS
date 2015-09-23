@@ -1,6 +1,6 @@
 ﻿Imports System.Runtime.InteropServices
 Public Class frmLogin
-    Dim db As New DBHelper("Data Source=C:\Users\JORDAN\Desktop\LoansManagementSystem\LMS.s3db; Version=3;")
+    Dim db As New DBHelper("Data Source=|DataDirectory|\LMS.s3db; Version=3;")
     Dim dr As SQLite.SQLiteDataReader
     Dim cmd As SQLite.SQLiteCommand
 
@@ -52,5 +52,9 @@ Public Class frmLogin
 
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
         Application.Exit()
+    End Sub
+
+    Private Sub pnlMain_Paint(sender As Object, e As PaintEventArgs) Handles pnlMain.Paint
+
     End Sub
 End Class
