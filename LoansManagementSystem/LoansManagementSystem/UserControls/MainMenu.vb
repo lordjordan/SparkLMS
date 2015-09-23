@@ -21,7 +21,7 @@
 
     End Sub
 
-    Private Sub btnSystemUser_Click(sender As Object, e As EventArgs) Handles btnSystemUser.Click
+    Private Sub btnSystemUser_Click(sender As Object, e As EventArgs) Handles btnSystemUser.Click, Button1.Click
         showUSC(uscSystemUser)
     End Sub
 
