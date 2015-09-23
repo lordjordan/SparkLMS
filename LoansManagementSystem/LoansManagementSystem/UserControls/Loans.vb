@@ -3,8 +3,8 @@
     Public biMonInterest As Decimal
     Public interest As Double
     Public bilangNGhulog, daysNgmonth, interestRate As Integer
-    Public itm As ListViewItem
     Public dateStart, dateEnd As DateTime
+    Dim itm As ListViewItem
     Dim db As New DBHelper("Data Source=" & My.Settings.ConString & "; Version=3;")
     Dim dr As SQLite.SQLiteDataReader
 
@@ -297,61 +297,64 @@
         End If
 
     End Sub
-    Private Sub dtStart_ValueChanged(sender As Object, e As EventArgs) Handles dtStart.ValueChanged
-        'terms * 2 = bilang ng hulog
-        dateStart = dtStart.Value
-        daysNgmonth = DateTime.DaysInMonth(dateStart.Year, dateStart.Month)
-        'principal/bilangNghulog  = bayad w/out interest /Monthly rate
-        'principal*interestRate = totalPaymentPerMonth
-        'monthlyrate/2 =bi-Monthly Interest
-        'principal = CDbl(txtPrincipal.Text)
-        'monthlyRate = principal / bilangNGhulog
-        'biMonInterest = (CInt(cbxInterest.Text) / 100) / 2
-        'interest = principal * biMonInterest
-        'totalPaymentBiMonth = monthlyRate + interest
-        'lblAmort.Text = totalPaymentBiMonth
 
-        bilangNGhulog = 0
-        bilangNGhulog = CInt(txtTerms.Text) * 2
+    Private Sub dtStart_TextChanged(sender As Object, e As EventArgs) Handles dtStart.TextChanged
+        If dtStart.Value < Date.Now Then
+            MsgBox("Invalid set of date " & vbCrLf & dtStart.Value & " is not valid.", MsgBoxStyle.Exclamation, "Set date is past.")
 
-        Do Until bilangNGhulog = 0
-
-            Select Case daysNgmonth
-
-                Case 28
-                    If dateStart.Day < 13 Then
-                        dateStart = dateStart.AddDays(+15)
-                    ElseIf dateStart.Day = 28 Then
-                        dateStart = dateStart.AddDays(+15)
-                        'Continue Do
-                    Else
-                        dateStart = dateStart.AddDays(+13)
-                    End If
-                Case 29
-                    If dateStart.Day < 13 Then
-                        dateStart = dateStart.AddDays(+15)
-                    ElseIf dateStart.Day = 29 Then
-                        dateStart = dateStart.AddDays(+15)
-                        'Continue Do
-                    Else
-                        dateStart = dateStart.AddDays(+14)
-                    End If
-                Case 31
-                    If dateStart.Day < 16 Then
-                        dateStart = dateStart.AddDays(+15)
-                    Else
-                        dateStart = dateStart.AddDays(+16)
-                    End If
-                Case Else
-                    dateStart = dateStart.AddDays(+15)
-            End Select
+        End If
+        If txtTerms.Text <> "" Then
+            dateStart = dtStart.Value
             daysNgmonth = DateTime.DaysInMonth(dateStart.Year, dateStart.Month)
-            bilangNGhulog += 1
-            MsgBox(dateStart & " " & bilangNGhulog & "" & dtEnd.Value)
-            bilangNGhulog -= 1
-        Loop
-        dtEnd.Value = dateStart
+            'principal/bilangNghulog  = bayad w/out interest /Monthly rate
+            'principal*interestRate = totalPaymentPerMonth
+            'monthlyrate/2 =bi-Monthly Interest
+            'principal = CDbl(txtPrincipal.Text)
+            'monthlyRate = principal / bilangNGhulog
+            'biMonInterest = (CInt(cbxInterest.Text) / 100) / 2
+            'interest = principal * biMonInterest
+            'totalPaymentBiMonth = monthlyRate + interest
+            'lblAmort.Text = totalPaymentBiMonth
+            bilangNGhulog = CInt(txtTerms.Text) * 2
 
+            Do Until bilangNGhulog = 1
+
+                Select Case daysNgmonth
+                    Case 28
+                        If dateStart.Day < 13 Then
+                            dateStart = dateStart.AddDays(+15)
+                        ElseIf dateStart.Day = 28 Then
+                            dateStart = dateStart.AddDays(+15)
+                            'Continue Do
+                        Else
+                            dateStart = dateStart.AddDays(+13)
+                        End If
+                    Case 29
+                        If dateStart.Day < 13 Then
+                            dateStart = dateStart.AddDays(+15)
+                        ElseIf dateStart.Day = 29 Then
+                            dateStart = dateStart.AddDays(+15)
+                            'Continue Do
+                        Else
+                            dateStart = dateStart.AddDays(+14)
+                        End If
+                    Case 31
+                        If dateStart.Day < 16 Then
+                            dateStart = dateStart.AddDays(+15)
+                        Else
+                            dateStart = dateStart.AddDays(+16)
+                        End If
+                    Case Else
+                        dateStart = dateStart.AddDays(+15)
+                End Select
+                daysNgmonth = DateTime.DaysInMonth(dateStart.Year, dateStart.Month)
+                bilangNGhulog -= 1
+            Loop
+            dtEnd.Value = dateStart
+        End If
+    End Sub
+    Private Sub dtStart_ValueChanged(sender As Object, e As EventArgs) Handles dtStart.ValueChanged
+        
     End Sub
     Public Sub dtEnd_ValueChanged(sender As Object, e As EventArgs) Handles dtEnd.ValueChanged
         If dtEnd.Value < dtStart.Value Then
@@ -637,8 +640,22 @@
         showLoanInfo(False)
     End Sub
 
+    Private Sub txtTerms_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtTerms.KeyPress
+        If Asc(e.KeyChar) <> 8 Then
+            If Asc(e.KeyChar) < 48 Or Asc(e.KeyChar) > 57 Then
+                e.Handled = True
+            End If
+        End If
+    End Sub
 
-    Private Sub txtTerms_LostFocus(sender As Object, e As EventArgs) Handles txtTerms.LostFocus
+
+
+    Private Sub txtTerms_TextChanged(sender As Object, e As EventArgs) Handles txtTerms.TextChanged
+        If txtTerms.Text = "0" Then
+            txtTerms.Text = ""
+        ElseIf txtTerms.Text = "" Then
+            dtEnd.Value = Date.Now
+        End If
         If txtTerms.Text <> "" Then
             dateStart = dtStart.Value
             daysNgmonth = DateTime.DaysInMonth(dateStart.Year, dateStart.Month)
@@ -651,15 +668,11 @@
             'interest = principal * biMonInterest
             'totalPaymentBiMonth = monthlyRate + interest
             'lblAmort.Text = totalPaymentBiMonth
-
-
-            bilangNGhulog = 0
             bilangNGhulog = CInt(txtTerms.Text) * 2
 
-            Do Until bilangNGhulog = 0
+            Do Until bilangNGhulog = 1
 
                 Select Case daysNgmonth
-
                     Case 28
                         If dateStart.Day < 13 Then
                             dateStart = dateStart.AddDays(+15)
@@ -688,12 +701,11 @@
                         dateStart = dateStart.AddDays(+15)
                 End Select
                 daysNgmonth = DateTime.DaysInMonth(dateStart.Year, dateStart.Month)
-                bilangNGhulog += 1
-
                 bilangNGhulog -= 1
             Loop
             dtEnd.Value = dateStart
         End If
     End Sub
 
+ 
 End Class
