@@ -18,9 +18,10 @@
 
     Private Sub btnCollectibles_Click(sender As Object, e As EventArgs) Handles btnCollectibles.Click
         showUSC(uscCollectibles)
+
     End Sub
 
-    Private Sub btnSystemUser_Click(sender As Object, e As EventArgs) Handles btnSystemUser.Click, Button1.Click
+    Private Sub btnSystemUser_Click(sender As Object, e As EventArgs) Handles btnSystemUser.Click
         showUSC(uscSystemUser)
     End Sub
 
@@ -49,7 +50,4 @@
         Application.Exit()
     End Sub
 
-    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
-
-    End Sub
 End Class

@@ -42,25 +42,24 @@ Partial Class Loans
         Me.pnlMain = New System.Windows.Forms.Panel()
         Me.btnSearchLoan = New System.Windows.Forms.Button()
         Me.gbxAddEdit = New System.Windows.Forms.GroupBox()
+        Me.gbxLoanData = New System.Windows.Forms.GroupBox()
+        Me.cbxLoanStatus = New System.Windows.Forms.ComboBox()
+        Me.txtTerms = New System.Windows.Forms.TextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.lblClientID = New System.Windows.Forms.Label()
         Me.lblDateHired = New System.Windows.Forms.Label()
         Me.Label22 = New System.Windows.Forms.Label()
         Me.linkCoMakers = New System.Windows.Forms.LinkLabel()
         Me.linkRequirements = New System.Windows.Forms.LinkLabel()
         Me.lblFullname = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
         Me.btnFind = New System.Windows.Forms.Button()
-        Me.btnSave = New System.Windows.Forms.Button()
         Me.txtLoanRemarks = New System.Windows.Forms.TextBox()
         Me.Label21 = New System.Windows.Forms.Label()
         Me.Label20 = New System.Windows.Forms.Label()
         Me.chkboxRestructure = New System.Windows.Forms.CheckBox()
         Me.lblAmort = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.radApproved = New System.Windows.Forms.RadioButton()
-        Me.radDeclined = New System.Windows.Forms.RadioButton()
-        Me.radReturn = New System.Windows.Forms.RadioButton()
         Me.cbxInterest = New System.Windows.Forms.ComboBox()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.dtEnd = New System.Windows.Forms.DateTimePicker()
@@ -69,27 +68,18 @@ Partial Class Loans
         Me.Label11 = New System.Windows.Forms.Label()
         Me.lblEmployeeNo = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
-        Me.lblLoanID = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.txtPrincipal = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.btnSave = New System.Windows.Forms.Button()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.radApproved = New System.Windows.Forms.RadioButton()
+        Me.radDeclined = New System.Windows.Forms.RadioButton()
+        Me.radReturn = New System.Windows.Forms.RadioButton()
         Me.btnCancel = New System.Windows.Forms.Button()
         Me.btnSaveAs = New System.Windows.Forms.Button()
-        Me.gbxShowCoMakers = New System.Windows.Forms.GroupBox()
-        Me.Label24 = New System.Windows.Forms.Label()
-        Me.btnCancelAddCoMaker = New System.Windows.Forms.Button()
-        Me.Label19 = New System.Windows.Forms.Label()
-        Me.btnAddCoMaker = New System.Windows.Forms.Button()
-        Me.btnSearchCoMaker = New System.Windows.Forms.Button()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.Label17 = New System.Windows.Forms.Label()
-        Me.ListBox4 = New System.Windows.Forms.ListBox()
-        Me.btnBackCm = New System.Windows.Forms.Button()
-        Me.btnChosenCm = New System.Windows.Forms.Button()
-        Me.ListBox3 = New System.Windows.Forms.ListBox()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.gbxShowClient = New System.Windows.Forms.GroupBox()
@@ -104,6 +94,9 @@ Partial Class Loans
         Me.txtSearchClient = New System.Windows.Forms.TextBox()
         Me.Label28 = New System.Windows.Forms.Label()
         Me.gbxLoanInfo = New System.Windows.Forms.GroupBox()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label17 = New System.Windows.Forms.Label()
         Me.lblDtEndInfo = New System.Windows.Forms.Label()
         Me.Label32 = New System.Windows.Forms.Label()
         Me.lblDtStartInfo = New System.Windows.Forms.Label()
@@ -138,8 +131,8 @@ Partial Class Loans
         Me.ColumnHeader15 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.pnlMain.SuspendLayout()
         Me.gbxAddEdit.SuspendLayout()
+        Me.gbxLoanData.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
-        Me.gbxShowCoMakers.SuspendLayout()
         Me.gbxShowClient.SuspendLayout()
         Me.gbxLoanInfo.SuspendLayout()
         Me.SuspendLayout()
@@ -149,7 +142,7 @@ Partial Class Loans
         Me.btnClose.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnClose.BackColor = System.Drawing.Color.Gray
         Me.btnClose.ForeColor = System.Drawing.Color.White
-        Me.btnClose.Location = New System.Drawing.Point(1107, 16)
+        Me.btnClose.Location = New System.Drawing.Point(1116, 16)
         Me.btnClose.Name = "btnClose"
         Me.btnClose.Size = New System.Drawing.Size(123, 39)
         Me.btnClose.TabIndex = 52
@@ -332,48 +325,102 @@ Partial Class Loans
         'gbxAddEdit
         '
         Me.gbxAddEdit.BackColor = System.Drawing.Color.LightGray
-        Me.gbxAddEdit.Controls.Add(Me.lblClientID)
-        Me.gbxAddEdit.Controls.Add(Me.lblDateHired)
-        Me.gbxAddEdit.Controls.Add(Me.Label22)
-        Me.gbxAddEdit.Controls.Add(Me.linkCoMakers)
-        Me.gbxAddEdit.Controls.Add(Me.linkRequirements)
-        Me.gbxAddEdit.Controls.Add(Me.lblFullname)
-        Me.gbxAddEdit.Controls.Add(Me.Label10)
-        Me.gbxAddEdit.Controls.Add(Me.btnFind)
+        Me.gbxAddEdit.Controls.Add(Me.gbxLoanData)
         Me.gbxAddEdit.Controls.Add(Me.btnSave)
-        Me.gbxAddEdit.Controls.Add(Me.txtLoanRemarks)
-        Me.gbxAddEdit.Controls.Add(Me.Label21)
-        Me.gbxAddEdit.Controls.Add(Me.Label20)
-        Me.gbxAddEdit.Controls.Add(Me.chkboxRestructure)
-        Me.gbxAddEdit.Controls.Add(Me.lblAmort)
-        Me.gbxAddEdit.Controls.Add(Me.Label2)
         Me.gbxAddEdit.Controls.Add(Me.GroupBox1)
-        Me.gbxAddEdit.Controls.Add(Me.cbxInterest)
-        Me.gbxAddEdit.Controls.Add(Me.Label16)
-        Me.gbxAddEdit.Controls.Add(Me.dtEnd)
-        Me.gbxAddEdit.Controls.Add(Me.Label15)
-        Me.gbxAddEdit.Controls.Add(Me.dtStart)
-        Me.gbxAddEdit.Controls.Add(Me.Label11)
-        Me.gbxAddEdit.Controls.Add(Me.lblEmployeeNo)
-        Me.gbxAddEdit.Controls.Add(Me.Label13)
-        Me.gbxAddEdit.Controls.Add(Me.lblLoanID)
-        Me.gbxAddEdit.Controls.Add(Me.Label12)
-        Me.gbxAddEdit.Controls.Add(Me.txtPrincipal)
-        Me.gbxAddEdit.Controls.Add(Me.Label9)
-        Me.gbxAddEdit.Controls.Add(Me.Label6)
-        Me.gbxAddEdit.Controls.Add(Me.Label5)
-        Me.gbxAddEdit.Controls.Add(Me.Label4)
         Me.gbxAddEdit.Controls.Add(Me.btnCancel)
         Me.gbxAddEdit.Controls.Add(Me.btnSaveAs)
         Me.gbxAddEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.gbxAddEdit.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gbxAddEdit.Location = New System.Drawing.Point(276, 56)
         Me.gbxAddEdit.Name = "gbxAddEdit"
-        Me.gbxAddEdit.Size = New System.Drawing.Size(772, 532)
+        Me.gbxAddEdit.Size = New System.Drawing.Size(735, 503)
         Me.gbxAddEdit.TabIndex = 55
         Me.gbxAddEdit.TabStop = False
         Me.gbxAddEdit.Text = "Add new loan application"
         Me.gbxAddEdit.Visible = False
+        '
+        'gbxLoanData
+        '
+        Me.gbxLoanData.Controls.Add(Me.cbxLoanStatus)
+        Me.gbxLoanData.Controls.Add(Me.txtTerms)
+        Me.gbxLoanData.Controls.Add(Me.Label8)
+        Me.gbxLoanData.Controls.Add(Me.Label5)
+        Me.gbxLoanData.Controls.Add(Me.lblClientID)
+        Me.gbxLoanData.Controls.Add(Me.lblDateHired)
+        Me.gbxLoanData.Controls.Add(Me.Label22)
+        Me.gbxLoanData.Controls.Add(Me.linkCoMakers)
+        Me.gbxLoanData.Controls.Add(Me.linkRequirements)
+        Me.gbxLoanData.Controls.Add(Me.lblFullname)
+        Me.gbxLoanData.Controls.Add(Me.btnFind)
+        Me.gbxLoanData.Controls.Add(Me.txtLoanRemarks)
+        Me.gbxLoanData.Controls.Add(Me.Label21)
+        Me.gbxLoanData.Controls.Add(Me.Label20)
+        Me.gbxLoanData.Controls.Add(Me.chkboxRestructure)
+        Me.gbxLoanData.Controls.Add(Me.lblAmort)
+        Me.gbxLoanData.Controls.Add(Me.Label2)
+        Me.gbxLoanData.Controls.Add(Me.cbxInterest)
+        Me.gbxLoanData.Controls.Add(Me.Label16)
+        Me.gbxLoanData.Controls.Add(Me.dtEnd)
+        Me.gbxLoanData.Controls.Add(Me.Label15)
+        Me.gbxLoanData.Controls.Add(Me.dtStart)
+        Me.gbxLoanData.Controls.Add(Me.Label11)
+        Me.gbxLoanData.Controls.Add(Me.lblEmployeeNo)
+        Me.gbxLoanData.Controls.Add(Me.Label13)
+        Me.gbxLoanData.Controls.Add(Me.Label12)
+        Me.gbxLoanData.Controls.Add(Me.txtPrincipal)
+        Me.gbxLoanData.Controls.Add(Me.Label9)
+        Me.gbxLoanData.Controls.Add(Me.Label6)
+        Me.gbxLoanData.Controls.Add(Me.Label4)
+        Me.gbxLoanData.Location = New System.Drawing.Point(11, 96)
+        Me.gbxLoanData.Name = "gbxLoanData"
+        Me.gbxLoanData.Size = New System.Drawing.Size(715, 333)
+        Me.gbxLoanData.TabIndex = 173
+        Me.gbxLoanData.TabStop = False
+        '
+        'cbxLoanStatus
+        '
+        Me.cbxLoanStatus.Enabled = False
+        Me.cbxLoanStatus.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cbxLoanStatus.FormattingEnabled = True
+        Me.cbxLoanStatus.Items.AddRange(New Object() {"In process", "Active", "Complete", "Accelarated"})
+        Me.cbxLoanStatus.Location = New System.Drawing.Point(545, 109)
+        Me.cbxLoanStatus.Name = "cbxLoanStatus"
+        Me.cbxLoanStatus.Size = New System.Drawing.Size(155, 28)
+        Me.cbxLoanStatus.TabIndex = 173
+        Me.cbxLoanStatus.Text = "In Process"
+        '
+        'txtTerms
+        '
+        Me.txtTerms.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtTerms.Location = New System.Drawing.Point(109, 109)
+        Me.txtTerms.Name = "txtTerms"
+        Me.txtTerms.Size = New System.Drawing.Size(90, 26)
+        Me.txtTerms.TabIndex = 172
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label8.Location = New System.Drawing.Point(11, 115)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(47, 16)
+        Me.Label8.TabIndex = 171
+        Me.Label8.Text = "Terms"
+        Me.Label8.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label5.Location = New System.Drawing.Point(11, 290)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(80, 16)
+        Me.Label5.TabIndex = 170
+        Me.Label5.Text = "amortization"
+        Me.Label5.TextAlign = System.Drawing.ContentAlignment.TopRight
         '
         'lblClientID
         '
@@ -381,11 +428,10 @@ Partial Class Loans
         Me.lblClientID.BackColor = System.Drawing.Color.Transparent
         Me.lblClientID.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblClientID.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.lblClientID.Location = New System.Drawing.Point(119, 40)
+        Me.lblClientID.Location = New System.Drawing.Point(108, 33)
         Me.lblClientID.Name = "lblClientID"
-        Me.lblClientID.Size = New System.Drawing.Size(70, 20)
+        Me.lblClientID.Size = New System.Drawing.Size(0, 20)
         Me.lblClientID.TabIndex = 169
-        Me.lblClientID.Text = "Client ID"
         Me.lblClientID.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'lblDateHired
@@ -393,7 +439,7 @@ Partial Class Loans
         Me.lblDateHired.AutoSize = True
         Me.lblDateHired.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblDateHired.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.lblDateHired.Location = New System.Drawing.Point(552, 139)
+        Me.lblDateHired.Location = New System.Drawing.Point(541, 34)
         Me.lblDateHired.Name = "lblDateHired"
         Me.lblDateHired.Size = New System.Drawing.Size(90, 20)
         Me.lblDateHired.TabIndex = 168
@@ -405,7 +451,7 @@ Partial Class Loans
         Me.Label22.AutoSize = True
         Me.Label22.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label22.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label22.Location = New System.Drawing.Point(455, 142)
+        Me.Label22.Location = New System.Drawing.Point(444, 37)
         Me.Label22.Name = "Label22"
         Me.Label22.Size = New System.Drawing.Size(73, 16)
         Me.Label22.TabIndex = 167
@@ -416,7 +462,7 @@ Partial Class Loans
         '
         Me.linkCoMakers.AutoSize = True
         Me.linkCoMakers.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.linkCoMakers.Location = New System.Drawing.Point(22, 381)
+        Me.linkCoMakers.Location = New System.Drawing.Point(577, 290)
         Me.linkCoMakers.Name = "linkCoMakers"
         Me.linkCoMakers.Size = New System.Drawing.Size(106, 16)
         Me.linkCoMakers.TabIndex = 166
@@ -427,7 +473,7 @@ Partial Class Loans
         '
         Me.linkRequirements.AutoSize = True
         Me.linkRequirements.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.linkRequirements.Location = New System.Drawing.Point(22, 357)
+        Me.linkRequirements.Location = New System.Drawing.Point(444, 290)
         Me.linkRequirements.Name = "linkRequirements"
         Me.linkRequirements.Size = New System.Drawing.Size(127, 16)
         Me.linkRequirements.TabIndex = 165
@@ -440,56 +486,28 @@ Partial Class Loans
         Me.lblFullname.BackColor = System.Drawing.Color.Transparent
         Me.lblFullname.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblFullname.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.lblFullname.Location = New System.Drawing.Point(119, 70)
+        Me.lblFullname.Location = New System.Drawing.Point(108, 63)
         Me.lblFullname.Name = "lblFullname"
-        Me.lblFullname.Size = New System.Drawing.Size(78, 20)
+        Me.lblFullname.Size = New System.Drawing.Size(0, 20)
         Me.lblFullname.TabIndex = 164
-        Me.lblFullname.Text = "Full name"
         Me.lblFullname.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label10.Location = New System.Drawing.Point(552, 182)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(84, 20)
-        Me.Label10.TabIndex = 163
-        Me.Label10.Text = "In Process"
-        Me.Label10.TextAlign = System.Drawing.ContentAlignment.TopRight
         '
         'btnFind
         '
         Me.btnFind.BackColor = System.Drawing.Color.Gray
         Me.btnFind.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnFind.ForeColor = System.Drawing.Color.White
-        Me.btnFind.Location = New System.Drawing.Point(366, 38)
+        Me.btnFind.Location = New System.Drawing.Point(355, 31)
         Me.btnFind.Name = "btnFind"
         Me.btnFind.Size = New System.Drawing.Size(60, 24)
         Me.btnFind.TabIndex = 162
         Me.btnFind.Text = "Find"
         Me.btnFind.UseVisualStyleBackColor = False
         '
-        'btnSave
-        '
-        Me.btnSave.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.btnSave.FlatAppearance.BorderSize = 0
-        Me.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSave.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSave.ForeColor = System.Drawing.Color.White
-        Me.btnSave.Location = New System.Drawing.Point(18, 443)
-        Me.btnSave.Name = "btnSave"
-        Me.btnSave.Size = New System.Drawing.Size(108, 60)
-        Me.btnSave.TabIndex = 125
-        Me.btnSave.Text = "Save"
-        Me.btnSave.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btnSave.UseVisualStyleBackColor = False
-        '
         'txtLoanRemarks
         '
         Me.txtLoanRemarks.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtLoanRemarks.Location = New System.Drawing.Point(458, 241)
+        Me.txtLoanRemarks.Location = New System.Drawing.Point(447, 171)
         Me.txtLoanRemarks.Multiline = True
         Me.txtLoanRemarks.Name = "txtLoanRemarks"
         Me.txtLoanRemarks.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
@@ -501,11 +519,11 @@ Partial Class Loans
         Me.Label21.AutoSize = True
         Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label21.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label21.Location = New System.Drawing.Point(455, 217)
+        Me.Label21.Location = New System.Drawing.Point(444, 147)
         Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(96, 16)
+        Me.Label21.Size = New System.Drawing.Size(99, 16)
         Me.Label21.TabIndex = 159
-        Me.Label21.Text = "Loan Remarks"
+        Me.Label21.Text = "Loan Remarks:"
         Me.Label21.TextAlign = System.Drawing.ContentAlignment.TopRight
         '
         'Label20
@@ -514,7 +532,7 @@ Partial Class Loans
         Me.Label20.Enabled = False
         Me.Label20.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label20.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label20.Location = New System.Drawing.Point(455, 324)
+        Me.Label20.Location = New System.Drawing.Point(444, 244)
         Me.Label20.Name = "Label20"
         Me.Label20.Size = New System.Drawing.Size(84, 16)
         Me.Label20.TabIndex = 158
@@ -525,21 +543,22 @@ Partial Class Loans
         '
         Me.chkboxRestructure.Appearance = System.Windows.Forms.Appearance.Button
         Me.chkboxRestructure.Enabled = False
-        Me.chkboxRestructure.Location = New System.Drawing.Point(556, 314)
+        Me.chkboxRestructure.Location = New System.Drawing.Point(545, 235)
         Me.chkboxRestructure.Name = "chkboxRestructure"
-        Me.chkboxRestructure.Size = New System.Drawing.Size(80, 32)
+        Me.chkboxRestructure.Size = New System.Drawing.Size(80, 28)
         Me.chkboxRestructure.TabIndex = 157
         Me.chkboxRestructure.Text = "NO"
         Me.chkboxRestructure.UseVisualStyleBackColor = True
         '
         'lblAmort
         '
+        Me.lblAmort.AutoSize = True
         Me.lblAmort.BackColor = System.Drawing.Color.White
         Me.lblAmort.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblAmort.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.lblAmort.Location = New System.Drawing.Point(127, 321)
+        Me.lblAmort.Location = New System.Drawing.Point(108, 287)
         Me.lblAmort.Name = "lblAmort"
-        Me.lblAmort.Size = New System.Drawing.Size(147, 20)
+        Me.lblAmort.Size = New System.Drawing.Size(50, 20)
         Me.lblAmort.TabIndex = 155
         Me.lblAmort.Text = "Value"
         Me.lblAmort.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -549,12 +568,171 @@ Partial Class Loans
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label2.Location = New System.Drawing.Point(455, 185)
+        Me.Label2.Location = New System.Drawing.Point(444, 115)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(78, 16)
         Me.Label2.TabIndex = 150
         Me.Label2.Text = "Loan Status"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
+        'cbxInterest
+        '
+        Me.cbxInterest.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cbxInterest.FormattingEnabled = True
+        Me.cbxInterest.Location = New System.Drawing.Point(109, 235)
+        Me.cbxInterest.Name = "cbxInterest"
+        Me.cbxInterest.Size = New System.Drawing.Size(90, 28)
+        Me.cbxInterest.TabIndex = 146
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label16.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label16.Location = New System.Drawing.Point(11, 241)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(77, 16)
+        Me.Label16.TabIndex = 145
+        Me.Label16.Text = "Interest rate"
+        Me.Label16.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
+        'dtEnd
+        '
+        Me.dtEnd.CustomFormat = "MM/dd/yyyy"
+        Me.dtEnd.Enabled = False
+        Me.dtEnd.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dtEnd.Location = New System.Drawing.Point(109, 171)
+        Me.dtEnd.Name = "dtEnd"
+        Me.dtEnd.Size = New System.Drawing.Size(300, 26)
+        Me.dtEnd.TabIndex = 144
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label15.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label15.Location = New System.Drawing.Point(11, 179)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(63, 16)
+        Me.Label15.TabIndex = 143
+        Me.Label15.Text = "Date end"
+        Me.Label15.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
+        'dtStart
+        '
+        Me.dtStart.CustomFormat = ""
+        Me.dtStart.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dtStart.Location = New System.Drawing.Point(109, 139)
+        Me.dtStart.Name = "dtStart"
+        Me.dtStart.Size = New System.Drawing.Size(300, 26)
+        Me.dtStart.TabIndex = 142
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label11.Location = New System.Drawing.Point(11, 147)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(65, 16)
+        Me.Label11.TabIndex = 141
+        Me.Label11.Text = "Date start"
+        Me.Label11.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
+        'lblEmployeeNo
+        '
+        Me.lblEmployeeNo.BackColor = System.Drawing.Color.Transparent
+        Me.lblEmployeeNo.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblEmployeeNo.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.lblEmployeeNo.Location = New System.Drawing.Point(541, 63)
+        Me.lblEmployeeNo.Name = "lblEmployeeNo"
+        Me.lblEmployeeNo.Size = New System.Drawing.Size(159, 20)
+        Me.lblEmployeeNo.TabIndex = 140
+        Me.lblEmployeeNo.Text = "Emp I.d"
+        Me.lblEmployeeNo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label13.Location = New System.Drawing.Point(444, 66)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(89, 16)
+        Me.Label13.TabIndex = 139
+        Me.Label13.Text = "Employee I.D"
+        Me.Label13.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label12.Location = New System.Drawing.Point(11, 270)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(70, 16)
+        Me.Label12.TabIndex = 136
+        Me.Label12.Text = "Bi-monthly"
+        Me.Label12.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
+        'txtPrincipal
+        '
+        Me.txtPrincipal.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPrincipal.Location = New System.Drawing.Point(109, 203)
+        Me.txtPrincipal.Name = "txtPrincipal"
+        Me.txtPrincipal.Size = New System.Drawing.Size(300, 26)
+        Me.txtPrincipal.TabIndex = 135
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label9.Location = New System.Drawing.Point(11, 209)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(60, 16)
+        Me.Label9.TabIndex = 134
+        Me.Label9.Text = "Principal"
+        Me.Label9.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label6.Location = New System.Drawing.Point(11, 66)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(45, 16)
+        Me.Label6.TabIndex = 130
+        Me.Label6.Text = "Name"
+        Me.Label6.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label4.Location = New System.Drawing.Point(11, 37)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(60, 16)
+        Me.Label4.TabIndex = 127
+        Me.Label4.Text = "Client I.D"
+        Me.Label4.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
+        'btnSave
+        '
+        Me.btnSave.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.btnSave.FlatAppearance.BorderSize = 0
+        Me.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnSave.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSave.ForeColor = System.Drawing.Color.White
+        Me.btnSave.Location = New System.Drawing.Point(9, 435)
+        Me.btnSave.Name = "btnSave"
+        Me.btnSave.Size = New System.Drawing.Size(108, 60)
+        Me.btnSave.TabIndex = 125
+        Me.btnSave.Text = "Save"
+        Me.btnSave.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.btnSave.UseVisualStyleBackColor = False
         '
         'GroupBox1
         '
@@ -563,9 +741,9 @@ Partial Class Loans
         Me.GroupBox1.Controls.Add(Me.radReturn)
         Me.GroupBox1.Enabled = False
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(19, 105)
+        Me.GroupBox1.Location = New System.Drawing.Point(11, 27)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(407, 63)
+        Me.GroupBox1.Size = New System.Drawing.Size(716, 63)
         Me.GroupBox1.TabIndex = 147
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Application Status"
@@ -575,7 +753,7 @@ Partial Class Loans
         Me.radApproved.AutoSize = True
         Me.radApproved.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.radApproved.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.radApproved.Location = New System.Drawing.Point(18, 32)
+        Me.radApproved.Location = New System.Drawing.Point(193, 26)
         Me.radApproved.Name = "radApproved"
         Me.radApproved.Size = New System.Drawing.Size(95, 24)
         Me.radApproved.TabIndex = 58
@@ -588,7 +766,7 @@ Partial Class Loans
         Me.radDeclined.AutoSize = True
         Me.radDeclined.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.radDeclined.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.radDeclined.Location = New System.Drawing.Point(151, 31)
+        Me.radDeclined.Location = New System.Drawing.Point(326, 25)
         Me.radDeclined.Name = "radDeclined"
         Me.radDeclined.Size = New System.Drawing.Size(89, 24)
         Me.radDeclined.TabIndex = 59
@@ -601,179 +779,13 @@ Partial Class Loans
         Me.radReturn.AutoSize = True
         Me.radReturn.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.radReturn.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.radReturn.Location = New System.Drawing.Point(285, 31)
+        Me.radReturn.Location = New System.Drawing.Point(460, 25)
         Me.radReturn.Name = "radReturn"
         Me.radReturn.Size = New System.Drawing.Size(76, 24)
         Me.radReturn.TabIndex = 60
         Me.radReturn.TabStop = True
         Me.radReturn.Text = "Return"
         Me.radReturn.UseVisualStyleBackColor = True
-        '
-        'cbxInterest
-        '
-        Me.cbxInterest.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cbxInterest.FormattingEnabled = True
-        Me.cbxInterest.Location = New System.Drawing.Point(126, 273)
-        Me.cbxInterest.Name = "cbxInterest"
-        Me.cbxInterest.Size = New System.Drawing.Size(143, 28)
-        Me.cbxInterest.TabIndex = 146
-        '
-        'Label16
-        '
-        Me.Label16.AutoSize = True
-        Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label16.Location = New System.Drawing.Point(22, 279)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(77, 16)
-        Me.Label16.TabIndex = 145
-        Me.Label16.Text = "Interest rate"
-        Me.Label16.TextAlign = System.Drawing.ContentAlignment.TopRight
-        '
-        'dtEnd
-        '
-        Me.dtEnd.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dtEnd.Location = New System.Drawing.Point(126, 209)
-        Me.dtEnd.Name = "dtEnd"
-        Me.dtEnd.Size = New System.Drawing.Size(300, 26)
-        Me.dtEnd.TabIndex = 144
-        '
-        'Label15
-        '
-        Me.Label15.AutoSize = True
-        Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label15.Location = New System.Drawing.Point(22, 217)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(63, 16)
-        Me.Label15.TabIndex = 143
-        Me.Label15.Text = "Date end"
-        Me.Label15.TextAlign = System.Drawing.ContentAlignment.TopRight
-        '
-        'dtStart
-        '
-        Me.dtStart.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dtStart.Location = New System.Drawing.Point(126, 177)
-        Me.dtStart.Name = "dtStart"
-        Me.dtStart.Size = New System.Drawing.Size(300, 26)
-        Me.dtStart.TabIndex = 142
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label11.Location = New System.Drawing.Point(22, 185)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(65, 16)
-        Me.Label11.TabIndex = 141
-        Me.Label11.Text = "Date start"
-        Me.Label11.TextAlign = System.Drawing.ContentAlignment.TopRight
-        '
-        'lblEmployeeNo
-        '
-        Me.lblEmployeeNo.BackColor = System.Drawing.Color.Transparent
-        Me.lblEmployeeNo.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblEmployeeNo.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.lblEmployeeNo.Location = New System.Drawing.Point(552, 70)
-        Me.lblEmployeeNo.Name = "lblEmployeeNo"
-        Me.lblEmployeeNo.Size = New System.Drawing.Size(159, 20)
-        Me.lblEmployeeNo.TabIndex = 140
-        Me.lblEmployeeNo.Text = "Emp I.d"
-        Me.lblEmployeeNo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label13.Location = New System.Drawing.Point(455, 73)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(91, 16)
-        Me.Label13.TabIndex = 139
-        Me.Label13.Text = "Employee  no"
-        Me.Label13.TextAlign = System.Drawing.ContentAlignment.TopRight
-        '
-        'lblLoanID
-        '
-        Me.lblLoanID.AutoSize = True
-        Me.lblLoanID.BackColor = System.Drawing.Color.Transparent
-        Me.lblLoanID.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblLoanID.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.lblLoanID.Location = New System.Drawing.Point(552, 39)
-        Me.lblLoanID.Name = "lblLoanID"
-        Me.lblLoanID.Size = New System.Drawing.Size(67, 20)
-        Me.lblLoanID.TabIndex = 137
-        Me.lblLoanID.Text = "Loan I.d"
-        Me.lblLoanID.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label12.Location = New System.Drawing.Point(22, 324)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(81, 16)
-        Me.Label12.TabIndex = 136
-        Me.Label12.Text = "Amortization"
-        Me.Label12.TextAlign = System.Drawing.ContentAlignment.TopRight
-        '
-        'txtPrincipal
-        '
-        Me.txtPrincipal.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPrincipal.Location = New System.Drawing.Point(126, 241)
-        Me.txtPrincipal.Name = "txtPrincipal"
-        Me.txtPrincipal.Size = New System.Drawing.Size(300, 26)
-        Me.txtPrincipal.TabIndex = 135
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label9.Location = New System.Drawing.Point(22, 247)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(60, 16)
-        Me.Label9.TabIndex = 134
-        Me.Label9.Text = "Principal"
-        Me.Label9.TextAlign = System.Drawing.ContentAlignment.TopRight
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label6.Location = New System.Drawing.Point(27, 73)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(45, 16)
-        Me.Label6.TabIndex = 130
-        Me.Label6.Text = "Name"
-        Me.Label6.TextAlign = System.Drawing.ContentAlignment.TopRight
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label5.Location = New System.Drawing.Point(455, 44)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(57, 16)
-        Me.Label5.TabIndex = 128
-        Me.Label5.Text = "Loan I.D"
-        Me.Label5.TextAlign = System.Drawing.ContentAlignment.TopRight
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label4.Location = New System.Drawing.Point(22, 44)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(57, 16)
-        Me.Label4.TabIndex = 127
-        Me.Label4.Text = "Client ID"
-        Me.Label4.TextAlign = System.Drawing.ContentAlignment.TopRight
         '
         'btnCancel
         '
@@ -782,7 +794,7 @@ Partial Class Loans
         Me.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCancel.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCancel.ForeColor = System.Drawing.Color.White
-        Me.btnCancel.Location = New System.Drawing.Point(246, 443)
+        Me.btnCancel.Location = New System.Drawing.Point(237, 435)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Size = New System.Drawing.Size(108, 60)
         Me.btnCancel.TabIndex = 123
@@ -797,165 +809,13 @@ Partial Class Loans
         Me.btnSaveAs.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnSaveAs.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnSaveAs.ForeColor = System.Drawing.Color.White
-        Me.btnSaveAs.Location = New System.Drawing.Point(132, 443)
+        Me.btnSaveAs.Location = New System.Drawing.Point(123, 435)
         Me.btnSaveAs.Name = "btnSaveAs"
         Me.btnSaveAs.Size = New System.Drawing.Size(108, 60)
         Me.btnSaveAs.TabIndex = 124
         Me.btnSaveAs.Text = "Save As"
         Me.btnSaveAs.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.btnSaveAs.UseVisualStyleBackColor = False
-        '
-        'gbxShowCoMakers
-        '
-        Me.gbxShowCoMakers.BackColor = System.Drawing.Color.LightGray
-        Me.gbxShowCoMakers.Controls.Add(Me.Label24)
-        Me.gbxShowCoMakers.Controls.Add(Me.btnCancelAddCoMaker)
-        Me.gbxShowCoMakers.Controls.Add(Me.Label19)
-        Me.gbxShowCoMakers.Controls.Add(Me.btnAddCoMaker)
-        Me.gbxShowCoMakers.Controls.Add(Me.btnSearchCoMaker)
-        Me.gbxShowCoMakers.Controls.Add(Me.TextBox5)
-        Me.gbxShowCoMakers.Controls.Add(Me.Label17)
-        Me.gbxShowCoMakers.Controls.Add(Me.ListBox4)
-        Me.gbxShowCoMakers.Controls.Add(Me.btnBackCm)
-        Me.gbxShowCoMakers.Controls.Add(Me.btnChosenCm)
-        Me.gbxShowCoMakers.Controls.Add(Me.ListBox3)
-        Me.gbxShowCoMakers.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.gbxShowCoMakers.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.gbxShowCoMakers.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.gbxShowCoMakers.Location = New System.Drawing.Point(313, 56)
-        Me.gbxShowCoMakers.Name = "gbxShowCoMakers"
-        Me.gbxShowCoMakers.Size = New System.Drawing.Size(690, 532)
-        Me.gbxShowCoMakers.TabIndex = 157
-        Me.gbxShowCoMakers.TabStop = False
-        Me.gbxShowCoMakers.Text = "Co makers"
-        Me.gbxShowCoMakers.Visible = False
-        '
-        'Label24
-        '
-        Me.Label24.AutoSize = True
-        Me.Label24.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label24.Location = New System.Drawing.Point(13, 86)
-        Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(64, 16)
-        Me.Label24.TabIndex = 129
-        Me.Label24.Text = "Client List"
-        Me.Label24.TextAlign = System.Drawing.ContentAlignment.TopRight
-        '
-        'btnCancelAddCoMaker
-        '
-        Me.btnCancelAddCoMaker.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.btnCancelAddCoMaker.FlatAppearance.BorderSize = 0
-        Me.btnCancelAddCoMaker.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCancelAddCoMaker.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCancelAddCoMaker.ForeColor = System.Drawing.Color.White
-        Me.btnCancelAddCoMaker.Location = New System.Drawing.Point(120, 443)
-        Me.btnCancelAddCoMaker.Name = "btnCancelAddCoMaker"
-        Me.btnCancelAddCoMaker.Size = New System.Drawing.Size(108, 60)
-        Me.btnCancelAddCoMaker.TabIndex = 128
-        Me.btnCancelAddCoMaker.Text = "Cancel"
-        Me.btnCancelAddCoMaker.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btnCancelAddCoMaker.UseVisualStyleBackColor = False
-        '
-        'Label19
-        '
-        Me.Label19.AutoSize = True
-        Me.Label19.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label19.Location = New System.Drawing.Point(371, 86)
-        Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(74, 16)
-        Me.Label19.TabIndex = 127
-        Me.Label19.Text = "Co-Makers"
-        Me.Label19.TextAlign = System.Drawing.ContentAlignment.TopRight
-        '
-        'btnAddCoMaker
-        '
-        Me.btnAddCoMaker.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.btnAddCoMaker.FlatAppearance.BorderSize = 0
-        Me.btnAddCoMaker.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnAddCoMaker.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAddCoMaker.ForeColor = System.Drawing.Color.White
-        Me.btnAddCoMaker.Location = New System.Drawing.Point(6, 443)
-        Me.btnAddCoMaker.Name = "btnAddCoMaker"
-        Me.btnAddCoMaker.Size = New System.Drawing.Size(108, 60)
-        Me.btnAddCoMaker.TabIndex = 126
-        Me.btnAddCoMaker.Text = "Ok"
-        Me.btnAddCoMaker.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btnAddCoMaker.UseVisualStyleBackColor = False
-        '
-        'btnSearchCoMaker
-        '
-        Me.btnSearchCoMaker.BackColor = System.Drawing.Color.Gray
-        Me.btnSearchCoMaker.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSearchCoMaker.ForeColor = System.Drawing.Color.White
-        Me.btnSearchCoMaker.Location = New System.Drawing.Point(255, 40)
-        Me.btnSearchCoMaker.Name = "btnSearchCoMaker"
-        Me.btnSearchCoMaker.Size = New System.Drawing.Size(61, 24)
-        Me.btnSearchCoMaker.TabIndex = 58
-        Me.btnSearchCoMaker.Text = "Search"
-        Me.btnSearchCoMaker.UseVisualStyleBackColor = False
-        '
-        'TextBox5
-        '
-        Me.TextBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox5.Location = New System.Drawing.Point(83, 40)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(166, 22)
-        Me.TextBox5.TabIndex = 57
-        '
-        'Label17
-        '
-        Me.Label17.AutoSize = True
-        Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label17.Location = New System.Drawing.Point(13, 43)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(51, 16)
-        Me.Label17.TabIndex = 56
-        Me.Label17.Text = "Search"
-        Me.Label17.TextAlign = System.Drawing.ContentAlignment.TopRight
-        '
-        'ListBox4
-        '
-        Me.ListBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ListBox4.FormattingEnabled = True
-        Me.ListBox4.ItemHeight = 15
-        Me.ListBox4.Location = New System.Drawing.Point(374, 110)
-        Me.ListBox4.Name = "ListBox4"
-        Me.ListBox4.Size = New System.Drawing.Size(310, 319)
-        Me.ListBox4.TabIndex = 55
-        '
-        'btnBackCm
-        '
-        Me.btnBackCm.BackColor = System.Drawing.Color.Gray
-        Me.btnBackCm.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnBackCm.ForeColor = System.Drawing.Color.White
-        Me.btnBackCm.Location = New System.Drawing.Point(319, 229)
-        Me.btnBackCm.Name = "btnBackCm"
-        Me.btnBackCm.Size = New System.Drawing.Size(49, 39)
-        Me.btnBackCm.TabIndex = 54
-        Me.btnBackCm.Text = "<<<"
-        Me.btnBackCm.UseVisualStyleBackColor = False
-        '
-        'btnChosenCm
-        '
-        Me.btnChosenCm.BackColor = System.Drawing.Color.Gray
-        Me.btnChosenCm.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnChosenCm.ForeColor = System.Drawing.Color.White
-        Me.btnChosenCm.Location = New System.Drawing.Point(319, 182)
-        Me.btnChosenCm.Name = "btnChosenCm"
-        Me.btnChosenCm.Size = New System.Drawing.Size(49, 39)
-        Me.btnChosenCm.TabIndex = 53
-        Me.btnChosenCm.Text = ">>>"
-        Me.btnChosenCm.UseVisualStyleBackColor = False
-        '
-        'ListBox3
-        '
-        Me.ListBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ListBox3.FormattingEnabled = True
-        Me.ListBox3.ItemHeight = 15
-        Me.ListBox3.Location = New System.Drawing.Point(6, 110)
-        Me.ListBox3.Name = "ListBox3"
-        Me.ListBox3.Size = New System.Drawing.Size(307, 319)
-        Me.ListBox3.TabIndex = 1
         '
         'Label1
         '
@@ -1038,7 +898,7 @@ Partial Class Loans
         '
         Me.Label26.AutoSize = True
         Me.Label26.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label26.Location = New System.Drawing.Point(3, 86)
+        Me.Label26.Location = New System.Drawing.Point(3, 91)
         Me.Label26.Name = "Label26"
         Me.Label26.Size = New System.Drawing.Size(64, 16)
         Me.Label26.TabIndex = 129
@@ -1079,6 +939,9 @@ Partial Class Loans
         'gbxLoanInfo
         '
         Me.gbxLoanInfo.BackColor = System.Drawing.Color.LightGray
+        Me.gbxLoanInfo.Controls.Add(Me.Label18)
+        Me.gbxLoanInfo.Controls.Add(Me.Label10)
+        Me.gbxLoanInfo.Controls.Add(Me.Label17)
         Me.gbxLoanInfo.Controls.Add(Me.lblDtEndInfo)
         Me.gbxLoanInfo.Controls.Add(Me.Label32)
         Me.gbxLoanInfo.Controls.Add(Me.lblDtStartInfo)
@@ -1111,6 +974,41 @@ Partial Class Loans
         Me.gbxLoanInfo.TabStop = False
         Me.gbxLoanInfo.Text = "Loan Information"
         Me.gbxLoanInfo.Visible = False
+        '
+        'Label18
+        '
+        Me.Label18.AutoSize = True
+        Me.Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label18.Location = New System.Drawing.Point(6, 248)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(106, 16)
+        Me.Label18.TabIndex = 200
+        Me.Label18.Text = "Payment History"
+        Me.Label18.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.BackColor = System.Drawing.Color.Transparent
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label10.Location = New System.Drawing.Point(681, 146)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(44, 20)
+        Me.Label10.TabIndex = 199
+        Me.Label10.Text = "Total"
+        Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label17.Location = New System.Drawing.Point(530, 149)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(145, 16)
+        Me.Label17.TabIndex = 198
+        Me.Label17.Text = "Bi-monthly amortization"
+        Me.Label17.TextAlign = System.Drawing.ContentAlignment.TopRight
         '
         'lblDtEndInfo
         '
@@ -1203,7 +1101,7 @@ Partial Class Loans
         Me.lblRembalInfo.BackColor = System.Drawing.Color.Transparent
         Me.lblRembalInfo.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblRembalInfo.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.lblRembalInfo.Location = New System.Drawing.Point(678, 176)
+        Me.lblRembalInfo.Location = New System.Drawing.Point(681, 206)
         Me.lblRembalInfo.Name = "lblRembalInfo"
         Me.lblRembalInfo.Size = New System.Drawing.Size(44, 20)
         Me.lblRembalInfo.TabIndex = 190
@@ -1214,7 +1112,7 @@ Partial Class Loans
         '
         Me.Label34.AutoSize = True
         Me.Label34.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label34.Location = New System.Drawing.Point(530, 179)
+        Me.Label34.Location = New System.Drawing.Point(530, 209)
         Me.Label34.Name = "Label34"
         Me.Label34.Size = New System.Drawing.Size(126, 16)
         Me.Label34.TabIndex = 189
@@ -1227,7 +1125,7 @@ Partial Class Loans
         Me.lblOverallTotInfo.BackColor = System.Drawing.Color.Transparent
         Me.lblOverallTotInfo.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblOverallTotInfo.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.lblOverallTotInfo.Location = New System.Drawing.Point(678, 146)
+        Me.lblOverallTotInfo.Location = New System.Drawing.Point(681, 176)
         Me.lblOverallTotInfo.Name = "lblOverallTotInfo"
         Me.lblOverallTotInfo.Size = New System.Drawing.Size(44, 20)
         Me.lblOverallTotInfo.TabIndex = 188
@@ -1238,7 +1136,7 @@ Partial Class Loans
         '
         Me.Label33.AutoSize = True
         Me.Label33.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label33.Location = New System.Drawing.Point(530, 149)
+        Me.Label33.Location = New System.Drawing.Point(530, 179)
         Me.Label33.Name = "Label33"
         Me.Label33.Size = New System.Drawing.Size(85, 16)
         Me.Label33.TabIndex = 187
@@ -1267,7 +1165,7 @@ Partial Class Loans
         Me.lblIntrInfo.BackColor = System.Drawing.Color.Transparent
         Me.lblIntrInfo.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblIntrInfo.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.lblIntrInfo.Location = New System.Drawing.Point(678, 116)
+        Me.lblIntrInfo.Location = New System.Drawing.Point(681, 116)
         Me.lblIntrInfo.Name = "lblIntrInfo"
         Me.lblIntrInfo.Size = New System.Drawing.Size(64, 20)
         Me.lblIntrInfo.TabIndex = 185
@@ -1280,9 +1178,9 @@ Partial Class Loans
         Me.Label31.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label31.Location = New System.Drawing.Point(530, 119)
         Me.Label31.Name = "Label31"
-        Me.Label31.Size = New System.Drawing.Size(142, 16)
+        Me.Label31.Size = New System.Drawing.Size(77, 16)
         Me.Label31.TabIndex = 184
-        Me.Label31.Text = "Interest rate per Month "
+        Me.Label31.Text = "Interest rate"
         Me.Label31.TextAlign = System.Drawing.ContentAlignment.TopRight
         '
         'lblInfoLoanID
@@ -1315,7 +1213,7 @@ Partial Class Loans
         Me.lblTermsInfo.BackColor = System.Drawing.Color.Transparent
         Me.lblTermsInfo.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTermsInfo.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.lblTermsInfo.Location = New System.Drawing.Point(678, 83)
+        Me.lblTermsInfo.Location = New System.Drawing.Point(681, 53)
         Me.lblTermsInfo.Name = "lblTermsInfo"
         Me.lblTermsInfo.Size = New System.Drawing.Size(53, 20)
         Me.lblTermsInfo.TabIndex = 175
@@ -1326,7 +1224,7 @@ Partial Class Loans
         '
         Me.Label27.AutoSize = True
         Me.Label27.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label27.Location = New System.Drawing.Point(530, 86)
+        Me.Label27.Location = New System.Drawing.Point(530, 56)
         Me.Label27.Name = "Label27"
         Me.Label27.Size = New System.Drawing.Size(47, 16)
         Me.Label27.TabIndex = 174
@@ -1339,7 +1237,7 @@ Partial Class Loans
         Me.lblLoanInfoPrin.BackColor = System.Drawing.Color.Transparent
         Me.lblLoanInfoPrin.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblLoanInfoPrin.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.lblLoanInfoPrin.Location = New System.Drawing.Point(678, 53)
+        Me.lblLoanInfoPrin.Location = New System.Drawing.Point(681, 83)
         Me.lblLoanInfoPrin.Name = "lblLoanInfoPrin"
         Me.lblLoanInfoPrin.Size = New System.Drawing.Size(68, 20)
         Me.lblLoanInfoPrin.TabIndex = 173
@@ -1350,7 +1248,7 @@ Partial Class Loans
         '
         Me.Label23.AutoSize = True
         Me.Label23.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label23.Location = New System.Drawing.Point(530, 56)
+        Me.Label23.Location = New System.Drawing.Point(530, 86)
         Me.Label23.Name = "Label23"
         Me.Label23.Size = New System.Drawing.Size(60, 16)
         Me.Label23.TabIndex = 172
@@ -1390,9 +1288,9 @@ Partial Class Loans
         Me.lvPayments.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lvPayments.FullRowSelect = True
         Me.lvPayments.GridLines = True
-        Me.lvPayments.Location = New System.Drawing.Point(6, 220)
+        Me.lvPayments.Location = New System.Drawing.Point(6, 267)
         Me.lvPayments.Name = "lvPayments"
-        Me.lvPayments.Size = New System.Drawing.Size(871, 315)
+        Me.lvPayments.Size = New System.Drawing.Size(871, 268)
         Me.lvPayments.TabIndex = 31
         Me.lvPayments.UseCompatibleStateImageBehavior = False
         Me.lvPayments.View = System.Windows.Forms.View.Details
@@ -1400,7 +1298,7 @@ Partial Class Loans
         'ColumnHeader23
         '
         Me.ColumnHeader23.Text = "Payment i.d"
-        Me.ColumnHeader23.Width = 25
+        Me.ColumnHeader23.Width = 92
         '
         'ColumnHeader24
         '
@@ -1451,19 +1349,17 @@ Partial Class Loans
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnClose)
         Me.Controls.Add(Me.gbxShowClient)
-        Me.Controls.Add(Me.gbxShowCoMakers)
-        Me.Controls.Add(Me.pnlMain)
         Me.Controls.Add(Me.gbxLoanInfo)
+        Me.Controls.Add(Me.pnlMain)
         Me.Name = "Loans"
         Me.Size = New System.Drawing.Size(1272, 698)
         Me.pnlMain.ResumeLayout(False)
         Me.pnlMain.PerformLayout()
         Me.gbxAddEdit.ResumeLayout(False)
-        Me.gbxAddEdit.PerformLayout()
+        Me.gbxLoanData.ResumeLayout(False)
+        Me.gbxLoanData.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        Me.gbxShowCoMakers.ResumeLayout(False)
-        Me.gbxShowCoMakers.PerformLayout()
         Me.gbxShowClient.ResumeLayout(False)
         Me.gbxShowClient.PerformLayout()
         Me.gbxLoanInfo.ResumeLayout(False)
@@ -1490,29 +1386,16 @@ Partial Class Loans
     Friend WithEvents Label11 As System.Windows.Forms.Label
     Friend WithEvents lblEmployeeNo As System.Windows.Forms.Label
     Friend WithEvents Label13 As System.Windows.Forms.Label
-    Friend WithEvents lblLoanID As System.Windows.Forms.Label
     Friend WithEvents Label12 As System.Windows.Forms.Label
     Friend WithEvents txtPrincipal As System.Windows.Forms.TextBox
     Friend WithEvents Label9 As System.Windows.Forms.Label
     Friend WithEvents Label6 As System.Windows.Forms.Label
-    Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents btnCancel As System.Windows.Forms.Button
     Friend WithEvents btnSaveAs As System.Windows.Forms.Button
     Friend WithEvents btnSave As System.Windows.Forms.Button
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents lblAmort As System.Windows.Forms.Label
-    Friend WithEvents gbxShowCoMakers As System.Windows.Forms.GroupBox
-    Friend WithEvents btnAddCoMaker As System.Windows.Forms.Button
-    Friend WithEvents btnSearchCoMaker As System.Windows.Forms.Button
-    Friend WithEvents TextBox5 As System.Windows.Forms.TextBox
-    Friend WithEvents Label17 As System.Windows.Forms.Label
-    Friend WithEvents ListBox4 As System.Windows.Forms.ListBox
-    Friend WithEvents btnBackCm As System.Windows.Forms.Button
-    Friend WithEvents btnChosenCm As System.Windows.Forms.Button
-    Friend WithEvents ListBox3 As System.Windows.Forms.ListBox
-    Friend WithEvents btnCancelAddCoMaker As System.Windows.Forms.Button
-    Friend WithEvents Label19 As System.Windows.Forms.Label
     Friend WithEvents OpenFileDialog1 As System.Windows.Forms.OpenFileDialog
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents btnSearchLoan As System.Windows.Forms.Button
@@ -1521,7 +1404,6 @@ Partial Class Loans
     Friend WithEvents Label21 As System.Windows.Forms.Label
     Friend WithEvents btnFind As System.Windows.Forms.Button
     Friend WithEvents Label20 As System.Windows.Forms.Label
-    Friend WithEvents Label10 As System.Windows.Forms.Label
     Friend WithEvents lblFullname As System.Windows.Forms.Label
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents radApproved As System.Windows.Forms.RadioButton
@@ -1531,7 +1413,6 @@ Partial Class Loans
     Friend WithEvents linkRequirements As System.Windows.Forms.LinkLabel
     Friend WithEvents lblDateHired As System.Windows.Forms.Label
     Friend WithEvents Label22 As System.Windows.Forms.Label
-    Friend WithEvents Label24 As System.Windows.Forms.Label
     Friend WithEvents ColumnHeader1 As System.Windows.Forms.ColumnHeader
     Friend WithEvents ColumnHeader2 As System.Windows.Forms.ColumnHeader
     Friend WithEvents ColumnHeader3 As System.Windows.Forms.ColumnHeader
@@ -1586,5 +1467,13 @@ Partial Class Loans
     Friend WithEvents ColumnHeader13 As System.Windows.Forms.ColumnHeader
     Friend WithEvents ColumnHeader14 As System.Windows.Forms.ColumnHeader
     Friend WithEvents ColumnHeader15 As System.Windows.Forms.ColumnHeader
+    Friend WithEvents txtTerms As System.Windows.Forms.TextBox
+    Friend WithEvents Label8 As System.Windows.Forms.Label
+    Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents gbxLoanData As System.Windows.Forms.GroupBox
+    Friend WithEvents cbxLoanStatus As System.Windows.Forms.ComboBox
+    Friend WithEvents Label10 As System.Windows.Forms.Label
+    Friend WithEvents Label17 As System.Windows.Forms.Label
+    Friend WithEvents Label18 As System.Windows.Forms.Label
 
 End Class

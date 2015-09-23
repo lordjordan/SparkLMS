@@ -1,12 +1,13 @@
 ﻿Module MainPanelController
 
     Public uscMainmenu As New MainMenu
-    Public uscCollectibles As New Collectibles
+    Public uscCollectibles As New frmCollectibles
     Public uscSystemUser As New System_User
     Public uscAttachments As New Attachments
     Public uscClients As New Clients
     Public uscBranches As New Branches
     Public uscLoans As New Loans
+
 
     'Public uscClientList As New ClientList
 

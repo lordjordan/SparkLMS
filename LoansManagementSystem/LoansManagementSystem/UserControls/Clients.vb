@@ -2,7 +2,7 @@
 
     Dim itm As ListViewItem
     '### Change the "Data Source" path to point to our own LMS Database
-    Dim db As New DBHelper("Data Source=C:\LMS.s3db; Version=3;")
+    Dim db As New DBHelper("Data Source=" & My.Settings.ConString & "; Version=3;")
     Dim dr As SQLite.SQLiteDataReader
     Private Sub showAddEdit(mode As Boolean)
         gbxAddEdit.Visible = mode
@@ -48,13 +48,13 @@
                 data.Add("first_name", txt_FName.Text)
                 data.Add("middle_name", txt_MName.Text)
                 data.Add("last_name", txt_LName.Text)
-                data.Add("birth_date", Format(DateTimePicker1.Value, "dd/MM/yyyy"))
+                data.Add("birth_date", Format(DateTimePicker1.Value, "MM/dd/yyyy"))
                 data.Add("address", txt_address.Text)
                 data.Add("contact_number", txt_Contact.Text)
                 data.Add("employee_type", cbxEmpType.Text)
                 data.Add("credit_limit", txt_Credit.Text)
                 data.Add("branch_id", cbxBranch.Text)
-                data.Add("date_hired", DateTimePicker2.Value)
+                data.Add("date_hired", Format(DateTimePicker2.Value, "MM/dd/yyyy"))
 
                 rec = db.ExecuteNonQuery("insert into tbl_clients values(NULL,@first_name,@middle_name,@last_name, @birth_date,@address,@branch_id,@contact_number,@employee_type,NULL,@date_hired,NULL,@credit_limit)", data)
 
@@ -74,13 +74,13 @@
                 data.Add("first_name", txt_FName.Text)
                 data.Add("middle_name", txt_MName.Text)
                 data.Add("last_name", txt_LName.Text)
-                data.Add("birth_date", Format(DateTimePicker1.Value, "dd/MM/yyyy"))
+                data.Add("birth_date", Format(DateTimePicker1.Value, "MM/dd/yyyy"))
                 data.Add("address", txt_address.Text)
                 data.Add("contact_number", txt_Contact.Text)
                 data.Add("employee_type", cbxEmpType.Text)
                 data.Add("credit_limit", txt_Credit.Text)
                 data.Add("branch_id", cbxBranch.Text)
-                data.Add("date_hired", Format(DateTimePicker2.Value, "dd/MM/yyyy"))
+                data.Add("date_hired", Format(DateTimePicker2.Value, "MM/dd/yyyy"))
 
                 rec = db.ExecuteNonQuery("UPDATE tbl_clients SET first_name=@first_name, middle_name=@middle_name, last_name=@last_name, birth_date=@birth_date," & _
                                          "address=@address, contact_number=@contact_number, employee_type=@employee_type, credit_limit=@credit_limit, branch_id=@branch_id, date_hired=@date_hired WHERE client_id=" & txt_client.Text, data)
@@ -152,6 +152,24 @@
 
     Private Sub Clients_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         LoadListView()
+
+        'dr = db.ExecuteReader("Select * from tbl_branches")
+        'Dim table As New DataTable()
+        'Dim ds As New DataSet
+
+        'If dr.HasRows Then
+
+        '    '### You can also use loops for multiple-row result
+        '    Do While dr.Read
+
+
+        '    Loop
+        'End If
+
+        ''dr.Fill(table)
+        'cbxBranch.DataSource = New BindingSource(table)
+        'cbxBranch.DisplayMember = "branch_name"
+
     End Sub
 
     Private Sub LoadListView()

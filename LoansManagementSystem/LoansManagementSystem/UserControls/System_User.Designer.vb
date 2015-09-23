@@ -24,28 +24,27 @@ Partial Class System_User
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnClose = New System.Windows.Forms.Button()
-        Me.pnlMain = New System.Windows.Forms.Panel()
-        Me.btnEdit = New System.Windows.Forms.Button()
-        Me.btnAddNew = New System.Windows.Forms.Button()
-        Me.gbxAddEdit = New System.Windows.Forms.GroupBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.txtUid = New System.Windows.Forms.TextBox()
-        Me.btnCancel = New System.Windows.Forms.Button()
-        Me.btnSave = New System.Windows.Forms.Button()
-        Me.cmbUtype = New System.Windows.Forms.ComboBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.txtPassword = New System.Windows.Forms.TextBox()
         Me.txtusername = New System.Windows.Forms.TextBox()
-        Me.text1 = New System.Windows.Forms.TextBox()
+        Me.txtPassword = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.cmbUtype = New System.Windows.Forms.ComboBox()
+        Me.btnSave = New System.Windows.Forms.Button()
+        Me.btnCancel = New System.Windows.Forms.Button()
+        Me.txtUid = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.gbxAddEdit = New System.Windows.Forms.GroupBox()
+        Me.btnAddNew = New System.Windows.Forms.Button()
+        Me.btnEdit = New System.Windows.Forms.Button()
         Me.ListView1 = New System.Windows.Forms.ListView()
         Me.ColumnHeader5 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader6 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader7 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader8 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.pnlMain.SuspendLayout()
+        Me.pnlMain = New System.Windows.Forms.Panel()
         Me.gbxAddEdit.SuspendLayout()
+        Me.pnlMain.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
@@ -72,50 +71,118 @@ Partial Class System_User
         Me.btnClose.Text = "Close"
         Me.btnClose.UseVisualStyleBackColor = False
         '
-        'pnlMain
+        'txtusername
         '
-        Me.pnlMain.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.pnlMain.Controls.Add(Me.ListView1)
-        Me.pnlMain.Controls.Add(Me.btnEdit)
-        Me.pnlMain.Controls.Add(Me.btnAddNew)
-        Me.pnlMain.Location = New System.Drawing.Point(37, 86)
-        Me.pnlMain.Name = "pnlMain"
-        Me.pnlMain.Size = New System.Drawing.Size(944, 418)
-        Me.pnlMain.TabIndex = 47
+        Me.txtusername.BackColor = System.Drawing.Color.White
+        Me.txtusername.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtusername.Location = New System.Drawing.Point(366, 123)
+        Me.txtusername.Name = "txtusername"
+        Me.txtusername.Size = New System.Drawing.Size(132, 22)
+        Me.txtusername.TabIndex = 0
         '
-        'btnEdit
+        'txtPassword
         '
-        Me.btnEdit.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnEdit.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.btnEdit.FlatAppearance.BorderSize = 0
-        Me.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnEdit.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnEdit.ForeColor = System.Drawing.Color.White
-        Me.btnEdit.Location = New System.Drawing.Point(136, 336)
-        Me.btnEdit.Name = "btnEdit"
-        Me.btnEdit.Size = New System.Drawing.Size(108, 60)
-        Me.btnEdit.TabIndex = 32
-        Me.btnEdit.Text = "Edit User"
-        Me.btnEdit.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btnEdit.UseVisualStyleBackColor = False
+        Me.txtPassword.BackColor = System.Drawing.Color.White
+        Me.txtPassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPassword.Location = New System.Drawing.Point(366, 158)
+        Me.txtPassword.Name = "txtPassword"
+        Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.txtPassword.Size = New System.Drawing.Size(132, 22)
+        Me.txtPassword.TabIndex = 2
         '
-        'btnAddNew
+        'Label5
         '
-        Me.btnAddNew.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnAddNew.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.btnAddNew.FlatAppearance.BorderSize = 0
-        Me.btnAddNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnAddNew.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAddNew.ForeColor = System.Drawing.Color.White
-        Me.btnAddNew.Location = New System.Drawing.Point(22, 336)
-        Me.btnAddNew.Name = "btnAddNew"
-        Me.btnAddNew.Size = New System.Drawing.Size(108, 60)
-        Me.btnAddNew.TabIndex = 33
-        Me.btnAddNew.Text = "Add User"
-        Me.btnAddNew.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btnAddNew.UseVisualStyleBackColor = False
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(251, 123)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(77, 16)
+        Me.Label5.TabIndex = 1
+        Me.Label5.Text = "Username :"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(251, 158)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(74, 16)
+        Me.Label3.TabIndex = 1
+        Me.Label3.Text = "Password :"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(251, 196)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(81, 16)
+        Me.Label2.TabIndex = 21
+        Me.Label2.Text = "User Type : "
+        '
+        'cmbUtype
+        '
+        Me.cmbUtype.AutoCompleteCustomSource.AddRange(New String() {"Super Admin", "Admin", "Offsite User", "Encoder"})
+        Me.cmbUtype.BackColor = System.Drawing.Color.White
+        Me.cmbUtype.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmbUtype.FormattingEnabled = True
+        Me.cmbUtype.Items.AddRange(New Object() {"Super Admin", "Admin", "Offsite User", "Encoder"})
+        Me.cmbUtype.Location = New System.Drawing.Point(366, 196)
+        Me.cmbUtype.Name = "cmbUtype"
+        Me.cmbUtype.Size = New System.Drawing.Size(132, 24)
+        Me.cmbUtype.TabIndex = 20
+        '
+        'btnSave
+        '
+        Me.btnSave.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btnSave.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.btnSave.FlatAppearance.BorderSize = 0
+        Me.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnSave.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSave.ForeColor = System.Drawing.Color.White
+        Me.btnSave.Location = New System.Drawing.Point(254, 278)
+        Me.btnSave.Name = "btnSave"
+        Me.btnSave.Size = New System.Drawing.Size(108, 60)
+        Me.btnSave.TabIndex = 34
+        Me.btnSave.Text = "&Save"
+        Me.btnSave.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.btnSave.UseVisualStyleBackColor = False
+        '
+        'btnCancel
+        '
+        Me.btnCancel.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btnCancel.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.btnCancel.FlatAppearance.BorderSize = 0
+        Me.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCancel.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCancel.ForeColor = System.Drawing.Color.White
+        Me.btnCancel.Location = New System.Drawing.Point(390, 278)
+        Me.btnCancel.Name = "btnCancel"
+        Me.btnCancel.Size = New System.Drawing.Size(108, 60)
+        Me.btnCancel.TabIndex = 36
+        Me.btnCancel.Text = "&Cancel"
+        Me.btnCancel.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.btnCancel.UseVisualStyleBackColor = False
+        '
+        'txtUid
+        '
+        Me.txtUid.BackColor = System.Drawing.Color.White
+        Me.txtUid.Enabled = False
+        Me.txtUid.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtUid.Location = New System.Drawing.Point(366, 86)
+        Me.txtUid.Name = "txtUid"
+        Me.txtUid.Size = New System.Drawing.Size(132, 22)
+        Me.txtUid.TabIndex = 37
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(251, 86)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(59, 16)
+        Me.Label4.TabIndex = 38
+        Me.Label4.Text = "User ID: "
         '
         'gbxAddEdit
         '
@@ -138,125 +205,37 @@ Partial Class System_User
         Me.gbxAddEdit.TabStop = False
         Me.gbxAddEdit.Text = "Information"
         '
-        'Label4
+        'btnAddNew
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(251, 86)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(59, 16)
-        Me.Label4.TabIndex = 38
-        Me.Label4.Text = "User ID: "
+        Me.btnAddNew.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btnAddNew.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.btnAddNew.FlatAppearance.BorderSize = 0
+        Me.btnAddNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAddNew.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAddNew.ForeColor = System.Drawing.Color.White
+        Me.btnAddNew.Location = New System.Drawing.Point(22, 336)
+        Me.btnAddNew.Name = "btnAddNew"
+        Me.btnAddNew.Size = New System.Drawing.Size(108, 60)
+        Me.btnAddNew.TabIndex = 33
+        Me.btnAddNew.Text = "Add User"
+        Me.btnAddNew.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.btnAddNew.UseVisualStyleBackColor = False
         '
-        'txtUid
+        'btnEdit
         '
-        Me.txtUid.BackColor = System.Drawing.Color.White
-        Me.txtUid.Enabled = False
-        Me.txtUid.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtUid.Location = New System.Drawing.Point(366, 86)
-        Me.txtUid.Name = "txtUid"
-        Me.txtUid.Size = New System.Drawing.Size(132, 22)
-        Me.txtUid.TabIndex = 37
-        '
-        'btnCancel
-        '
-        Me.btnCancel.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnCancel.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.btnCancel.FlatAppearance.BorderSize = 0
-        Me.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCancel.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCancel.ForeColor = System.Drawing.Color.White
-        Me.btnCancel.Location = New System.Drawing.Point(390, 278)
-        Me.btnCancel.Name = "btnCancel"
-        Me.btnCancel.Size = New System.Drawing.Size(108, 60)
-        Me.btnCancel.TabIndex = 36
-        Me.btnCancel.Text = "&Cancel"
-        Me.btnCancel.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btnCancel.UseVisualStyleBackColor = False
-        '
-        'btnSave
-        '
-        Me.btnSave.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnSave.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.btnSave.FlatAppearance.BorderSize = 0
-        Me.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSave.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSave.ForeColor = System.Drawing.Color.White
-        Me.btnSave.Location = New System.Drawing.Point(254, 278)
-        Me.btnSave.Name = "btnSave"
-        Me.btnSave.Size = New System.Drawing.Size(108, 60)
-        Me.btnSave.TabIndex = 34
-        Me.btnSave.Text = "&Save"
-        Me.btnSave.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btnSave.UseVisualStyleBackColor = False
-        '
-        'cmbUtype
-        '
-        Me.cmbUtype.AutoCompleteCustomSource.AddRange(New String() {"Super Admin", "Admin", "Offsite User", "Encoder"})
-        Me.cmbUtype.BackColor = System.Drawing.Color.White
-        Me.cmbUtype.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmbUtype.FormattingEnabled = True
-        Me.cmbUtype.Items.AddRange(New Object() {"Super Admin", "Admin", "Offsite User", "Encoder"})
-        Me.cmbUtype.Location = New System.Drawing.Point(366, 196)
-        Me.cmbUtype.Name = "cmbUtype"
-        Me.cmbUtype.Size = New System.Drawing.Size(132, 24)
-        Me.cmbUtype.TabIndex = 20
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(251, 196)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(81, 16)
-        Me.Label2.TabIndex = 21
-        Me.Label2.Text = "User Type : "
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(251, 158)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(74, 16)
-        Me.Label3.TabIndex = 1
-        Me.Label3.Text = "Password :"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(251, 123)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(77, 16)
-        Me.Label5.TabIndex = 1
-        Me.Label5.Text = "Username :"
-        '
-        'txtPassword
-        '
-        Me.txtPassword.BackColor = System.Drawing.Color.White
-        Me.txtPassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPassword.Location = New System.Drawing.Point(366, 158)
-        Me.txtPassword.Name = "txtPassword"
-        Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtPassword.Size = New System.Drawing.Size(132, 22)
-        Me.txtPassword.TabIndex = 2
-        '
-        'txtusername
-        '
-        Me.txtusername.BackColor = System.Drawing.Color.White
-        Me.txtusername.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtusername.Location = New System.Drawing.Point(366, 123)
-        Me.txtusername.Name = "txtusername"
-        Me.txtusername.Size = New System.Drawing.Size(132, 22)
-        Me.txtusername.TabIndex = 0
-        '
-        'text1
-        '
-        Me.text1.Location = New System.Drawing.Point(1183, 484)
-        Me.text1.Name = "text1"
-        Me.text1.Size = New System.Drawing.Size(100, 20)
-        Me.text1.TabIndex = 48
+        Me.btnEdit.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btnEdit.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.btnEdit.FlatAppearance.BorderSize = 0
+        Me.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnEdit.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnEdit.ForeColor = System.Drawing.Color.White
+        Me.btnEdit.Location = New System.Drawing.Point(136, 336)
+        Me.btnEdit.Name = "btnEdit"
+        Me.btnEdit.Size = New System.Drawing.Size(108, 60)
+        Me.btnEdit.TabIndex = 32
+        Me.btnEdit.Text = "Edit User"
+        Me.btnEdit.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.btnEdit.UseVisualStyleBackColor = False
         '
         'ListView1
         '
@@ -294,46 +273,57 @@ Partial Class System_User
         Me.ColumnHeader8.Text = "User Type"
         Me.ColumnHeader8.Width = 450
         '
+        'pnlMain
+        '
+        Me.pnlMain.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.pnlMain.Controls.Add(Me.ListView1)
+        Me.pnlMain.Controls.Add(Me.btnEdit)
+        Me.pnlMain.Controls.Add(Me.btnAddNew)
+        Me.pnlMain.Location = New System.Drawing.Point(37, 86)
+        Me.pnlMain.Name = "pnlMain"
+        Me.pnlMain.Size = New System.Drawing.Size(944, 418)
+        Me.pnlMain.TabIndex = 47
+        '
         'System_User
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.Controls.Add(Me.gbxAddEdit)
-        Me.Controls.Add(Me.text1)
         Me.Controls.Add(Me.btnClose)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.pnlMain)
         Me.Name = "System_User"
         Me.Size = New System.Drawing.Size(1040, 519)
-        Me.pnlMain.ResumeLayout(False)
         Me.gbxAddEdit.ResumeLayout(False)
         Me.gbxAddEdit.PerformLayout()
+        Me.pnlMain.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents btnClose As System.Windows.Forms.Button
-    Friend WithEvents pnlMain As System.Windows.Forms.Panel
-    Friend WithEvents btnEdit As System.Windows.Forms.Button
-    Friend WithEvents btnAddNew As System.Windows.Forms.Button
-    Friend WithEvents gbxAddEdit As System.Windows.Forms.GroupBox
-    Friend WithEvents cmbUtype As System.Windows.Forms.ComboBox
-    Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents Label5 As System.Windows.Forms.Label
-    Friend WithEvents txtPassword As System.Windows.Forms.TextBox
     Friend WithEvents txtusername As System.Windows.Forms.TextBox
-    Friend WithEvents btnCancel As System.Windows.Forms.Button
+    Friend WithEvents txtPassword As System.Windows.Forms.TextBox
+    Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents cmbUtype As System.Windows.Forms.ComboBox
     Friend WithEvents btnSave As System.Windows.Forms.Button
-    Friend WithEvents text1 As System.Windows.Forms.TextBox
-    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents btnCancel As System.Windows.Forms.Button
     Friend WithEvents txtUid As System.Windows.Forms.TextBox
+    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents gbxAddEdit As System.Windows.Forms.GroupBox
+    Friend WithEvents btnAddNew As System.Windows.Forms.Button
+    Friend WithEvents btnEdit As System.Windows.Forms.Button
     Friend WithEvents ListView1 As System.Windows.Forms.ListView
     Friend WithEvents ColumnHeader5 As System.Windows.Forms.ColumnHeader
     Friend WithEvents ColumnHeader6 As System.Windows.Forms.ColumnHeader
     Friend WithEvents ColumnHeader7 As System.Windows.Forms.ColumnHeader
     Friend WithEvents ColumnHeader8 As System.Windows.Forms.ColumnHeader
+    Friend WithEvents pnlMain As System.Windows.Forms.Panel
 
 End Class

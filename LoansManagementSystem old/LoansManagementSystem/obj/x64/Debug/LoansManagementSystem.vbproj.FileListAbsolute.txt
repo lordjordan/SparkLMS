@@ -1,0 +1,13 @@
+C:\Users\JORDAN\Desktop\LoansManagementSystem\LoansManagementSystem\bin\x64\Debug\LoansManagementSystem.exe.config
+C:\Users\JORDAN\Desktop\LoansManagementSystem\LoansManagementSystem\obj\x64\Debug\LoansManagementSystem.vbprojResolveAssemblyReference.cache
+C:\Users\JORDAN\Desktop\LoansManagementSystem\LoansManagementSystem\obj\x64\Debug\LoansManagementSystem.frmLogin.resources
+C:\Users\JORDAN\Desktop\LoansManagementSystem\LoansManagementSystem\obj\x64\Debug\LoansManagementSystem.frmMainPanel.resources
+C:\Users\JORDAN\Desktop\LoansManagementSystem\LoansManagementSystem\obj\x64\Debug\LoansManagementSystem.Resources.resources
+C:\Users\JORDAN\Desktop\LoansManagementSystem\LoansManagementSystem\obj\x64\Debug\LoansManagementSystem.Attachments.resources
+C:\Users\JORDAN\Desktop\LoansManagementSystem\LoansManagementSystem\obj\x64\Debug\LoansManagementSystem.Branches.resources
+C:\Users\JORDAN\Desktop\LoansManagementSystem\LoansManagementSystem\obj\x64\Debug\LoansManagementSystem.Clients.resources
+C:\Users\JORDAN\Desktop\LoansManagementSystem\LoansManagementSystem\obj\x64\Debug\LoansManagementSystem.Collectibles.resources
+C:\Users\JORDAN\Desktop\LoansManagementSystem\LoansManagementSystem\obj\x64\Debug\LoansManagementSystem.Loans.resources
+C:\Users\JORDAN\Desktop\LoansManagementSystem\LoansManagementSystem\obj\x64\Debug\LoansManagementSystem.MainMenu.resources
+C:\Users\JORDAN\Desktop\LoansManagementSystem\LoansManagementSystem\obj\x64\Debug\LoansManagementSystem.System_User.resources
+C:\Users\JORDAN\Desktop\LoansManagementSystem\LoansManagementSystem\obj\x64\Debug\LoansManagementSystem.vbproj.GenerateResource.Cache

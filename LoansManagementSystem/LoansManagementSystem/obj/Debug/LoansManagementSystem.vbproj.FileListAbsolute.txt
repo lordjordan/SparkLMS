@@ -22,7 +22,6 @@ C:\Users\JORDAN\Desktop\LoansManagementSystem\LoansManagementSystem\obj\Debug\Lo
 C:\Users\JORDAN\Desktop\LoansManagementSystem\LoansManagementSystem\obj\Debug\LoansManagementSystem.Clients.resources
 C:\Users\JORDAN\Desktop\LoansManagementSystem\LoansManagementSystem\obj\Debug\LoansManagementSystem.MainMenu.resources
 C:\Users\JORDAN\Desktop\LoansManagementSystem\LoansManagementSystem\obj\Debug\LoansManagementSystem.vbproj.GenerateResource.Cache
-C:\Users\JORDAN\Desktop\LoansManagementSystem\LoansManagementSystem\obj\Debug\LoansManagementSystem.Collectibles.resources
 C:\Users\JORDAN\Desktop\LoansManagementSystem\LoansManagementSystem\obj\Debug\LoansManagementSystem.System_User.resources
 C:\Users\JORDAN\Desktop\LoansManagementSystem\LoansManagementSystem\bin\Debug\System.Data.SQLite.DLL
 C:\Users\JORDAN\Desktop\LoansManagementSystem\LoansManagementSystem\obj\Debug\LoansManagementSystem.vbprojResolveAssemblyReference.cache
@@ -32,27 +31,4 @@ C:\Users\JORDAN\Desktop\LoansManagementSystem\LoansManagementSystem\obj\Debug\Lo
 C:\Users\JORDAN\Desktop\LoansManagementSystem\LoansManagementSystem\obj\Debug\LoansManagementSystem.frmClientRequirement.resources
 C:\Users\JORDAN\Desktop\LoansManagementSystem\LoansManagementSystem\obj\Debug\LoansManagementSystem.frmLogin.resources
 C:\Users\JORDAN\Desktop\LoansManagementSystem\LoansManagementSystem\bin\Debug\MySql.Fabric.Plugin.dll
-G:\TRABAHO\temp SGTSI\LoansManagementSystem\LoansManagementSystem\bin\Debug\LoansManagementSystem.exe.config
-G:\TRABAHO\temp SGTSI\LoansManagementSystem\LoansManagementSystem\obj\Debug\LoansManagementSystem.exe
-G:\TRABAHO\temp SGTSI\LoansManagementSystem\LoansManagementSystem\obj\Debug\LoansManagementSystem.xml
-G:\TRABAHO\temp SGTSI\LoansManagementSystem\LoansManagementSystem\obj\Debug\LoansManagementSystem.pdb
-C:\Users\hp\Documents\GitHub\SparkLMS\LoansManagementSystem\LoansManagementSystem\bin\Debug\LoansManagementSystem.exe.config
-C:\Users\hp\Documents\GitHub\SparkLMS\LoansManagementSystem\LoansManagementSystem\obj\Debug\LoansManagementSystem.exe
-C:\Users\hp\Documents\GitHub\SparkLMS\LoansManagementSystem\LoansManagementSystem\obj\Debug\LoansManagementSystem.xml
-C:\Users\hp\Documents\GitHub\SparkLMS\LoansManagementSystem\LoansManagementSystem\obj\Debug\LoansManagementSystem.pdb
-C:\Users\hp\Documents\GitHub\SparkLMS\LoansManagementSystem\LoansManagementSystem\bin\Debug\LoansManagementSystem.exe
-C:\Users\hp\Documents\GitHub\SparkLMS\LoansManagementSystem\LoansManagementSystem\bin\Debug\LoansManagementSystem.pdb
-C:\Users\hp\Documents\GitHub\SparkLMS\LoansManagementSystem\LoansManagementSystem\bin\Debug\LoansManagementSystem.xml
-C:\Users\hp\Documents\GitHub\SparkLMS\LoansManagementSystem\LoansManagementSystem\obj\Debug\LoansManagementSystem.vbprojResolveAssemblyReference.cache
-C:\Users\hp\Documents\GitHub\SparkLMS\LoansManagementSystem\LoansManagementSystem\obj\Debug\LoansManagementSystem.frmClientRequirement.resources
-C:\Users\hp\Documents\GitHub\SparkLMS\LoansManagementSystem\LoansManagementSystem\obj\Debug\LoansManagementSystem.frmMainPanel.resources
-C:\Users\hp\Documents\GitHub\SparkLMS\LoansManagementSystem\LoansManagementSystem\obj\Debug\LoansManagementSystem.frmLogin.resources
-C:\Users\hp\Documents\GitHub\SparkLMS\LoansManagementSystem\LoansManagementSystem\obj\Debug\LoansManagementSystem.Resources.resources
-C:\Users\hp\Documents\GitHub\SparkLMS\LoansManagementSystem\LoansManagementSystem\obj\Debug\LoansManagementSystem.Attachments.resources
-C:\Users\hp\Documents\GitHub\SparkLMS\LoansManagementSystem\LoansManagementSystem\obj\Debug\LoansManagementSystem.Branches.resources
-C:\Users\hp\Documents\GitHub\SparkLMS\LoansManagementSystem\LoansManagementSystem\obj\Debug\LoansManagementSystem.Clients.resources
-C:\Users\hp\Documents\GitHub\SparkLMS\LoansManagementSystem\LoansManagementSystem\obj\Debug\LoansManagementSystem.Collectibles.resources
-C:\Users\hp\Documents\GitHub\SparkLMS\LoansManagementSystem\LoansManagementSystem\obj\Debug\LoansManagementSystem.Loans.resources
-C:\Users\hp\Documents\GitHub\SparkLMS\LoansManagementSystem\LoansManagementSystem\obj\Debug\LoansManagementSystem.MainMenu.resources
-C:\Users\hp\Documents\GitHub\SparkLMS\LoansManagementSystem\LoansManagementSystem\obj\Debug\LoansManagementSystem.System_User.resources
-C:\Users\hp\Documents\GitHub\SparkLMS\LoansManagementSystem\LoansManagementSystem\obj\Debug\LoansManagementSystem.vbproj.GenerateResource.Cache
+C:\Users\JORDAN\Desktop\LoansManagementSystem\LoansManagementSystem\obj\Debug\LoansManagementSystem.frmCollectibles.resources

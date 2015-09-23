@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Collectibles
+Partial Class frmCollectibles
     Inherits System.Windows.Forms.UserControl
 
     'UserControl overrides dispose to clean up the component list.
@@ -25,10 +25,12 @@ Partial Class Collectibles
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnClose = New System.Windows.Forms.Button()
         Me.pnlMain = New System.Windows.Forms.Panel()
+        Me.Print = New System.Windows.Forms.Button()
+        Me.Process = New System.Windows.Forms.Button()
         Me.advsearch = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Button4 = New System.Windows.Forms.Button()
+        Me.txtSearchCollectibles = New System.Windows.Forms.TextBox()
+        Me.btnSearch = New System.Windows.Forms.Button()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.ListView1 = New System.Windows.Forms.ListView()
         Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
@@ -51,8 +53,6 @@ Partial Class Collectibles
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.btnCancel = New System.Windows.Forms.Button()
-        Me.Print = New System.Windows.Forms.Button()
-        Me.Process = New System.Windows.Forms.Button()
         Me.pnlMain.SuspendLayout()
         Me.gbxAdvanceSearch.SuspendLayout()
         Me.SuspendLayout()
@@ -90,14 +90,46 @@ Partial Class Collectibles
         Me.pnlMain.Controls.Add(Me.Process)
         Me.pnlMain.Controls.Add(Me.advsearch)
         Me.pnlMain.Controls.Add(Me.Label9)
-        Me.pnlMain.Controls.Add(Me.TextBox1)
-        Me.pnlMain.Controls.Add(Me.Button4)
+        Me.pnlMain.Controls.Add(Me.txtSearchCollectibles)
+        Me.pnlMain.Controls.Add(Me.btnSearch)
         Me.pnlMain.Controls.Add(Me.Label7)
         Me.pnlMain.Controls.Add(Me.ListView1)
-        Me.pnlMain.Location = New System.Drawing.Point(32, 104)
+        Me.pnlMain.Location = New System.Drawing.Point(32, 94)
         Me.pnlMain.Name = "pnlMain"
         Me.pnlMain.Size = New System.Drawing.Size(866, 553)
         Me.pnlMain.TabIndex = 48
+        '
+        'Print
+        '
+        Me.Print.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Print.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.Print.FlatAppearance.BorderSize = 0
+        Me.Print.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Print.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Print.ForeColor = System.Drawing.Color.White
+        Me.Print.Location = New System.Drawing.Point(147, 463)
+        Me.Print.Name = "Print"
+        Me.Print.Size = New System.Drawing.Size(108, 60)
+        Me.Print.TabIndex = 77
+        Me.Print.Text = "Print"
+        Me.Print.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.Print.UseVisualStyleBackColor = False
+        '
+        'Process
+        '
+        Me.Process.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Process.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.Process.FlatAppearance.BorderSize = 0
+        Me.Process.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Process.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Process.ForeColor = System.Drawing.Color.White
+        Me.Process.Location = New System.Drawing.Point(33, 463)
+        Me.Process.Name = "Process"
+        Me.Process.Size = New System.Drawing.Size(108, 60)
+        Me.Process.TabIndex = 76
+        Me.Process.Text = "Process"
+        Me.Process.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.Process.UseVisualStyleBackColor = False
         '
         'advsearch
         '
@@ -121,24 +153,24 @@ Partial Class Collectibles
         Me.Label9.Text = "Search"
         Me.Label9.TextAlign = System.Drawing.ContentAlignment.TopRight
         '
-        'TextBox1
+        'txtSearchCollectibles
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(28, 53)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(161, 22)
-        Me.TextBox1.TabIndex = 73
+        Me.txtSearchCollectibles.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtSearchCollectibles.Location = New System.Drawing.Point(28, 53)
+        Me.txtSearchCollectibles.Name = "txtSearchCollectibles"
+        Me.txtSearchCollectibles.Size = New System.Drawing.Size(161, 22)
+        Me.txtSearchCollectibles.TabIndex = 73
         '
-        'Button4
+        'btnSearch
         '
-        Me.Button4.BackColor = System.Drawing.SystemColors.ButtonFace
-        Me.Button4.ForeColor = System.Drawing.Color.OrangeRed
-        Me.Button4.Location = New System.Drawing.Point(195, 37)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(114, 38)
-        Me.Button4.TabIndex = 72
-        Me.Button4.Text = "Search"
-        Me.Button4.UseVisualStyleBackColor = False
+        Me.btnSearch.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.btnSearch.ForeColor = System.Drawing.Color.OrangeRed
+        Me.btnSearch.Location = New System.Drawing.Point(195, 37)
+        Me.btnSearch.Name = "btnSearch"
+        Me.btnSearch.Size = New System.Drawing.Size(114, 38)
+        Me.btnSearch.TabIndex = 72
+        Me.btnSearch.Text = "Search"
+        Me.btnSearch.UseVisualStyleBackColor = False
         '
         'Label7
         '
@@ -351,48 +383,16 @@ Partial Class Collectibles
         Me.btnCancel.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.btnCancel.UseVisualStyleBackColor = False
         '
-        'Print
-        '
-        Me.Print.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.Print.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.Print.FlatAppearance.BorderSize = 0
-        Me.Print.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Print.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Print.ForeColor = System.Drawing.Color.White
-        Me.Print.Location = New System.Drawing.Point(147, 463)
-        Me.Print.Name = "Print"
-        Me.Print.Size = New System.Drawing.Size(108, 60)
-        Me.Print.TabIndex = 77
-        Me.Print.Text = "Print"
-        Me.Print.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.Print.UseVisualStyleBackColor = False
-        '
-        'Process
-        '
-        Me.Process.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.Process.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.Process.FlatAppearance.BorderSize = 0
-        Me.Process.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Process.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Process.ForeColor = System.Drawing.Color.White
-        Me.Process.Location = New System.Drawing.Point(33, 463)
-        Me.Process.Name = "Process"
-        Me.Process.Size = New System.Drawing.Size(108, 60)
-        Me.Process.TabIndex = 76
-        Me.Process.Text = "Process"
-        Me.Process.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.Process.UseVisualStyleBackColor = False
-        '
-        'Collectibles
+        'frmCollectibles
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
+        Me.Controls.Add(Me.gbxAdvanceSearch)
         Me.Controls.Add(Me.pnlMain)
         Me.Controls.Add(Me.btnClose)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.gbxAdvanceSearch)
-        Me.Name = "Collectibles"
+        Me.Name = "frmCollectibles"
         Me.Size = New System.Drawing.Size(940, 660)
         Me.pnlMain.ResumeLayout(False)
         Me.pnlMain.PerformLayout()
@@ -422,8 +422,8 @@ Partial Class Collectibles
     Friend WithEvents btnCancel As System.Windows.Forms.Button
     Friend WithEvents advsearch As System.Windows.Forms.Label
     Friend WithEvents Label9 As System.Windows.Forms.Label
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
-    Friend WithEvents Button4 As System.Windows.Forms.Button
+    Friend WithEvents txtSearchCollectibles As System.Windows.Forms.TextBox
+    Friend WithEvents btnSearch As System.Windows.Forms.Button
     Friend WithEvents ColumnHeader3 As System.Windows.Forms.ColumnHeader
     Friend WithEvents ColumnHeader4 As System.Windows.Forms.ColumnHeader
     Friend WithEvents ColumnHeader5 As System.Windows.Forms.ColumnHeader

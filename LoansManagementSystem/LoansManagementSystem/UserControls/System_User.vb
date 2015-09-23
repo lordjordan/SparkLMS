@@ -2,7 +2,7 @@
 Public Class System_User
     Dim itm As ListViewItem
     '### Change the "Data Source" path to point to our own LMS Database
-    Dim db As New DBHelper("Data Source=C:\LMS.s3db; Version=3;")
+    Dim db As New DBHelper("Data Source=" & My.Settings.ConString & "; Version=3;")
     Dim dr As SQLite.SQLiteDataReader
     Dim cmd As SQLite.SQLiteCommand
 

@@ -24,14 +24,14 @@ Partial Class Attachments
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.pnlMain = New System.Windows.Forms.Panel()
+        Me.btnPreview = New System.Windows.Forms.Button()
+        Me.btnSearchAttachment = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.btnEdit = New System.Windows.Forms.Button()
         Me.btnAddNew = New System.Windows.Forms.Button()
         Me.ListView1 = New System.Windows.Forms.ListView()
-        Me.btnSearchAttachment = New System.Windows.Forms.Button()
-        Me.btnPreview = New System.Windows.Forms.Button()
         Me.btnClose = New System.Windows.Forms.Button()
         Me.pnlMain.SuspendLayout()
         Me.SuspendLayout()
@@ -65,6 +65,34 @@ Partial Class Attachments
         Me.pnlMain.Name = "pnlMain"
         Me.pnlMain.Size = New System.Drawing.Size(1107, 720)
         Me.pnlMain.TabIndex = 51
+        '
+        'btnPreview
+        '
+        Me.btnPreview.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btnPreview.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.btnPreview.FlatAppearance.BorderSize = 0
+        Me.btnPreview.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnPreview.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnPreview.ForeColor = System.Drawing.Color.White
+        Me.btnPreview.Location = New System.Drawing.Point(250, 643)
+        Me.btnPreview.Name = "btnPreview"
+        Me.btnPreview.Size = New System.Drawing.Size(108, 60)
+        Me.btnPreview.TabIndex = 60
+        Me.btnPreview.Text = "Preview"
+        Me.btnPreview.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.btnPreview.UseVisualStyleBackColor = False
+        '
+        'btnSearchAttachment
+        '
+        Me.btnSearchAttachment.BackColor = System.Drawing.Color.Gray
+        Me.btnSearchAttachment.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSearchAttachment.ForeColor = System.Drawing.Color.White
+        Me.btnSearchAttachment.Location = New System.Drawing.Point(292, 17)
+        Me.btnSearchAttachment.Name = "btnSearchAttachment"
+        Me.btnSearchAttachment.Size = New System.Drawing.Size(61, 24)
+        Me.btnSearchAttachment.TabIndex = 59
+        Me.btnSearchAttachment.Text = "Search"
+        Me.btnSearchAttachment.UseVisualStyleBackColor = False
         '
         'Label3
         '
@@ -143,34 +171,6 @@ Partial Class Attachments
         Me.ListView1.Size = New System.Drawing.Size(1061, 590)
         Me.ListView1.TabIndex = 30
         Me.ListView1.UseCompatibleStateImageBehavior = False
-        '
-        'btnSearchAttachment
-        '
-        Me.btnSearchAttachment.BackColor = System.Drawing.Color.Gray
-        Me.btnSearchAttachment.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSearchAttachment.ForeColor = System.Drawing.Color.White
-        Me.btnSearchAttachment.Location = New System.Drawing.Point(292, 17)
-        Me.btnSearchAttachment.Name = "btnSearchAttachment"
-        Me.btnSearchAttachment.Size = New System.Drawing.Size(61, 24)
-        Me.btnSearchAttachment.TabIndex = 59
-        Me.btnSearchAttachment.Text = "Search"
-        Me.btnSearchAttachment.UseVisualStyleBackColor = False
-        '
-        'btnPreview
-        '
-        Me.btnPreview.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnPreview.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.btnPreview.FlatAppearance.BorderSize = 0
-        Me.btnPreview.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnPreview.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnPreview.ForeColor = System.Drawing.Color.White
-        Me.btnPreview.Location = New System.Drawing.Point(250, 643)
-        Me.btnPreview.Name = "btnPreview"
-        Me.btnPreview.Size = New System.Drawing.Size(108, 60)
-        Me.btnPreview.TabIndex = 60
-        Me.btnPreview.Text = "Preview"
-        Me.btnPreview.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btnPreview.UseVisualStyleBackColor = False
         '
         'btnClose
         '

@@ -1,11 +1,11 @@
 ﻿Public Class Loans
-    Public principal, monthlyRate, totalPaymentBiMonth As Double
+    Public principal, monthlyRate, totalPaymentBiMonth, amount, oBal As Double
     Public biMonInterest As Decimal
     Public interest As Double
     Public bilangNGhulog, daysNgmonth, interestRate As Integer
     Public itm As ListViewItem
     Public dateStart, dateEnd As DateTime
-    Dim db As New DBHelper("Data Source=C:\LMS.s3db; Version=3;")
+    Dim db As New DBHelper("Data Source=" & My.Settings.ConString & "; Version=3;")
     Dim dr As SQLite.SQLiteDataReader
 
     Private Sub showAddEdit(mode As Boolean)
@@ -17,11 +17,7 @@
         gbxShowClient.Visible = mode
         gbxAddEdit.Enabled = Not mode
     End Sub
-    Private Sub showAddCoMaker(mode As Boolean)
-        gbxShowCoMakers.BringToFront()
-        gbxShowCoMakers.Visible = mode
-        gbxAddEdit.Enabled = Not mode
-    End Sub
+
     Private Sub showLoanInfo(mode As Boolean)
         gbxLoanInfo.BringToFront()
         gbxLoanInfo.Visible = mode
@@ -38,7 +34,6 @@
         lblClientID.Text = ""
         lblFullname.Text = ""
         lblEmployeeNo.Text = ""
-        lblLoanID.Text = ""
         lblDateHired.Text = ""
         dtStart.Value = Date.Now
         dtEnd.Value = Date.Now
@@ -53,17 +48,13 @@
     End Sub
 
 
-    Private Sub btnAddNewCm_Click(sender As Object, e As EventArgs)
-        showAddCoMaker(True)
-    End Sub
+
     Private Sub btnAddNew_Click(sender As Object, e As EventArgs) Handles btnAddNew.Click
         gbxAddEdit.Text = "Add new loan application"
         showAddEdit(True)
 
     End Sub
-    Private Sub btnCancelAddCoMaker_Click(sender As Object, e As EventArgs) Handles btnCancelAddCoMaker.Click
-        showAddCoMaker(False)
-    End Sub
+   
     Private Sub chkboxRestructure_CheckedChanged(sender As Object, e As EventArgs) Handles chkboxRestructure.CheckedChanged
         If chkboxRestructure.Checked = False Then
             chkboxRestructure.Text = "NO"
@@ -107,8 +98,8 @@
 
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
         'add client lang, update pa
-        'Dim totalPayment As Double
-        'Dim creditLimit As Double
+        Dim totalPayment, creditLimit, totalPrin As Double
+
         Dim radioValue As Integer
         If radApproved.Checked = True Then
             radioValue = 1
@@ -157,36 +148,46 @@
         'validation collect all payment of active loan tas ibangga sa credit limit nya
         'pwede i module
         ''Try
-        'dr = db.ExecuteReader("SELECT credit_limit FROM tbl_clients WHERE client_id = " & lblClientID.Text)
-        'If dr.HasRows Then
-        '    creditLimit = CDbl(dr.Item("credit_limit").ToString)
-        'End If
+        dr = db.ExecuteReader("SELECT credit_limit FROM tbl_clients WHERE client_id = " & lblClientID.Text)
+        If dr.HasRows Then
+            creditLimit = CDbl(dr.Item("credit_limit").ToString)
+        End If
 
-        ''Catch ex As Exception
-        ''    MsgBox(ex.ToString)
-        ''End Try
+        'Catch ex As Exception
+        '    MsgBox(ex.ToString)
+        'End Try
+        dr = db.ExecuteReader("SELECT SUM(principal) as 'total' FROM tbl_loans WHERE client_id =" & lblClientID.Text _
+                              & " AND loan_status = 1")
 
-        'dr = db.ExecuteReader("SELECT SUM(amount) as 'total' FROM tbl_payments INNER JOIN tbl_loans" & _
-        '                      " ON tbl_payments.loan_id = tbl_loans.loan_id WHERE tbl_loans.client_id= " & _
-        '                       lblClientID.Text & " AND tbl_loans.loan_status = 1")
-        'If dr.HasRows Then
-        '    'MsgBox("Please attach requirements", vbExclamation + vbOKOnly, "No requirements")
-        '    'Exit Sub
-        '    If dr.Item("total").ToString <> "" Then
-        '        'base sa totalPayment
+        If dr.HasRows Then
+            If dr.Item("total").ToString <> "" Then
+                totalPrin = CDbl(dr.Item("total").ToString) + CDbl(txtPrincipal.Text)
+            Else
+                totalPrin = 0
+            End If
+        End If
 
-        '        totalPayment = CDbl(dr.Item("total").ToString)
 
-        '        If CDbl(txtPrincipal.Text) > creditLimit Then
-        '            MsgBox("The amount of principal is greater than the Credit limit issued for this client.\n Available Pricipal: " & totalPayment, vbExclamation + vbOKOnly, "Principal not available.")
-        '            Exit Sub
-        '        ElseIf CDbl(txtPrincipal.Text) > totalPayment Then
-        '            MsgBox("The amount of principal is greater than the Available Principal for this client.\n Available Pricipal: " & totalPayment, vbExclamation + vbOKOnly, "Principal not available.")
-        '            Exit Sub
-        '        End If
-        '    End If
-        'End If
+        dr = db.ExecuteReader("SELECT SUM(amount) as 'total' FROM tbl_payments INNER JOIN tbl_loans" & _
+                              " ON tbl_payments.loan_id = tbl_loans.loan_id WHERE tbl_loans.client_id= " & _
+                               lblClientID.Text & " AND tbl_loans.loan_status = 1")
+        If dr.HasRows Then
+            If dr.Item("total").ToString <> "" Then
+                'base sa totalPayment
 
+                totalPayment = CDbl(dr.Item("total").ToString)
+                '
+            Else
+                totalPayment = 0
+            End If
+        End If
+        If CDbl(txtPrincipal.Text) > creditLimit Then
+            MsgBox("The amount of principal is greater than the Credit limit issued for this client.\n Available Pricipal: " & totalPayment, vbExclamation + vbOKOnly, "Principal not available.")
+            Exit Sub
+        ElseIf CDbl(txtPrincipal.Text) - totalPayment > creditLimit Then 'eto pa finalization
+            MsgBox("The amount of principal is greater than the Available Principal for this client.\n Available Pricipal: " & totalPayment, vbExclamation + vbOKOnly, "Principal not available.")
+            Exit Sub
+        End If
 
         'Catch ex As Exception
         '    MsgBox(ex.ToString)
@@ -204,7 +205,7 @@
         data.Add("date_start", Format(dtStart.Value, "MM/dd/yyyy"))
         data.Add("date_end", Format(dtEnd.Value, "MM/dd/yyyy"))
         data.Add("interest_percentage", cbxInterest.Text)
-        data.Add("date_enrolled", Format(Now, "dd/MM/yyyy"))
+        data.Add("date_enrolled", Format(Now, "MM/dd/yyyy"))
         data.Add("loan_remarks", txtLoanRemarks.Text)
 
         'pwede mag if condition
@@ -224,9 +225,7 @@
         frmClientRequirement.ShowDialog()
     End Sub
 
-    Private Sub linkCoMakers_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles linkCoMakers.LinkClicked
-        showAddCoMaker(True)
-    End Sub
+
     Private Sub btnFind_Click(sender As Object, e As EventArgs) Handles btnFind.Click
         lvClientList.Items.Clear()
         showClient(True)
@@ -296,8 +295,62 @@
                 e.Handled = True
             End If
         End If
+
     End Sub
     Private Sub dtStart_ValueChanged(sender As Object, e As EventArgs) Handles dtStart.ValueChanged
+        'terms * 2 = bilang ng hulog
+        dateStart = dtStart.Value
+        daysNgmonth = DateTime.DaysInMonth(dateStart.Year, dateStart.Month)
+        'principal/bilangNghulog  = bayad w/out interest /Monthly rate
+        'principal*interestRate = totalPaymentPerMonth
+        'monthlyrate/2 =bi-Monthly Interest
+        'principal = CDbl(txtPrincipal.Text)
+        'monthlyRate = principal / bilangNGhulog
+        'biMonInterest = (CInt(cbxInterest.Text) / 100) / 2
+        'interest = principal * biMonInterest
+        'totalPaymentBiMonth = monthlyRate + interest
+        'lblAmort.Text = totalPaymentBiMonth
+
+        bilangNGhulog = 0
+        bilangNGhulog = CInt(txtTerms.Text) * 2
+
+        Do Until bilangNGhulog = 0
+
+            Select Case daysNgmonth
+
+                Case 28
+                    If dateStart.Day < 13 Then
+                        dateStart = dateStart.AddDays(+15)
+                    ElseIf dateStart.Day = 28 Then
+                        dateStart = dateStart.AddDays(+15)
+                        'Continue Do
+                    Else
+                        dateStart = dateStart.AddDays(+13)
+                    End If
+                Case 29
+                    If dateStart.Day < 13 Then
+                        dateStart = dateStart.AddDays(+15)
+                    ElseIf dateStart.Day = 29 Then
+                        dateStart = dateStart.AddDays(+15)
+                        'Continue Do
+                    Else
+                        dateStart = dateStart.AddDays(+14)
+                    End If
+                Case 31
+                    If dateStart.Day < 16 Then
+                        dateStart = dateStart.AddDays(+15)
+                    Else
+                        dateStart = dateStart.AddDays(+16)
+                    End If
+                Case Else
+                    dateStart = dateStart.AddDays(+15)
+            End Select
+            daysNgmonth = DateTime.DaysInMonth(dateStart.Year, dateStart.Month)
+            bilangNGhulog += 1
+            MsgBox(dateStart & " " & bilangNGhulog & "" & dtEnd.Value)
+            bilangNGhulog -= 1
+        Loop
+        dtEnd.Value = dateStart
 
     End Sub
     Public Sub dtEnd_ValueChanged(sender As Object, e As EventArgs) Handles dtEnd.ValueChanged
@@ -400,7 +453,7 @@
 
  
 
-    Private Sub gbxShowCoMakers_Enter(sender As Object, e As EventArgs) Handles gbxShowCoMakers.Enter
+    Private Sub gbxShowCoMakers_Enter(sender As Object, e As EventArgs)
 
     End Sub
 
@@ -553,37 +606,94 @@
         interest = principal * biMonInterest
         totalPaymentBiMonth = monthlyRate + interest
         lblOverallTotInfo.Text = totalPaymentBiMonth * bilangNGhulog
-        showLoanInfo(True)
-        Exit Sub
+
         dr = db.ExecuteReader("SELECT * FROM tbl_payments WHERE loan_id= " & lblInfoLoanID.Text)
-
+        amount = 0
+        oBal = principal
         If dr.HasRows Then
-            
-
-
             Do While dr.Read
+                oBal = oBal - monthlyRate
                 itm = lvPayments.Items.Add(dr.Item("payment_id").ToString)
                 itm.SubItems.Add(Format(CDate(dr.Item("date_stamp").ToString), "MM/dd/yyyy"))
+                itm.SubItems.Add(oBal)
                 itm.SubItems.Add(monthlyRate)
                 itm.SubItems.Add(dr.Item("amortization").ToString)
                 itm.SubItems.Add(interest)
                 itm.SubItems.Add(totalPaymentBiMonth)
-                itm.SubItems.Add(Format(CDate(dr.Item("date_end").ToString), "MM/dd/yyyy"))
-                If dr.Item("application_status").ToString = 0 Then
-                    itm.SubItems.Add("In process")
-                    itm.SubItems.Add("N/A")
-                End If
+                itm.SubItems.Add(dr.Item("amount").ToString)
+                   
+                    amount = CDbl(dr.Item("amount").ToString) + amount
+
             Loop
+
         Else
             MsgBox("No payment history", MsgBoxStyle.Information, "LMS")
+
         End If
+        lblRembalInfo.Text = CDbl(lblOverallTotInfo.Text) - amount
         showLoanInfo(True)
     End Sub
     Private Sub btnLoanBack_Click(sender As Object, e As EventArgs) Handles btnLoanBack.Click
         showLoanInfo(False)
     End Sub
 
-    Private Sub lvLoanList_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lvLoanList.SelectedIndexChanged
 
+    Private Sub txtTerms_LostFocus(sender As Object, e As EventArgs) Handles txtTerms.LostFocus
+        If txtTerms.Text <> "" Then
+            dateStart = dtStart.Value
+            daysNgmonth = DateTime.DaysInMonth(dateStart.Year, dateStart.Month)
+            'principal/bilangNghulog  = bayad w/out interest /Monthly rate
+            'principal*interestRate = totalPaymentPerMonth
+            'monthlyrate/2 =bi-Monthly Interest
+            'principal = CDbl(txtPrincipal.Text)
+            'monthlyRate = principal / bilangNGhulog
+            'biMonInterest = (CInt(cbxInterest.Text) / 100) / 2
+            'interest = principal * biMonInterest
+            'totalPaymentBiMonth = monthlyRate + interest
+            'lblAmort.Text = totalPaymentBiMonth
+
+
+            bilangNGhulog = 0
+            bilangNGhulog = CInt(txtTerms.Text) * 2
+
+            Do Until bilangNGhulog = 0
+
+                Select Case daysNgmonth
+
+                    Case 28
+                        If dateStart.Day < 13 Then
+                            dateStart = dateStart.AddDays(+15)
+                        ElseIf dateStart.Day = 28 Then
+                            dateStart = dateStart.AddDays(+15)
+                            'Continue Do
+                        Else
+                            dateStart = dateStart.AddDays(+13)
+                        End If
+                    Case 29
+                        If dateStart.Day < 13 Then
+                            dateStart = dateStart.AddDays(+15)
+                        ElseIf dateStart.Day = 29 Then
+                            dateStart = dateStart.AddDays(+15)
+                            'Continue Do
+                        Else
+                            dateStart = dateStart.AddDays(+14)
+                        End If
+                    Case 31
+                        If dateStart.Day < 16 Then
+                            dateStart = dateStart.AddDays(+15)
+                        Else
+                            dateStart = dateStart.AddDays(+16)
+                        End If
+                    Case Else
+                        dateStart = dateStart.AddDays(+15)
+                End Select
+                daysNgmonth = DateTime.DaysInMonth(dateStart.Year, dateStart.Month)
+                bilangNGhulog += 1
+
+                bilangNGhulog -= 1
+            Loop
+            dtEnd.Value = dateStart
+        End If
     End Sub
+
 End Class

@@ -107,23 +107,23 @@
   <ItemGroup>
     <Compile Include="Controllers\MainPanelController.vb" />
     <Compile Include="DBHelper.vb" />
-    <Compile Include="Forms\frmClientRequirement.Designer.vb">
+    <Compile Include="Controllers\Forms\frmClientRequirement.Designer.vb">
       <DependentUpon>frmClientRequirement.vb</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmClientRequirement.vb">
+    <Compile Include="Controllers\Forms\frmClientRequirement.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmMainPanel.vb">
+    <Compile Include="Controllers\Forms\frmMainPanel.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmMainPanel.Designer.vb">
+    <Compile Include="Controllers\Forms\frmMainPanel.Designer.vb">
       <DependentUpon>frmMainPanel.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmLogin.Designer.vb">
+    <Compile Include="Controllers\Forms\frmLogin.Designer.vb">
       <DependentUpon>frmLogin.vb</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmLogin.vb">
+    <Compile Include="Controllers\Forms\frmLogin.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -185,13 +185,13 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Forms\frmClientRequirement.resx">
+    <EmbeddedResource Include="Controllers\Forms\frmClientRequirement.resx">
       <DependentUpon>frmClientRequirement.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmMainPanel.resx">
+    <EmbeddedResource Include="Controllers\Forms\frmMainPanel.resx">
       <DependentUpon>frmMainPanel.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmLogin.resx">
+    <EmbeddedResource Include="Controllers\Forms\frmLogin.resx">
       <DependentUpon>frmLogin.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
