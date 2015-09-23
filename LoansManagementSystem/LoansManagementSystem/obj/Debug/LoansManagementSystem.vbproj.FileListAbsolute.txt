@@ -1,0 +1,34 @@
+c:\users\hp\documents\visual studio 2013\Projects\LoansManagementSystem\LoansManagementSystem\bin\Debug\LoansManagementSystem.exe.config
+c:\users\hp\documents\visual studio 2013\Projects\LoansManagementSystem\LoansManagementSystem\bin\Debug\LoansManagementSystem.exe
+c:\users\hp\documents\visual studio 2013\Projects\LoansManagementSystem\LoansManagementSystem\bin\Debug\LoansManagementSystem.pdb
+c:\users\hp\documents\visual studio 2013\Projects\LoansManagementSystem\LoansManagementSystem\bin\Debug\LoansManagementSystem.xml
+c:\users\hp\documents\visual studio 2013\Projects\LoansManagementSystem\LoansManagementSystem\obj\Debug\LoansManagementSystem.frmMainPanel.resources
+c:\users\hp\documents\visual studio 2013\Projects\LoansManagementSystem\LoansManagementSystem\obj\Debug\LoansManagementSystem.Resources.resources
+c:\users\hp\documents\visual studio 2013\Projects\LoansManagementSystem\LoansManagementSystem\obj\Debug\LoansManagementSystem.vbproj.GenerateResource.Cache
+c:\users\hp\documents\visual studio 2013\Projects\LoansManagementSystem\LoansManagementSystem\obj\Debug\LoansManagementSystem.exe
+c:\users\hp\documents\visual studio 2013\Projects\LoansManagementSystem\LoansManagementSystem\obj\Debug\LoansManagementSystem.xml
+c:\users\hp\documents\visual studio 2013\Projects\LoansManagementSystem\LoansManagementSystem\obj\Debug\LoansManagementSystem.pdb
+c:\users\hp\documents\visual studio 2013\Projects\LoansManagementSystem\LoansManagementSystem\obj\Debug\LoansManagementSystem.Clients.resources
+c:\users\hp\documents\visual studio 2013\Projects\LoansManagementSystem\LoansManagementSystem\obj\Debug\LoansManagementSystem.MainMenu.resources
+C:\Users\JORDAN\Desktop\LoansManagementSystem\LoansManagementSystem\bin\Debug\LoansManagementSystem.exe.config
+C:\Users\JORDAN\Desktop\LoansManagementSystem\LoansManagementSystem\obj\Debug\LoansManagementSystem.exe
+C:\Users\JORDAN\Desktop\LoansManagementSystem\LoansManagementSystem\obj\Debug\LoansManagementSystem.xml
+C:\Users\JORDAN\Desktop\LoansManagementSystem\LoansManagementSystem\obj\Debug\LoansManagementSystem.pdb
+C:\Users\JORDAN\Desktop\LoansManagementSystem\LoansManagementSystem\bin\Debug\LoansManagementSystem.exe
+C:\Users\JORDAN\Desktop\LoansManagementSystem\LoansManagementSystem\bin\Debug\LoansManagementSystem.pdb
+C:\Users\JORDAN\Desktop\LoansManagementSystem\LoansManagementSystem\bin\Debug\LoansManagementSystem.xml
+C:\Users\JORDAN\Desktop\LoansManagementSystem\LoansManagementSystem\obj\Debug\LoansManagementSystem.frmMainPanel.resources
+C:\Users\JORDAN\Desktop\LoansManagementSystem\LoansManagementSystem\obj\Debug\LoansManagementSystem.Resources.resources
+C:\Users\JORDAN\Desktop\LoansManagementSystem\LoansManagementSystem\obj\Debug\LoansManagementSystem.Clients.resources
+C:\Users\JORDAN\Desktop\LoansManagementSystem\LoansManagementSystem\obj\Debug\LoansManagementSystem.MainMenu.resources
+C:\Users\JORDAN\Desktop\LoansManagementSystem\LoansManagementSystem\obj\Debug\LoansManagementSystem.vbproj.GenerateResource.Cache
+C:\Users\JORDAN\Desktop\LoansManagementSystem\LoansManagementSystem\obj\Debug\LoansManagementSystem.System_User.resources
+C:\Users\JORDAN\Desktop\LoansManagementSystem\LoansManagementSystem\bin\Debug\System.Data.SQLite.DLL
+C:\Users\JORDAN\Desktop\LoansManagementSystem\LoansManagementSystem\obj\Debug\LoansManagementSystem.vbprojResolveAssemblyReference.cache
+C:\Users\JORDAN\Desktop\LoansManagementSystem\LoansManagementSystem\obj\Debug\LoansManagementSystem.Attachments.resources
+C:\Users\JORDAN\Desktop\LoansManagementSystem\LoansManagementSystem\obj\Debug\LoansManagementSystem.Branches.resources
+C:\Users\JORDAN\Desktop\LoansManagementSystem\LoansManagementSystem\obj\Debug\LoansManagementSystem.Loans.resources
+C:\Users\JORDAN\Desktop\LoansManagementSystem\LoansManagementSystem\obj\Debug\LoansManagementSystem.frmClientRequirement.resources
+C:\Users\JORDAN\Desktop\LoansManagementSystem\LoansManagementSystem\obj\Debug\LoansManagementSystem.frmLogin.resources
+C:\Users\JORDAN\Desktop\LoansManagementSystem\LoansManagementSystem\bin\Debug\MySql.Fabric.Plugin.dll
+C:\Users\JORDAN\Desktop\LoansManagementSystem\LoansManagementSystem\obj\Debug\LoansManagementSystem.frmCollectibles.resources
