@@ -32,3 +32,7 @@ C:\Users\JORDAN\Desktop\LoansManagementSystem\LoansManagementSystem\obj\Debug\Lo
 C:\Users\JORDAN\Desktop\LoansManagementSystem\LoansManagementSystem\obj\Debug\LoansManagementSystem.frmLogin.resources
 C:\Users\JORDAN\Desktop\LoansManagementSystem\LoansManagementSystem\bin\Debug\MySql.Fabric.Plugin.dll
 C:\Users\JORDAN\Desktop\LoansManagementSystem\LoansManagementSystem\obj\Debug\LoansManagementSystem.frmCollectibles.resources
+C:\Users\hp\Source\Repos\SparkLMS\LoansManagementSystem\LoansManagementSystem\bin\Debug\LoansManagementSystem.exe.config
+C:\Users\hp\Source\Repos\SparkLMS\LoansManagementSystem\LoansManagementSystem\obj\Debug\LoansManagementSystem.exe
+C:\Users\hp\Source\Repos\SparkLMS\LoansManagementSystem\LoansManagementSystem\obj\Debug\LoansManagementSystem.xml
+C:\Users\hp\Source\Repos\SparkLMS\LoansManagementSystem\LoansManagementSystem\obj\Debug\LoansManagementSystem.pdb

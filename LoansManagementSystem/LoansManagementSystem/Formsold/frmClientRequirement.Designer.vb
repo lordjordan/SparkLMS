@@ -23,11 +23,12 @@ Partial Class frmClientRequirement
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
+        Me.gbxAddReq = New System.Windows.Forms.GroupBox()
         Me.btnBrowse = New System.Windows.Forms.Button()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Btn_Save = New System.Windows.Forms.Button()
-        Me.txt_remark = New System.Windows.Forms.TextBox()
         Me.Label19 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.txt_remark = New System.Windows.Forms.TextBox()
+        Me.Btn_Save = New System.Windows.Forms.Button()
         Me.Label27 = New System.Windows.Forms.Label()
         Me.ListView3 = New System.Windows.Forms.ListView()
         Me.ColumnHeader18 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
@@ -39,6 +40,7 @@ Partial Class frmClientRequirement
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
+        Me.gbxAddReq.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -51,11 +53,7 @@ Partial Class frmClientRequirement
         '
         'SplitContainer1.Panel1
         '
-        Me.SplitContainer1.Panel1.Controls.Add(Me.btnBrowse)
-        Me.SplitContainer1.Panel1.Controls.Add(Me.Label1)
-        Me.SplitContainer1.Panel1.Controls.Add(Me.Btn_Save)
-        Me.SplitContainer1.Panel1.Controls.Add(Me.txt_remark)
-        Me.SplitContainer1.Panel1.Controls.Add(Me.Label19)
+        Me.SplitContainer1.Panel1.Controls.Add(Me.gbxAddReq)
         Me.SplitContainer1.Panel1.Controls.Add(Me.Label27)
         Me.SplitContainer1.Panel1.Controls.Add(Me.ListView3)
         '
@@ -68,27 +66,58 @@ Partial Class frmClientRequirement
         Me.SplitContainer1.SplitterDistance = 478
         Me.SplitContainer1.TabIndex = 165
         '
+        'gbxAddReq
+        '
+        Me.gbxAddReq.Controls.Add(Me.btnBrowse)
+        Me.gbxAddReq.Controls.Add(Me.Label19)
+        Me.gbxAddReq.Controls.Add(Me.Label1)
+        Me.gbxAddReq.Controls.Add(Me.txt_remark)
+        Me.gbxAddReq.Controls.Add(Me.Btn_Save)
+        Me.gbxAddReq.Location = New System.Drawing.Point(9, 281)
+        Me.gbxAddReq.Name = "gbxAddReq"
+        Me.gbxAddReq.Size = New System.Drawing.Size(458, 233)
+        Me.gbxAddReq.TabIndex = 167
+        Me.gbxAddReq.TabStop = False
+        '
         'btnBrowse
         '
         Me.btnBrowse.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnBrowse.BackColor = System.Drawing.Color.Gray
         Me.btnBrowse.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBrowse.ForeColor = System.Drawing.Color.White
-        Me.btnBrowse.Location = New System.Drawing.Point(14, 306)
+        Me.btnBrowse.Location = New System.Drawing.Point(8, 49)
         Me.btnBrowse.Name = "btnBrowse"
         Me.btnBrowse.Size = New System.Drawing.Size(104, 36)
         Me.btnBrowse.TabIndex = 166
         Me.btnBrowse.Text = "Browse"
         Me.btnBrowse.UseVisualStyleBackColor = False
         '
+        'Label19
+        '
+        Me.Label19.AutoSize = True
+        Me.Label19.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label19.Location = New System.Drawing.Point(143, 93)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(69, 16)
+        Me.Label19.TabIndex = 137
+        Me.Label19.Text = "Remarks: "
+        '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(11, 290)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(14, 28)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(39, 13)
+        Me.Label1.Size = New System.Drawing.Size(0, 16)
         Me.Label1.TabIndex = 141
-        Me.Label1.Text = "Label1"
+        '
+        'txt_remark
+        '
+        Me.txt_remark.Location = New System.Drawing.Point(146, 112)
+        Me.txt_remark.Multiline = True
+        Me.txt_remark.Name = "txt_remark"
+        Me.txt_remark.Size = New System.Drawing.Size(306, 113)
+        Me.txt_remark.TabIndex = 138
         '
         'Btn_Save
         '
@@ -98,31 +127,13 @@ Partial Class frmClientRequirement
         Me.Btn_Save.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Btn_Save.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_Save.ForeColor = System.Drawing.Color.White
-        Me.Btn_Save.Location = New System.Drawing.Point(11, 372)
+        Me.Btn_Save.Location = New System.Drawing.Point(8, 112)
         Me.Btn_Save.Name = "Btn_Save"
         Me.Btn_Save.Size = New System.Drawing.Size(108, 60)
         Me.Btn_Save.TabIndex = 139
         Me.Btn_Save.Text = "Add"
         Me.Btn_Save.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.Btn_Save.UseVisualStyleBackColor = False
-        '
-        'txt_remark
-        '
-        Me.txt_remark.Location = New System.Drawing.Point(147, 372)
-        Me.txt_remark.Multiline = True
-        Me.txt_remark.Name = "txt_remark"
-        Me.txt_remark.Size = New System.Drawing.Size(314, 130)
-        Me.txt_remark.TabIndex = 138
-        '
-        'Label19
-        '
-        Me.Label19.AutoSize = True
-        Me.Label19.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label19.Location = New System.Drawing.Point(144, 346)
-        Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(62, 16)
-        Me.Label19.TabIndex = 137
-        Me.Label19.Text = "Remark: "
         '
         'Label27
         '
@@ -142,7 +153,7 @@ Partial Class frmClientRequirement
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.ListView3.AutoArrange = False
         Me.ListView3.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader18, Me.ColumnHeader20})
-        Me.ListView3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ListView3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ListView3.FullRowSelect = True
         Me.ListView3.GridLines = True
         Me.ListView3.Location = New System.Drawing.Point(9, 48)
@@ -154,7 +165,7 @@ Partial Class frmClientRequirement
         '
         'ColumnHeader18
         '
-        Me.ColumnHeader18.Text = "Name of Picture"
+        Me.ColumnHeader18.Text = "Image path"
         Me.ColumnHeader18.Width = 186
         '
         'ColumnHeader20
@@ -170,7 +181,7 @@ Partial Class frmClientRequirement
         Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PictureBox1.Location = New System.Drawing.Point(11, 48)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(542, 450)
+        Me.PictureBox1.Size = New System.Drawing.Size(542, 458)
         Me.PictureBox1.TabIndex = 165
         Me.PictureBox1.TabStop = False
         '
@@ -212,6 +223,8 @@ Partial Class frmClientRequirement
         Me.SplitContainer1.Panel2.PerformLayout()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.ResumeLayout(False)
+        Me.gbxAddReq.ResumeLayout(False)
+        Me.gbxAddReq.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -229,4 +242,5 @@ Partial Class frmClientRequirement
     Friend WithEvents txt_remark As System.Windows.Forms.TextBox
     Friend WithEvents Label19 As System.Windows.Forms.Label
     Friend WithEvents btnBrowse As System.Windows.Forms.Button
+    Friend WithEvents gbxAddReq As System.Windows.Forms.GroupBox
 End Class

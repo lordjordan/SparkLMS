@@ -56,7 +56,8 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("C:\Users\jonathan\Desktop\LoansManagementSystem\LMS.s3db")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("C:\Users\JORDAN\Desktop\LoansManagementSystem\LoansManagementSystem\bin\Debug\LMS"& _ 
+            ".s3db")>  _
         Public Property ConString() As String
             Get
                 Return CType(Me("ConString"),String)

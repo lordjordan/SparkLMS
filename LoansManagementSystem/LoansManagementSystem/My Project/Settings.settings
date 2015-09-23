@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="ConString" Type="System.String" Scope="User">
-      <Value Profile="(Default)">C:\Users\jonathan\Desktop\LoansManagementSystem\LMS.s3db</Value>
+      <Value Profile="(Default)">C:\Users\JORDAN\Desktop\LoansManagementSystem\LoansManagementSystem\bin\Debug\LMS.s3db</Value>
     </Setting>
   </Settings>
 </SettingsFile>
