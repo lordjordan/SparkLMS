@@ -33,7 +33,9 @@
    
 
 
-    Private Sub txtSearchClient_TextChanged(sender As Object, e As EventArgs) Handles txtSearchClient.TextChanged
+   
 
+    Private Sub btnClientBack_Click(sender As Object, e As EventArgs) Handles btnClientBack.Click
+        Me.Close()
     End Sub
 End Class
