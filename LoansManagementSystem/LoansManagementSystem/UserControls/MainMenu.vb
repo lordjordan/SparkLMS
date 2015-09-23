@@ -33,7 +33,7 @@
         showUSC(uscClients)
     End Sub
 
-    Private Sub btnBranches_Click(sender As Object, e As EventArgs) Handles btnBranches.Click
+    Private Sub btnBranches_Click(sender As Object, e As EventArgs) Handles btnBranches.Click, Button3.Click
         showUSC(uscBranches)
     End Sub
 
