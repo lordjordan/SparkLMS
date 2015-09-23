@@ -117,17 +117,25 @@
         Dim x As Integer
         x = 0
         Dim arrLoan As New ArrayList
-        dr = db.ExecuteReader("SELECT loan_id FROM tbl_loans " & _
-                              "WHERE loan_status=1")
+        dr = db.ExecuteReader("SELECT loan_id, last_name || ' ' || first_name || ' ' || middle_name  as name, principal, amortization, interest_percentage, date_start, date_end FROM tbl_loans " & _
+                             "INNER JOIN tbl_clients ON tbl_loans.client_id = tbl_clients.client_id WHERE loan_status=1")
 
         If dr.HasRows Then
 
             Do While dr.Read
                 arrLoan.Add(dr.Item("loan_id").ToString)
-                MsgBox(arrLoan(x))
+                'MsgBox(arrLoan(x))
+                itm = Me.ListView1.Items.Add(dr.Item("loan_id").ToString)
+                itm.SubItems.Add(Format(CDate(dr.Item("date_start").ToString), "MM-dd-yyyy"))
+                itm.SubItems.Add(dr.Item("name").ToString)
+                itm.SubItems.Add(dr.Item("principal").ToString)
+                itm.SubItems.Add(dr.Item("principal").ToString)
+                'itm.SubItems.Add(dr.Item("monthlyRate").ToString)
+                itm.SubItems.Add(dr.Item("interest_percentage").ToString)
+                'itm.SubItems.Add(dr.Item("totalPaymentBiMonth").ToString)
+
                 x += 1
             Loop
-
         End If
 
         Exit Sub
