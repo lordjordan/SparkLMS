@@ -70,7 +70,6 @@ Partial Class frmClientRequirement
         '
         'btnBrowse
         '
-        Me.btnBrowse.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnBrowse.BackColor = System.Drawing.Color.Gray
         Me.btnBrowse.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBrowse.ForeColor = System.Drawing.Color.White
@@ -92,7 +91,6 @@ Partial Class frmClientRequirement
         '
         'Btn_Save
         '
-        Me.Btn_Save.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.Btn_Save.BackColor = System.Drawing.SystemColors.ControlDarkDark
         Me.Btn_Save.FlatAppearance.BorderSize = 0
         Me.Btn_Save.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -108,7 +106,9 @@ Partial Class frmClientRequirement
         '
         'txt_remark
         '
-        Me.txt_remark.Location = New System.Drawing.Point(147, 372)
+        Me.txt_remark.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txt_remark.Location = New System.Drawing.Point(147, 376)
         Me.txt_remark.Multiline = True
         Me.txt_remark.Name = "txt_remark"
         Me.txt_remark.Size = New System.Drawing.Size(314, 130)
@@ -116,6 +116,7 @@ Partial Class frmClientRequirement
         '
         'Label19
         '
+        Me.Label19.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.Label19.AutoSize = True
         Me.Label19.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label19.Location = New System.Drawing.Point(144, 346)
