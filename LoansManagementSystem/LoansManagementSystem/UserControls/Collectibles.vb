@@ -136,9 +136,9 @@
                 itm.SubItems.Add(Format(CDate(dr.Item("date_start").ToString), "MM-dd-yyyy"))
                 itm.SubItems.Add(dr.Item("name").ToString)
                 itm.SubItems.Add(dr.Item("principal").ToString)
-                itm.SubItems.Add(dr.Item("amortization").ToString)
-                itm.SubItems.Add(interest01)
-                itm.SubItems.Add(totalPaymentBiMonth)
+                itm.SubItems.Add(Math.Round(monthlyRate, 2))
+                itm.SubItems.Add(Math.Round(interest01, 2))
+                itm.SubItems.Add(Math.Round(totalPaymentBiMonth, 2))
                 'itm.SubItems.Add(dr.Item("totalPaymentBiMonth").ToString)
 
                 x += 1
