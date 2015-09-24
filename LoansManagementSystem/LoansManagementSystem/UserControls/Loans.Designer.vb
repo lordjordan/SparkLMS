@@ -43,7 +43,7 @@ Partial Class Loans
         Me.btnSearchLoan = New System.Windows.Forms.Button()
         Me.gbxAddEdit = New System.Windows.Forms.GroupBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.Label36 = New System.Windows.Forms.Label()
+        Me.lblGrossAm = New System.Windows.Forms.Label()
         Me.Label35 = New System.Windows.Forms.Label()
         Me.Label19 = New System.Windows.Forms.Label()
         Me.lblAmort = New System.Windows.Forms.Label()
@@ -52,7 +52,7 @@ Partial Class Loans
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label24 = New System.Windows.Forms.Label()
+        Me.lblAmortWOInt = New System.Windows.Forms.Label()
         Me.cbxLoanStatus = New System.Windows.Forms.ComboBox()
         Me.txtTerms = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -344,7 +344,7 @@ Partial Class Loans
         Me.gbxAddEdit.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gbxAddEdit.Location = New System.Drawing.Point(276, 56)
         Me.gbxAddEdit.Name = "gbxAddEdit"
-        Me.gbxAddEdit.Size = New System.Drawing.Size(735, 625)
+        Me.gbxAddEdit.Size = New System.Drawing.Size(735, 612)
         Me.gbxAddEdit.TabIndex = 55
         Me.gbxAddEdit.TabStop = False
         Me.gbxAddEdit.Text = "Add new loan application"
@@ -352,7 +352,7 @@ Partial Class Loans
         '
         'GroupBox3
         '
-        Me.GroupBox3.Controls.Add(Me.Label36)
+        Me.GroupBox3.Controls.Add(Me.lblGrossAm)
         Me.GroupBox3.Controls.Add(Me.Label35)
         Me.GroupBox3.Controls.Add(Me.Label19)
         Me.GroupBox3.Controls.Add(Me.lblAmort)
@@ -361,23 +361,23 @@ Partial Class Loans
         Me.GroupBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox3.Location = New System.Drawing.Point(11, 440)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(404, 111)
+        Me.GroupBox3.Size = New System.Drawing.Size(404, 105)
         Me.GroupBox3.TabIndex = 174
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "With Interest"
         '
-        'Label36
+        'lblGrossAm
         '
-        Me.Label36.AutoSize = True
-        Me.Label36.BackColor = System.Drawing.Color.White
-        Me.Label36.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label36.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label36.Location = New System.Drawing.Point(100, 71)
-        Me.Label36.Name = "Label36"
-        Me.Label36.Size = New System.Drawing.Size(50, 20)
-        Me.Label36.TabIndex = 172
-        Me.Label36.Text = "Value"
-        Me.Label36.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.lblGrossAm.AutoSize = True
+        Me.lblGrossAm.BackColor = System.Drawing.Color.White
+        Me.lblGrossAm.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblGrossAm.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.lblGrossAm.Location = New System.Drawing.Point(103, 71)
+        Me.lblGrossAm.Name = "lblGrossAm"
+        Me.lblGrossAm.Size = New System.Drawing.Size(50, 20)
+        Me.lblGrossAm.TabIndex = 172
+        Me.lblGrossAm.Text = "Value"
+        Me.lblGrossAm.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Label35
         '
@@ -409,7 +409,7 @@ Partial Class Loans
         Me.lblAmort.BackColor = System.Drawing.Color.White
         Me.lblAmort.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblAmort.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.lblAmort.Location = New System.Drawing.Point(100, 41)
+        Me.lblAmort.Location = New System.Drawing.Point(103, 41)
         Me.lblAmort.Name = "lblAmort"
         Me.lblAmort.Size = New System.Drawing.Size(50, 20)
         Me.lblAmort.TabIndex = 155
@@ -460,7 +460,7 @@ Partial Class Loans
         Me.gbxLoanData.Controls.Add(Me.Label4)
         Me.gbxLoanData.Location = New System.Drawing.Point(11, 96)
         Me.gbxLoanData.Name = "gbxLoanData"
-        Me.gbxLoanData.Size = New System.Drawing.Size(715, 455)
+        Me.gbxLoanData.Size = New System.Drawing.Size(715, 449)
         Me.gbxLoanData.TabIndex = 173
         Me.gbxLoanData.TabStop = False
         '
@@ -468,7 +468,7 @@ Partial Class Loans
         '
         Me.GroupBox2.Controls.Add(Me.Label12)
         Me.GroupBox2.Controls.Add(Me.Label5)
-        Me.GroupBox2.Controls.Add(Me.Label24)
+        Me.GroupBox2.Controls.Add(Me.lblAmortWOInt)
         Me.GroupBox2.Enabled = False
         Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox2.Location = New System.Drawing.Point(0, 262)
@@ -502,18 +502,18 @@ Partial Class Loans
         Me.Label5.Text = "amortization"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.TopRight
         '
-        'Label24
+        'lblAmortWOInt
         '
-        Me.Label24.AutoSize = True
-        Me.Label24.BackColor = System.Drawing.Color.White
-        Me.Label24.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label24.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label24.Location = New System.Drawing.Point(100, 41)
-        Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(50, 20)
-        Me.Label24.TabIndex = 155
-        Me.Label24.Text = "Value"
-        Me.Label24.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.lblAmortWOInt.AutoSize = True
+        Me.lblAmortWOInt.BackColor = System.Drawing.Color.White
+        Me.lblAmortWOInt.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblAmortWOInt.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.lblAmortWOInt.Location = New System.Drawing.Point(103, 40)
+        Me.lblAmortWOInt.Name = "lblAmortWOInt"
+        Me.lblAmortWOInt.Size = New System.Drawing.Size(50, 20)
+        Me.lblAmortWOInt.TabIndex = 155
+        Me.lblAmortWOInt.Text = "Value"
+        Me.lblAmortWOInt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'cbxLoanStatus
         '
@@ -827,7 +827,7 @@ Partial Class Loans
         Me.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnSave.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnSave.ForeColor = System.Drawing.Color.White
-        Me.btnSave.Location = New System.Drawing.Point(11, 557)
+        Me.btnSave.Location = New System.Drawing.Point(11, 547)
         Me.btnSave.Name = "btnSave"
         Me.btnSave.Size = New System.Drawing.Size(108, 60)
         Me.btnSave.TabIndex = 125
@@ -895,7 +895,7 @@ Partial Class Loans
         Me.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCancel.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCancel.ForeColor = System.Drawing.Color.White
-        Me.btnCancel.Location = New System.Drawing.Point(239, 557)
+        Me.btnCancel.Location = New System.Drawing.Point(239, 547)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Size = New System.Drawing.Size(108, 60)
         Me.btnCancel.TabIndex = 123
@@ -910,7 +910,7 @@ Partial Class Loans
         Me.btnSaveAs.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnSaveAs.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnSaveAs.ForeColor = System.Drawing.Color.White
-        Me.btnSaveAs.Location = New System.Drawing.Point(125, 557)
+        Me.btnSaveAs.Location = New System.Drawing.Point(125, 547)
         Me.btnSaveAs.Name = "btnSaveAs"
         Me.btnSaveAs.Size = New System.Drawing.Size(108, 60)
         Me.btnSaveAs.TabIndex = 124
@@ -1446,10 +1446,10 @@ Partial Class Loans
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
+        Me.Controls.Add(Me.gbxAddEdit)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnClose)
         Me.Controls.Add(Me.gbxShowClient)
-        Me.Controls.Add(Me.gbxAddEdit)
         Me.Controls.Add(Me.gbxLoanInfo)
         Me.Controls.Add(Me.pnlMain)
         Me.Name = "Loans"
@@ -1582,10 +1582,10 @@ Partial Class Loans
     Friend WithEvents Label18 As System.Windows.Forms.Label
     Friend WithEvents GroupBox3 As System.Windows.Forms.GroupBox
     Friend WithEvents Label19 As System.Windows.Forms.Label
-    Friend WithEvents Label24 As System.Windows.Forms.Label
+    Friend WithEvents lblAmortWOInt As System.Windows.Forms.Label
     Friend WithEvents Label30 As System.Windows.Forms.Label
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
-    Friend WithEvents Label36 As System.Windows.Forms.Label
+    Friend WithEvents lblGrossAm As System.Windows.Forms.Label
     Friend WithEvents Label35 As System.Windows.Forms.Label
 
 End Class
