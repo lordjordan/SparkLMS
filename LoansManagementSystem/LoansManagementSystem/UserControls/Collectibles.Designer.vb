@@ -107,7 +107,7 @@ Partial Class frmCollectibles
         Me.Print.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Print.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Print.ForeColor = System.Drawing.Color.White
-        Me.Print.Location = New System.Drawing.Point(147, 463)
+        Me.Print.Location = New System.Drawing.Point(123, 463)
         Me.Print.Name = "Print"
         Me.Print.Size = New System.Drawing.Size(108, 60)
         Me.Print.TabIndex = 77
@@ -123,7 +123,7 @@ Partial Class frmCollectibles
         Me.Process.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Process.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Process.ForeColor = System.Drawing.Color.White
-        Me.Process.Location = New System.Drawing.Point(33, 463)
+        Me.Process.Location = New System.Drawing.Point(9, 463)
         Me.Process.Name = "Process"
         Me.Process.Size = New System.Drawing.Size(108, 60)
         Me.Process.TabIndex = 76

@@ -22,6 +22,7 @@ Partial Class frmLogin
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmLogin))
         Me.pnlMain = New System.Windows.Forms.Panel()
         Me.btnLog = New System.Windows.Forms.Button()
@@ -32,6 +33,7 @@ Partial Class frmLogin
         Me.txtUser = New System.Windows.Forms.TextBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.pnlMain.SuspendLayout()
         CType(Me.picUser, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -57,16 +59,16 @@ Partial Class frmLogin
         'btnLog
         '
         Me.btnLog.BackColor = System.Drawing.Color.MidnightBlue
-        Me.btnLog.FlatAppearance.BorderSize = 0
         Me.btnLog.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnLog.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnLog.ForeColor = System.Drawing.Color.White
         Me.btnLog.Image = CType(resources.GetObject("btnLog.Image"), System.Drawing.Image)
-        Me.btnLog.Location = New System.Drawing.Point(769, 264)
+        Me.btnLog.Location = New System.Drawing.Point(749, 296)
         Me.btnLog.Name = "btnLog"
-        Me.btnLog.Size = New System.Drawing.Size(41, 23)
+        Me.btnLog.Size = New System.Drawing.Size(64, 48)
         Me.btnLog.TabIndex = 68
         Me.btnLog.TextAlign = System.Drawing.ContentAlignment.BottomLeft
+        Me.ToolTip1.SetToolTip(Me.btnLog, "Click here to login")
         Me.btnLog.UseVisualStyleBackColor = False
         '
         'Label1
@@ -138,6 +140,10 @@ Partial Class frmLogin
         Me.PictureBox1.TabIndex = 62
         Me.PictureBox1.TabStop = False
         '
+        'ToolTip1
+        '
+        Me.ToolTip1.ToolTipTitle = "tt1"
+        '
         'frmLogin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -165,4 +171,5 @@ Partial Class frmLogin
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents btnLog As System.Windows.Forms.Button
+    Friend WithEvents ToolTip1 As System.Windows.Forms.ToolTip
 End Class

@@ -54,6 +54,7 @@ Partial Class Clients
         Me.txt_FName = New System.Windows.Forms.TextBox()
         Me.btnSave = New System.Windows.Forms.Button()
         Me.gbxAddEdit = New System.Windows.Forms.GroupBox()
+        Me.cbxEmpType = New System.Windows.Forms.ComboBox()
         Me.Btn_add_req = New System.Windows.Forms.Button()
         Me.btn_brows = New System.Windows.Forms.Button()
         Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
@@ -68,7 +69,6 @@ Partial Class Clients
         Me.btnCancel = New System.Windows.Forms.Button()
         Me.btnClose = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.cbxEmpType = New System.Windows.Forms.ComboBox()
         Me.pnlMain.SuspendLayout()
         Me.gbxAddEdit.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -174,7 +174,7 @@ Partial Class Clients
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.ForeColor = System.Drawing.Color.White
-        Me.Button2.Location = New System.Drawing.Point(250, 399)
+        Me.Button2.Location = New System.Drawing.Point(247, 399)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(108, 60)
         Me.Button2.TabIndex = 31
@@ -190,7 +190,7 @@ Partial Class Clients
         Me.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnEdit.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnEdit.ForeColor = System.Drawing.Color.White
-        Me.btnEdit.Location = New System.Drawing.Point(136, 399)
+        Me.btnEdit.Location = New System.Drawing.Point(133, 399)
         Me.btnEdit.Name = "btnEdit"
         Me.btnEdit.Size = New System.Drawing.Size(108, 60)
         Me.btnEdit.TabIndex = 32
@@ -206,7 +206,7 @@ Partial Class Clients
         Me.btnAddNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnAddNew.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAddNew.ForeColor = System.Drawing.Color.White
-        Me.btnAddNew.Location = New System.Drawing.Point(22, 399)
+        Me.btnAddNew.Location = New System.Drawing.Point(19, 399)
         Me.btnAddNew.Name = "btnAddNew"
         Me.btnAddNew.Size = New System.Drawing.Size(108, 60)
         Me.btnAddNew.TabIndex = 33
@@ -399,6 +399,14 @@ Partial Class Clients
         Me.gbxAddEdit.Text = "Add New Client"
         Me.gbxAddEdit.Visible = False
         '
+        'cbxEmpType
+        '
+        Me.cbxEmpType.FormattingEnabled = True
+        Me.cbxEmpType.Location = New System.Drawing.Point(144, 298)
+        Me.cbxEmpType.Name = "cbxEmpType"
+        Me.cbxEmpType.Size = New System.Drawing.Size(228, 28)
+        Me.cbxEmpType.TabIndex = 67
+        '
         'Btn_add_req
         '
         Me.Btn_add_req.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
@@ -546,14 +554,6 @@ Partial Class Clients
         Me.Label1.Size = New System.Drawing.Size(170, 39)
         Me.Label1.TabIndex = 47
         Me.Label1.Text = "Client List"
-        '
-        'cbxEmpType
-        '
-        Me.cbxEmpType.FormattingEnabled = True
-        Me.cbxEmpType.Location = New System.Drawing.Point(144, 298)
-        Me.cbxEmpType.Name = "cbxEmpType"
-        Me.cbxEmpType.Size = New System.Drawing.Size(228, 28)
-        Me.cbxEmpType.TabIndex = 67
         '
         'Clients
         '
