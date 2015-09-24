@@ -5,6 +5,9 @@
     Public bilangNGhulog, daysNgmonth As Integer
     Public dateStart As DateTime
     Public dateEnd As DateTime
+    Public interest1 As Double
+    Public interest01 As Double
+    Public amortization As Double
     Dim itm As ListViewItem
     '### Change the "Data Source" path to point to our own LMS Database
     Dim db As New DBHelper("Data Source=" & My.Settings.ConString & "; Version=3;")
@@ -120,18 +123,22 @@
         dr = db.ExecuteReader("SELECT loan_id, last_name || ' ' || first_name || ' ' || middle_name  as name, principal, amortization, interest_percentage, date_start, date_end FROM tbl_loans " & _
                              "INNER JOIN tbl_clients ON tbl_loans.client_id = tbl_clients.client_id WHERE loan_status=1")
 
+        
         If dr.HasRows Then
-
             Do While dr.Read
+                interest = CDbl(dr.Item("interest_percentage"))
+                monthlyRate = CDbl(dr.Item("amortization"))
+                interest01 = (interest / 100) * monthlyRate
+                totalPaymentBiMonth = monthlyRate + interest01
                 arrLoan.Add(dr.Item("loan_id").ToString)
                 'MsgBox(arrLoan(x))
                 itm = Me.ListView1.Items.Add(dr.Item("loan_id").ToString)
                 itm.SubItems.Add(Format(CDate(dr.Item("date_start").ToString), "MM-dd-yyyy"))
                 itm.SubItems.Add(dr.Item("name").ToString)
                 itm.SubItems.Add(dr.Item("principal").ToString)
-                itm.SubItems.Add(dr.Item("principal").ToString)
-                'itm.SubItems.Add(dr.Item("monthlyRate").ToString)
-                itm.SubItems.Add(dr.Item("interest_percentage").ToString)
+                itm.SubItems.Add(Math.Round(monthlyRate, 2))
+                itm.SubItems.Add(Math.Round(interest01, 2))
+                itm.SubItems.Add(Math.Round(totalPaymentBiMonth, 2))
                 'itm.SubItems.Add(dr.Item("totalPaymentBiMonth").ToString)
 
                 x += 1
