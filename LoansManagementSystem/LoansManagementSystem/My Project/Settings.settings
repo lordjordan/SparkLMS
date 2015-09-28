@@ -5,5 +5,8 @@
     <Setting Name="ConString" Type="System.String" Scope="User">
       <Value Profile="(Default)">D:\LMSdb\LMS.s3db</Value>
     </Setting>
+    <Setting Name="DB" Type="System.String" Scope="User">
+      <Value Profile="(Default)">LMS.s3db</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
