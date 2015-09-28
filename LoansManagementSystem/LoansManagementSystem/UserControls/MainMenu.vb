@@ -21,7 +21,7 @@
 
     End Sub
 
-    Private Sub btnSystemUser_Click(sender As Object, e As EventArgs) Handles btnSystemUser.Click, Button1.Click
+    Private Sub btnSystemUser_Click(sender As Object, e As EventArgs) Handles btnSystemUser.Click
         showUSC(uscSystemUser)
     End Sub
 
@@ -33,7 +33,7 @@
         showUSC(uscClients)
     End Sub
 
-    Private Sub btnBranches_Click(sender As Object, e As EventArgs) Handles btnBranches.Click, Button3.Click
+    Private Sub btnBranches_Click(sender As Object, e As EventArgs) Handles btnBranches.Click
         showUSC(uscBranches)
     End Sub
 

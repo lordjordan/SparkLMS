@@ -37,9 +37,6 @@ Partial Class MainMenu
         Me.btnLoans = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -227,54 +224,6 @@ Partial Class MainMenu
         Me.PictureBox2.TabIndex = 70
         Me.PictureBox2.TabStop = False
         '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.Color.MediumOrchid
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
-        Me.Button1.Location = New System.Drawing.Point(615, 105)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(141, 95)
-        Me.Button1.TabIndex = 17
-        Me.Button1.Text = "System User"
-        Me.Button1.TextAlign = System.Drawing.ContentAlignment.BottomLeft
-        Me.Button1.UseVisualStyleBackColor = False
-        '
-        'Button2
-        '
-        Me.Button2.BackColor = System.Drawing.Color.Indigo
-        Me.Button2.FlatAppearance.BorderSize = 0
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.ForeColor = System.Drawing.Color.White
-        Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
-        Me.Button2.Location = New System.Drawing.Point(615, 205)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(141, 95)
-        Me.Button2.TabIndex = 16
-        Me.Button2.Text = "Settings"
-        Me.Button2.TextAlign = System.Drawing.ContentAlignment.BottomLeft
-        Me.Button2.UseVisualStyleBackColor = False
-        '
-        'Button3
-        '
-        Me.Button3.BackColor = System.Drawing.Color.MediumTurquoise
-        Me.Button3.FlatAppearance.BorderSize = 0
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.ForeColor = System.Drawing.Color.White
-        Me.Button3.Image = CType(resources.GetObject("Button3.Image"), System.Drawing.Image)
-        Me.Button3.Location = New System.Drawing.Point(762, 115)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(141, 95)
-        Me.Button3.TabIndex = 19
-        Me.Button3.Text = "Branches"
-        Me.Button3.TextAlign = System.Drawing.ContentAlignment.BottomLeft
-        Me.Button3.UseVisualStyleBackColor = False
-        '
         'MainMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -286,12 +235,9 @@ Partial Class MainMenu
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnClients)
         Me.Controls.Add(Me.btnCollectibles)
-        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.btnSettings)
-        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.btnSystemUser)
         Me.Controls.Add(Me.btnAttachments)
-        Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.btnBranches)
         Me.Controls.Add(Me.btnLoans)
         Me.Controls.Add(Me.PictureBox1)
@@ -316,8 +262,5 @@ Partial Class MainMenu
     Friend WithEvents lblDate As System.Windows.Forms.Label
     Friend WithEvents tmrTimeDate As System.Windows.Forms.Timer
     Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
-    Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents Button2 As System.Windows.Forms.Button
-    Friend WithEvents Button3 As System.Windows.Forms.Button
 
 End Class

@@ -30,7 +30,7 @@ Partial Class frmComaker
         Me.Label26 = New System.Windows.Forms.Label()
         Me.btnRemove = New System.Windows.Forms.Button()
         Me.btnAddNew = New System.Windows.Forms.Button()
-        Me.gbxAddEdit = New System.Windows.Forms.GroupBox()
+        Me.gbxAddCoMaker = New System.Windows.Forms.GroupBox()
         Me.btnClientBack = New System.Windows.Forms.Button()
         Me.lvClientList = New System.Windows.Forms.ListView()
         Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
@@ -41,7 +41,9 @@ Partial Class frmComaker
         Me.btnSearchClient = New System.Windows.Forms.Button()
         Me.txtSearchClient = New System.Windows.Forms.TextBox()
         Me.Label28 = New System.Windows.Forms.Label()
-        Me.gbxAddEdit.SuspendLayout()
+        Me.pnlComaker = New System.Windows.Forms.Panel()
+        Me.gbxAddCoMaker.SuspendLayout()
+        Me.pnlComaker.SuspendLayout()
         Me.SuspendLayout()
         '
         'lvCoMakerList
@@ -54,9 +56,9 @@ Partial Class frmComaker
         Me.lvCoMakerList.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lvCoMakerList.FullRowSelect = True
         Me.lvCoMakerList.GridLines = True
-        Me.lvCoMakerList.Location = New System.Drawing.Point(15, 94)
+        Me.lvCoMakerList.Location = New System.Drawing.Point(6, 44)
         Me.lvCoMakerList.Name = "lvCoMakerList"
-        Me.lvCoMakerList.Size = New System.Drawing.Size(873, 360)
+        Me.lvCoMakerList.Size = New System.Drawing.Size(854, 387)
         Me.lvCoMakerList.TabIndex = 135
         Me.lvCoMakerList.UseCompatibleStateImageBehavior = False
         Me.lvCoMakerList.View = System.Windows.Forms.View.Details
@@ -84,7 +86,7 @@ Partial Class frmComaker
         '
         Me.Label26.AutoSize = True
         Me.Label26.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label26.Location = New System.Drawing.Point(12, 75)
+        Me.Label26.Location = New System.Drawing.Point(3, 25)
         Me.Label26.Name = "Label26"
         Me.Label26.Size = New System.Drawing.Size(90, 16)
         Me.Label26.TabIndex = 134
@@ -99,7 +101,7 @@ Partial Class frmComaker
         Me.btnRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnRemove.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnRemove.ForeColor = System.Drawing.Color.White
-        Me.btnRemove.Location = New System.Drawing.Point(129, 467)
+        Me.btnRemove.Location = New System.Drawing.Point(132, 463)
         Me.btnRemove.Name = "btnRemove"
         Me.btnRemove.Size = New System.Drawing.Size(108, 60)
         Me.btnRemove.TabIndex = 136
@@ -115,7 +117,7 @@ Partial Class frmComaker
         Me.btnAddNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnAddNew.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAddNew.ForeColor = System.Drawing.Color.White
-        Me.btnAddNew.Location = New System.Drawing.Point(15, 467)
+        Me.btnAddNew.Location = New System.Drawing.Point(18, 463)
         Me.btnAddNew.Name = "btnAddNew"
         Me.btnAddNew.Size = New System.Drawing.Size(108, 60)
         Me.btnAddNew.TabIndex = 137
@@ -123,25 +125,25 @@ Partial Class frmComaker
         Me.btnAddNew.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.btnAddNew.UseVisualStyleBackColor = False
         '
-        'gbxAddEdit
+        'gbxAddCoMaker
         '
-        Me.gbxAddEdit.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.gbxAddEdit.BackColor = System.Drawing.Color.LightGray
-        Me.gbxAddEdit.Controls.Add(Me.btnClientBack)
-        Me.gbxAddEdit.Controls.Add(Me.lvClientList)
-        Me.gbxAddEdit.Controls.Add(Me.Label1)
-        Me.gbxAddEdit.Controls.Add(Me.btnSearchClient)
-        Me.gbxAddEdit.Controls.Add(Me.txtSearchClient)
-        Me.gbxAddEdit.Controls.Add(Me.Label28)
-        Me.gbxAddEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.gbxAddEdit.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.gbxAddEdit.Location = New System.Drawing.Point(174, 21)
-        Me.gbxAddEdit.Name = "gbxAddEdit"
-        Me.gbxAddEdit.Size = New System.Drawing.Size(637, 295)
-        Me.gbxAddEdit.TabIndex = 138
-        Me.gbxAddEdit.TabStop = False
-        Me.gbxAddEdit.Text = "Add New Co-maker"
-        Me.gbxAddEdit.Visible = False
+        Me.gbxAddCoMaker.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.gbxAddCoMaker.BackColor = System.Drawing.Color.LightGray
+        Me.gbxAddCoMaker.Controls.Add(Me.btnClientBack)
+        Me.gbxAddCoMaker.Controls.Add(Me.lvClientList)
+        Me.gbxAddCoMaker.Controls.Add(Me.Label1)
+        Me.gbxAddCoMaker.Controls.Add(Me.btnSearchClient)
+        Me.gbxAddCoMaker.Controls.Add(Me.txtSearchClient)
+        Me.gbxAddCoMaker.Controls.Add(Me.Label28)
+        Me.gbxAddCoMaker.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.gbxAddCoMaker.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.gbxAddCoMaker.Location = New System.Drawing.Point(153, 57)
+        Me.gbxAddCoMaker.Name = "gbxAddCoMaker"
+        Me.gbxAddCoMaker.Size = New System.Drawing.Size(637, 295)
+        Me.gbxAddCoMaker.TabIndex = 138
+        Me.gbxAddCoMaker.TabStop = False
+        Me.gbxAddCoMaker.Text = "Add New Co-maker"
+        Me.gbxAddCoMaker.Visible = False
         '
         'btnClientBack
         '
@@ -230,23 +232,35 @@ Partial Class frmComaker
         Me.Label28.Text = "Search"
         Me.Label28.TextAlign = System.Drawing.ContentAlignment.TopRight
         '
+        'pnlComaker
+        '
+        Me.pnlComaker.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.pnlComaker.Controls.Add(Me.Label26)
+        Me.pnlComaker.Controls.Add(Me.lvCoMakerList)
+        Me.pnlComaker.Location = New System.Drawing.Point(12, 23)
+        Me.pnlComaker.Name = "pnlComaker"
+        Me.pnlComaker.Size = New System.Drawing.Size(873, 434)
+        Me.pnlComaker.TabIndex = 140
+        '
         'frmComaker
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(903, 545)
-        Me.Controls.Add(Me.gbxAddEdit)
+        Me.ClientSize = New System.Drawing.Size(903, 535)
         Me.Controls.Add(Me.btnRemove)
         Me.Controls.Add(Me.btnAddNew)
-        Me.Controls.Add(Me.lvCoMakerList)
-        Me.Controls.Add(Me.Label26)
+        Me.Controls.Add(Me.gbxAddCoMaker)
+        Me.Controls.Add(Me.pnlComaker)
         Me.Name = "frmComaker"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Co-maker(s) of "
-        Me.gbxAddEdit.ResumeLayout(False)
-        Me.gbxAddEdit.PerformLayout()
+        Me.gbxAddCoMaker.ResumeLayout(False)
+        Me.gbxAddCoMaker.PerformLayout()
+        Me.pnlComaker.ResumeLayout(False)
+        Me.pnlComaker.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
     Friend WithEvents lvCoMakerList As System.Windows.Forms.ListView
@@ -257,7 +271,7 @@ Partial Class frmComaker
     Friend WithEvents Label26 As System.Windows.Forms.Label
     Friend WithEvents btnRemove As System.Windows.Forms.Button
     Friend WithEvents btnAddNew As System.Windows.Forms.Button
-    Friend WithEvents gbxAddEdit As System.Windows.Forms.GroupBox
+    Friend WithEvents gbxAddCoMaker As System.Windows.Forms.GroupBox
     Friend WithEvents btnClientBack As System.Windows.Forms.Button
     Friend WithEvents lvClientList As System.Windows.Forms.ListView
     Friend WithEvents ColumnHeader1 As System.Windows.Forms.ColumnHeader
@@ -268,4 +282,5 @@ Partial Class frmComaker
     Friend WithEvents btnSearchClient As System.Windows.Forms.Button
     Friend WithEvents txtSearchClient As System.Windows.Forms.TextBox
     Friend WithEvents Label28 As System.Windows.Forms.Label
+    Friend WithEvents pnlComaker As System.Windows.Forms.Panel
 End Class

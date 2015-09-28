@@ -40,10 +40,12 @@
         txtPrincipal.Clear()
         cbxInterest.Text = ""
         lblAmort.Text = ""
+        lblAmortWOInt.Text = ""
+        lblGrossAm.Text = ""
         txtLoanRemarks.Text = ""
 
-
-
+        frmClientRequirement.Close()
+        frmComaker.Close()
 
     End Sub
 
@@ -295,7 +297,6 @@
                 e.Handled = True
             End If
         End If
-
     End Sub
 
     Private Sub dtStart_TextChanged(sender As Object, e As EventArgs) Handles dtStart.TextChanged
@@ -416,7 +417,7 @@
                 End Select
                 daysNgmonth = DateTime.DaysInMonth(dateStart.Year, dateStart.Month)
                 bilangNGhulog += 1
-                MsgBox(dateStart & " " & bilangNGhulog & "" & dtEnd.Value)
+
 
             Loop
             'principal/bilangNghulog  = bayad w/out interest /Monthly rate
@@ -428,6 +429,8 @@
             interest = principal * biMonInterest
             totalPaymentBiMonth = monthlyRate + interest
             lblAmort.Text = totalPaymentBiMonth
+            lblAmortWOInt.Text = monthlyRate
+            lblGrossAm.Text = totalPaymentBiMonth * bilangNGhulog
         End If
         bilangNGhulog = 0
     End Sub
@@ -708,4 +711,11 @@
     End Sub
 
  
+    Private Sub linkCoMakers_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles linkCoMakers.LinkClicked
+        frmComaker.ShowDialog()
+    End Sub
+
+    Private Sub cbxInterest_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbxInterest.SelectedIndexChanged
+
+    End Sub
 End Class
