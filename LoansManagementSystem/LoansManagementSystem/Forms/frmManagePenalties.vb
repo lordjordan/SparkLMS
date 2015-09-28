@@ -50,6 +50,7 @@
                 'itm.SubItems.Add(dr.Item("totalPaymentBiMonth").ToString)
                 x += 1
             Loop
+
         End If
 
         Exit Sub
