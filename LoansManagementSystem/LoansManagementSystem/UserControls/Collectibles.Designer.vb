@@ -40,6 +40,9 @@ Partial Class frmCollectibles
         Me.ColumnHeader10 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader11 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader12 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader6 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader7 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.gbxAdvanceSearch = New System.Windows.Forms.GroupBox()
         Me.dtpWeek = New System.Windows.Forms.DateTimePicker()
         Me.Cancel = New System.Windows.Forms.Button()
@@ -53,8 +56,19 @@ Partial Class frmCollectibles
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.btnCancel = New System.Windows.Forms.Button()
+        Me.gbxClientCollectible = New System.Windows.Forms.GroupBox()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.btnManage = New System.Windows.Forms.Button()
+        Me.ListBox1 = New System.Windows.Forms.ListBox()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.txtAmount = New System.Windows.Forms.TextBox()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.btnCancelColl = New System.Windows.Forms.Button()
+        Me.btnOk = New System.Windows.Forms.Button()
         Me.pnlMain.SuspendLayout()
         Me.gbxAdvanceSearch.SuspendLayout()
+        Me.gbxClientCollectible.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
@@ -187,7 +201,7 @@ Partial Class frmCollectibles
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.ListView1.CheckBoxes = True
-        Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader3, Me.ColumnHeader4, Me.ColumnHeader5, Me.ColumnHeader1, Me.ColumnHeader10, Me.ColumnHeader11, Me.ColumnHeader12})
+        Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader3, Me.ColumnHeader4, Me.ColumnHeader5, Me.ColumnHeader1, Me.ColumnHeader10, Me.ColumnHeader11, Me.ColumnHeader12, Me.ColumnHeader2, Me.ColumnHeader6, Me.ColumnHeader7})
         Me.ListView1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ListView1.FullRowSelect = True
         Me.ListView1.GridLines = True
@@ -206,32 +220,47 @@ Partial Class frmCollectibles
         'ColumnHeader4
         '
         Me.ColumnHeader4.Text = "Due Date"
-        Me.ColumnHeader4.Width = 200
+        Me.ColumnHeader4.Width = 150
         '
         'ColumnHeader5
         '
         Me.ColumnHeader5.Text = "Name"
-        Me.ColumnHeader5.Width = 280
+        Me.ColumnHeader5.Width = 199
         '
         'ColumnHeader1
         '
-        Me.ColumnHeader1.Text = "Outstanding Balance"
-        Me.ColumnHeader1.Width = 180
+        Me.ColumnHeader1.Text = "Payable Amount"
+        Me.ColumnHeader1.Width = 120
         '
         'ColumnHeader10
         '
-        Me.ColumnHeader10.Text = "Principal"
-        Me.ColumnHeader10.Width = 180
+        Me.ColumnHeader10.Text = "Collected Amount"
+        Me.ColumnHeader10.Width = 120
         '
         'ColumnHeader11
         '
-        Me.ColumnHeader11.Text = "Interest"
-        Me.ColumnHeader11.Width = 180
+        Me.ColumnHeader11.Text = "Penalty Amount"
+        Me.ColumnHeader11.Width = 120
         '
         'ColumnHeader12
         '
-        Me.ColumnHeader12.Text = "Total Amount"
-        Me.ColumnHeader12.Width = 200
+        Me.ColumnHeader12.Text = "Previous Balance"
+        Me.ColumnHeader12.Width = 120
+        '
+        'ColumnHeader2
+        '
+        Me.ColumnHeader2.Text = "Principal Amount"
+        Me.ColumnHeader2.Width = 120
+        '
+        'ColumnHeader6
+        '
+        Me.ColumnHeader6.Text = "Interest"
+        Me.ColumnHeader6.Width = 100
+        '
+        'ColumnHeader7
+        '
+        Me.ColumnHeader7.Text = "Outstanding Balance"
+        Me.ColumnHeader7.Width = 130
         '
         'gbxAdvanceSearch
         '
@@ -248,12 +277,13 @@ Partial Class frmCollectibles
         Me.gbxAdvanceSearch.Controls.Add(Me.ComboBox1)
         Me.gbxAdvanceSearch.Controls.Add(Me.Label2)
         Me.gbxAdvanceSearch.Controls.Add(Me.btnCancel)
-        Me.gbxAdvanceSearch.Location = New System.Drawing.Point(303, 78)
+        Me.gbxAdvanceSearch.Location = New System.Drawing.Point(347, 75)
         Me.gbxAdvanceSearch.Name = "gbxAdvanceSearch"
-        Me.gbxAdvanceSearch.Size = New System.Drawing.Size(627, 340)
+        Me.gbxAdvanceSearch.Size = New System.Drawing.Size(627, 298)
         Me.gbxAdvanceSearch.TabIndex = 72
         Me.gbxAdvanceSearch.TabStop = False
         Me.gbxAdvanceSearch.Text = "Advanced Search"
+        Me.gbxAdvanceSearch.Visible = False
         '
         'dtpWeek
         '
@@ -271,7 +301,7 @@ Partial Class frmCollectibles
         Me.Cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Cancel.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Cancel.ForeColor = System.Drawing.Color.White
-        Me.Cancel.Location = New System.Drawing.Point(191, 250)
+        Me.Cancel.Location = New System.Drawing.Point(191, 208)
         Me.Cancel.Name = "Cancel"
         Me.Cancel.Size = New System.Drawing.Size(108, 60)
         Me.Cancel.TabIndex = 69
@@ -375,7 +405,7 @@ Partial Class frmCollectibles
         Me.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCancel.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCancel.ForeColor = System.Drawing.Color.White
-        Me.btnCancel.Location = New System.Drawing.Point(53, 250)
+        Me.btnCancel.Location = New System.Drawing.Point(53, 208)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Size = New System.Drawing.Size(108, 60)
         Me.btnCancel.TabIndex = 58
@@ -383,21 +413,149 @@ Partial Class frmCollectibles
         Me.btnCancel.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.btnCancel.UseVisualStyleBackColor = False
         '
+        'gbxClientCollectible
+        '
+        Me.gbxClientCollectible.BackColor = System.Drawing.Color.LightGray
+        Me.gbxClientCollectible.Controls.Add(Me.Label12)
+        Me.gbxClientCollectible.Controls.Add(Me.btnManage)
+        Me.gbxClientCollectible.Controls.Add(Me.ListBox1)
+        Me.gbxClientCollectible.Controls.Add(Me.Label11)
+        Me.gbxClientCollectible.Controls.Add(Me.txtAmount)
+        Me.gbxClientCollectible.Controls.Add(Me.Label10)
+        Me.gbxClientCollectible.Controls.Add(Me.Label8)
+        Me.gbxClientCollectible.Controls.Add(Me.btnCancelColl)
+        Me.gbxClientCollectible.Controls.Add(Me.btnOk)
+        Me.gbxClientCollectible.Location = New System.Drawing.Point(484, 56)
+        Me.gbxClientCollectible.Name = "gbxClientCollectible"
+        Me.gbxClientCollectible.Size = New System.Drawing.Size(446, 448)
+        Me.gbxClientCollectible.TabIndex = 73
+        Me.gbxClientCollectible.TabStop = False
+        Me.gbxClientCollectible.Text = "Client Loan Information"
+        Me.gbxClientCollectible.Visible = False
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.Location = New System.Drawing.Point(138, 165)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(154, 13)
+        Me.Label12.TabIndex = 76
+        Me.Label12.Text = "(Please check penalties below)"
+        '
+        'btnManage
+        '
+        Me.btnManage.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btnManage.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.btnManage.FlatAppearance.BorderSize = 0
+        Me.btnManage.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnManage.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnManage.ForeColor = System.Drawing.Color.White
+        Me.btnManage.Location = New System.Drawing.Point(31, 353)
+        Me.btnManage.Name = "btnManage"
+        Me.btnManage.Size = New System.Drawing.Size(108, 60)
+        Me.btnManage.TabIndex = 75
+        Me.btnManage.Text = "Manage Penalties"
+        Me.btnManage.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.btnManage.UseVisualStyleBackColor = False
+        '
+        'ListBox1
+        '
+        Me.ListBox1.FormattingEnabled = True
+        Me.ListBox1.Location = New System.Drawing.Point(75, 182)
+        Me.ListBox1.Name = "ListBox1"
+        Me.ListBox1.Size = New System.Drawing.Size(302, 147)
+        Me.ListBox1.TabIndex = 74
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Location = New System.Drawing.Point(72, 64)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(117, 16)
+        Me.Label11.TabIndex = 73
+        Me.Label11.Text = "ENTER AMOUNT"
+        '
+        'txtAmount
+        '
+        Me.txtAmount.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtAmount.Location = New System.Drawing.Point(75, 83)
+        Me.txtAmount.Name = "txtAmount"
+        Me.txtAmount.Size = New System.Drawing.Size(302, 44)
+        Me.txtAmount.TabIndex = 72
+        Me.txtAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(27, 151)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(64, 16)
+        Me.Label10.TabIndex = 71
+        Me.Label10.Text = "Penalties"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(31, 30)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(81, 16)
+        Me.Label8.TabIndex = 70
+        Me.Label8.Text = "Collectibles:"
+        '
+        'btnCancelColl
+        '
+        Me.btnCancelColl.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btnCancelColl.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.btnCancelColl.FlatAppearance.BorderSize = 0
+        Me.btnCancelColl.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCancelColl.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCancelColl.ForeColor = System.Drawing.Color.White
+        Me.btnCancelColl.Location = New System.Drawing.Point(301, 353)
+        Me.btnCancelColl.Name = "btnCancelColl"
+        Me.btnCancelColl.Size = New System.Drawing.Size(108, 60)
+        Me.btnCancelColl.TabIndex = 69
+        Me.btnCancelColl.Text = "Cancel"
+        Me.btnCancelColl.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.btnCancelColl.UseVisualStyleBackColor = False
+        '
+        'btnOk
+        '
+        Me.btnOk.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btnOk.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.btnOk.FlatAppearance.BorderSize = 0
+        Me.btnOk.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnOk.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnOk.ForeColor = System.Drawing.Color.White
+        Me.btnOk.Location = New System.Drawing.Point(161, 353)
+        Me.btnOk.Name = "btnOk"
+        Me.btnOk.Size = New System.Drawing.Size(108, 60)
+        Me.btnOk.TabIndex = 58
+        Me.btnOk.Text = "OK"
+        Me.btnOk.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.btnOk.UseVisualStyleBackColor = False
+        '
         'frmCollectibles
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.Controls.Add(Me.gbxAdvanceSearch)
-        Me.Controls.Add(Me.pnlMain)
+        Me.Controls.Add(Me.gbxClientCollectible)
         Me.Controls.Add(Me.btnClose)
         Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.pnlMain)
+        Me.Controls.Add(Me.gbxAdvanceSearch)
         Me.Name = "frmCollectibles"
         Me.Size = New System.Drawing.Size(940, 660)
         Me.pnlMain.ResumeLayout(False)
         Me.pnlMain.PerformLayout()
         Me.gbxAdvanceSearch.ResumeLayout(False)
         Me.gbxAdvanceSearch.PerformLayout()
+        Me.gbxClientCollectible.ResumeLayout(False)
+        Me.gbxClientCollectible.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -433,5 +591,18 @@ Partial Class frmCollectibles
     Friend WithEvents ColumnHeader12 As System.Windows.Forms.ColumnHeader
     Friend WithEvents Print As System.Windows.Forms.Button
     Friend WithEvents Process As System.Windows.Forms.Button
+    Friend WithEvents ColumnHeader2 As System.Windows.Forms.ColumnHeader
+    Friend WithEvents ColumnHeader6 As System.Windows.Forms.ColumnHeader
+    Friend WithEvents ColumnHeader7 As System.Windows.Forms.ColumnHeader
+    Friend WithEvents gbxClientCollectible As System.Windows.Forms.GroupBox
+    Friend WithEvents btnCancelColl As System.Windows.Forms.Button
+    Friend WithEvents btnOk As System.Windows.Forms.Button
+    Friend WithEvents Label10 As System.Windows.Forms.Label
+    Friend WithEvents Label8 As System.Windows.Forms.Label
+    Friend WithEvents Label11 As System.Windows.Forms.Label
+    Friend WithEvents txtAmount As System.Windows.Forms.TextBox
+    Friend WithEvents ListBox1 As System.Windows.Forms.ListBox
+    Friend WithEvents btnManage As System.Windows.Forms.Button
+    Friend WithEvents Label12 As System.Windows.Forms.Label
 
 End Class
