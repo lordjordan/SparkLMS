@@ -26,7 +26,6 @@ Partial Class frmManagePenalties
         Me.btnEditPenalties = New System.Windows.Forms.Button()
         Me.btnRemovePenalties = New System.Windows.Forms.Button()
         Me.ListView2 = New System.Windows.Forms.ListView()
-        Me.ColumnHeader8 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader9 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader13 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.btnCancelPenalties = New System.Windows.Forms.Button()
@@ -84,20 +83,16 @@ Partial Class frmManagePenalties
         'ListView2
         '
         Me.ListView2.CheckBoxes = True
-        Me.ListView2.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader8, Me.ColumnHeader9, Me.ColumnHeader13})
+        Me.ListView2.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader9, Me.ColumnHeader13})
         Me.ListView2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ListView2.FullRowSelect = True
         Me.ListView2.GridLines = True
-        Me.ListView2.Location = New System.Drawing.Point(128, 25)
+        Me.ListView2.Location = New System.Drawing.Point(41, 39)
         Me.ListView2.Name = "ListView2"
-        Me.ListView2.Size = New System.Drawing.Size(415, 252)
+        Me.ListView2.Size = New System.Drawing.Size(564, 252)
         Me.ListView2.TabIndex = 83
         Me.ListView2.UseCompatibleStateImageBehavior = False
         Me.ListView2.View = System.Windows.Forms.View.Details
-        '
-        'ColumnHeader8
-        '
-        Me.ColumnHeader8.Text = ""
         '
         'ColumnHeader9
         '
@@ -163,7 +158,6 @@ Partial Class frmManagePenalties
     Friend WithEvents btnEditPenalties As System.Windows.Forms.Button
     Friend WithEvents btnRemovePenalties As System.Windows.Forms.Button
     Friend WithEvents ListView2 As System.Windows.Forms.ListView
-    Friend WithEvents ColumnHeader8 As System.Windows.Forms.ColumnHeader
     Friend WithEvents ColumnHeader9 As System.Windows.Forms.ColumnHeader
     Friend WithEvents ColumnHeader13 As System.Windows.Forms.ColumnHeader
     Friend WithEvents btnCancelPenalties As System.Windows.Forms.Button

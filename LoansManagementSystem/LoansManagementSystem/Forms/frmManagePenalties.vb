@@ -13,7 +13,7 @@
     Dim db As New DBHelper("Data Source=" & My.Settings.ConString & "; Version=3;")
     Dim dr As SQLite.SQLiteDataReader
     Private Sub btnCancelPenalties_Click(sender As Object, e As EventArgs) Handles btnCancelPenalties.Click
-        Me.Close()
+        Me.Hide()
         uscCollectibles.gbxClientCollectible.Visible = True
     End Sub
 
@@ -36,7 +36,7 @@
                 totalPaymentBiMonth = monthlyRate + interest01
                 arrLoan.Add(dr.Item("loan_id").ToString)
                 'MsgBox(arrLoan(x))
-                itm = uscCollectibles.ListView1.Items.Add("")
+                itm = uscCollectibles.lvCollectibles.Items.Add("")
                 itm.SubItems.Add(Format(CDate(dr.Item("date_start").ToString), "MM-dd-yyyy"))
                 itm.SubItems.Add(dr.Item("name").ToString)
                 itm.SubItems.Add(Math.Round(totalPaymentBiMonth, 2))
@@ -57,12 +57,12 @@
     End Sub
 
     Private Sub frmManagePenalties_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        If uscCollectibles.ListView1.SelectedItems.Count > 0 Then
+        'If uscCollectibles.ListView1.SelectedItems.Count > 0 Then
 
-            itm.SubItems.Add(uscCollectibles.ListView1.SelectedItems(0).SubItems(1).Text)
-            itm.SubItems.Add(uscCollectibles.ListView1.SelectedItems(0).SubItems(5).Text)
-        Else
-            MessageBox.Show("Please select record to edit.", "Important Note", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1)
-        End If
+        '    itm.SubItems.Add(uscCollectibles.ListView1.SelectedItems(0).SubItems(1).Text)
+        '    itm.SubItems.Add(uscCollectibles.ListView1.SelectedItems(0).SubItems(5).Text)
+        'Else
+        '    MessageBox.Show("Please select record to edit.", "Important Note", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1)
+        'End If
     End Sub
 End Class
