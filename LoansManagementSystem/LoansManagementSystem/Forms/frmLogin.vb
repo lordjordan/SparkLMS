@@ -17,31 +17,32 @@ Public Class frmLogin
     Private Sub btnLog_Click(sender As Object, e As EventArgs) Handles btnLog.Click
         'Dim rec As Integer
         Dim data As New Dictionary(Of String, Object)
-        'Dim user As String = txtUser.Text
-        'Dim pass As String = txtPassword.Text
+        Dim user As String = txtUser.Text
+        Dim pass As String = txtPassword.Text
 
 
-        'If txtUser.Text = "" Or txtPassword.Text = "" Then
-        '    MsgBox("Please provide username and password.", MsgBoxStyle.Exclamation, "Authentication Error")
-        'Else
+        If txtUser.Text = "" Or txtPassword.Text = "" Then
+            MsgBox("Please provide username and password.", MsgBoxStyle.Exclamation, "Authentication Error")
+        Else
 
-        '    data.Add("user_name", txtUser.Text)
-        '    data.Add("user_password", txtPassword.Text)
-        '    dr = db.ExecuteReader("SELECT user_name, user_password from tbl_users WHERE user_name = '" & txtUser.Text & "' and user_password= '" & txtPassword.Text & "'")
+            data.Add("user_name", txtUser.Text)
+            data.Add("user_password", txtPassword.Text)
+            'dr = db.ExecuteReader("SELECT user_name, user_password from tbl_users WHERE user_name = '" & txtUser.Text & "' and user_password= '" & txtPassword.Text & "'")
+            dr = db.ExecuteReader("SELECT user_name, user_password from tbl_users " & _
+                                 " WHERE user_name = @user_name and user_password= @user_password", data)
+            If dr.HasRows Then
+                MessageBox.Show("Login successful!", "", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                frmMainPanel.Show()
+                Me.Hide()
+            Else
+                MessageBox.Show("Username and Password do not match..", "Authentication Failure", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                'Clear all fields
+                txtPassword.Text = ""
+                txtUser.Text = ""
+                txtUser.Focus()
+            End If
 
-        '    If dr.HasRows Then
-        '        MessageBox.Show("Login successful!", "", MessageBoxButtons.OK, MessageBoxIcon.Information)
-        frmMainPanel.Show()
-        Me.Hide()
-        '    Else
-        '        MessageBox.Show("Username and Password do not match..", "Authentication Failure", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-        '        'Clear all fields
-        '        txtPassword.Text = ""
-        '        txtUser.Text = ""
-        '        txtUser.Focus()
-        '    End If
-
-        'End If
+        End If
 
     End Sub
 

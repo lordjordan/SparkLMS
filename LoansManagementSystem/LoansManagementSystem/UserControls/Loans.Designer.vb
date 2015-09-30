@@ -306,6 +306,7 @@ Partial Class Loans
         Me.pnlMain.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.pnlMain.Controls.Add(Me.gbxAddEdit)
         Me.pnlMain.Controls.Add(Me.lvLoanList)
         Me.pnlMain.Controls.Add(Me.btnSearchLoan)
         Me.pnlMain.Controls.Add(Me.btnUploadLoanApplcation)
@@ -342,7 +343,7 @@ Partial Class Loans
         Me.gbxAddEdit.Controls.Add(Me.btnSaveAs)
         Me.gbxAddEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.gbxAddEdit.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.gbxAddEdit.Location = New System.Drawing.Point(276, 56)
+        Me.gbxAddEdit.Location = New System.Drawing.Point(186, 70)
         Me.gbxAddEdit.Name = "gbxAddEdit"
         Me.gbxAddEdit.Size = New System.Drawing.Size(735, 612)
         Me.gbxAddEdit.TabIndex = 55
@@ -1446,7 +1447,6 @@ Partial Class Loans
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
-        Me.Controls.Add(Me.gbxAddEdit)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnClose)
         Me.Controls.Add(Me.gbxShowClient)

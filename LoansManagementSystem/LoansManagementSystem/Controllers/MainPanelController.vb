@@ -6,7 +6,7 @@
     Public uscAttachments As New Attachments
     Public uscClients As New Clients
     Public uscBranches As New Branches
-    Public uscLoans As New Loans
+    Public uscLoans As New LoansV2
 
 
     'Public uscClientList As New ClientList
