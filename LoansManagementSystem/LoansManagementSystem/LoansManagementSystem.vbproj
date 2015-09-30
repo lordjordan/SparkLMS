@@ -69,6 +69,11 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="microsoft.office.interop.excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>bin\Debug\microsoft.office.interop.excel.dll</HintPath>
+    </Reference>
     <Reference Include="MySql.Fabric.Plugin, Version=6.9.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector Net 6.9.7\Assemblies\v4.5\MySql.Fabric.Plugin.dll</HintPath>
@@ -132,7 +137,7 @@
     <Compile Include="Forms\frmLogin.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmManagePenalties.designer.vb">
+    <Compile Include="Forms\frmManagePenalties.Designer.vb">
       <DependentUpon>frmManagePenalties.vb</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmManagePenalties.vb">
@@ -177,7 +182,7 @@
     <Compile Include="UserControls\Collectibles.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\Company.designer.vb">
+    <Compile Include="UserControls\Company.Designer.vb">
       <DependentUpon>Company.vb</DependentUpon>
     </Compile>
     <Compile Include="UserControls\Company.vb">
@@ -187,12 +192,6 @@
       <DependentUpon>Loans.vb</DependentUpon>
     </Compile>
     <Compile Include="UserControls\Loans.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\LoansV2.Designer.vb">
-      <DependentUpon>LoansV2.vb</DependentUpon>
-    </Compile>
-    <Compile Include="UserControls\LoansV2.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControls\MainMenu.Designer.vb">
@@ -247,9 +246,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\Loans.resx">
       <DependentUpon>Loans.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\LoansV2.resx">
-      <DependentUpon>LoansV2.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\MainMenu.resx">
       <DependentUpon>MainMenu.vb</DependentUpon>

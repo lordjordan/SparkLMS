@@ -40,6 +40,7 @@ Partial Class Loans
         Me.Label3 = New System.Windows.Forms.Label()
         Me.btnUploadLoanApplcation = New System.Windows.Forms.Button()
         Me.pnlMain = New System.Windows.Forms.Panel()
+        Me.btnSearchLoan = New System.Windows.Forms.Button()
         Me.gbxAddEdit = New System.Windows.Forms.GroupBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.lblGrossAm = New System.Windows.Forms.Label()
@@ -86,7 +87,6 @@ Partial Class Loans
         Me.radReturn = New System.Windows.Forms.RadioButton()
         Me.btnCancel = New System.Windows.Forms.Button()
         Me.btnSaveAs = New System.Windows.Forms.Button()
-        Me.btnSearchLoan = New System.Windows.Forms.Button()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.gbxShowClient = New System.Windows.Forms.GroupBox()
@@ -306,7 +306,6 @@ Partial Class Loans
         Me.pnlMain.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.pnlMain.Controls.Add(Me.gbxAddEdit)
         Me.pnlMain.Controls.Add(Me.lvLoanList)
         Me.pnlMain.Controls.Add(Me.btnSearchLoan)
         Me.pnlMain.Controls.Add(Me.btnUploadLoanApplcation)
@@ -320,6 +319,18 @@ Partial Class Loans
         Me.pnlMain.Size = New System.Drawing.Size(1239, 623)
         Me.pnlMain.TabIndex = 51
         '
+        'btnSearchLoan
+        '
+        Me.btnSearchLoan.BackColor = System.Drawing.Color.Gray
+        Me.btnSearchLoan.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSearchLoan.ForeColor = System.Drawing.Color.White
+        Me.btnSearchLoan.Location = New System.Drawing.Point(292, 15)
+        Me.btnSearchLoan.Name = "btnSearchLoan"
+        Me.btnSearchLoan.Size = New System.Drawing.Size(61, 24)
+        Me.btnSearchLoan.TabIndex = 59
+        Me.btnSearchLoan.Text = "Search"
+        Me.btnSearchLoan.UseVisualStyleBackColor = False
+        '
         'gbxAddEdit
         '
         Me.gbxAddEdit.BackColor = System.Drawing.Color.LightGray
@@ -331,7 +342,7 @@ Partial Class Loans
         Me.gbxAddEdit.Controls.Add(Me.btnSaveAs)
         Me.gbxAddEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.gbxAddEdit.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.gbxAddEdit.Location = New System.Drawing.Point(186, 70)
+        Me.gbxAddEdit.Location = New System.Drawing.Point(276, 56)
         Me.gbxAddEdit.Name = "gbxAddEdit"
         Me.gbxAddEdit.Size = New System.Drawing.Size(735, 612)
         Me.gbxAddEdit.TabIndex = 55
@@ -907,18 +918,6 @@ Partial Class Loans
         Me.btnSaveAs.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.btnSaveAs.UseVisualStyleBackColor = False
         '
-        'btnSearchLoan
-        '
-        Me.btnSearchLoan.BackColor = System.Drawing.Color.Gray
-        Me.btnSearchLoan.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSearchLoan.ForeColor = System.Drawing.Color.White
-        Me.btnSearchLoan.Location = New System.Drawing.Point(292, 15)
-        Me.btnSearchLoan.Name = "btnSearchLoan"
-        Me.btnSearchLoan.Size = New System.Drawing.Size(61, 24)
-        Me.btnSearchLoan.TabIndex = 59
-        Me.btnSearchLoan.Text = "Search"
-        Me.btnSearchLoan.UseVisualStyleBackColor = False
-        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -943,7 +942,7 @@ Partial Class Loans
         Me.gbxShowClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.gbxShowClient.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gbxShowClient.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.gbxShowClient.Location = New System.Drawing.Point(351, 44)
+        Me.gbxShowClient.Location = New System.Drawing.Point(349, 56)
         Me.gbxShowClient.Name = "gbxShowClient"
         Me.gbxShowClient.Size = New System.Drawing.Size(620, 309)
         Me.gbxShowClient.TabIndex = 158
@@ -1447,6 +1446,7 @@ Partial Class Loans
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
+        Me.Controls.Add(Me.gbxAddEdit)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnClose)
         Me.Controls.Add(Me.gbxShowClient)

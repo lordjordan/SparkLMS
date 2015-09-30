@@ -21,7 +21,7 @@
 
     End Sub
 
-    Private Sub btnSystemUser_Click(sender As Object, e As EventArgs) Handles btnSystemUser.Click
+    Private Sub btnSystemUser_Click(sender As Object, e As EventArgs)
         showUSC(uscSystemUser)
     End Sub
 
@@ -29,15 +29,15 @@
         showUSC(uscLoans)
     End Sub
 
-    Private Sub btnClients_Click(sender As Object, e As EventArgs) Handles btnClients.Click
+    Private Sub btnClients_Click(sender As Object, e As EventArgs)
         showUSC(uscClients)
     End Sub
 
-    Private Sub btnBranches_Click(sender As Object, e As EventArgs) Handles btnBranches.Click
+    Private Sub btnBranches_Click(sender As Object, e As EventArgs)
         showUSC(uscBranches)
     End Sub
 
-    Private Sub btnAttachments_Click(sender As Object, e As EventArgs) Handles btnAttachments.Click
+    Private Sub btnAttachments_Click(sender As Object, e As EventArgs)
         showUSC(uscAttachments)
     End Sub
 
@@ -50,7 +50,23 @@
         Application.Exit()
     End Sub
 
+    Private Sub btnClients_Click_1(sender As Object, e As EventArgs) Handles btnClients.Click
+        showUSC(uscClients)
+    End Sub
+
+    Private Sub btnBranches_Click_1(sender As Object, e As EventArgs) Handles btnBranches.Click
+        showUSC(uscBranches)
+    End Sub
+
     Private Sub btnCompany_Click(sender As Object, e As EventArgs) Handles btnCompany.Click
-        showUSC(uscCompany)
+        showUSC(uscCompanies)
+    End Sub
+
+    Private Sub btnSystemUser_Click_1(sender As Object, e As EventArgs) Handles btnSystemUser.Click
+        showUSC(uscSystemUser)
+    End Sub
+
+    Private Sub btnAttachments_Click_1(sender As Object, e As EventArgs) Handles btnAttachments.Click
+        showUSC(uscAttachments)
     End Sub
 End Class

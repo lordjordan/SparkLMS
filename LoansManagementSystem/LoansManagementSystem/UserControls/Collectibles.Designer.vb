@@ -25,13 +25,13 @@ Partial Class frmCollectibles
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnClose = New System.Windows.Forms.Button()
         Me.pnlMain = New System.Windows.Forms.Panel()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnExport = New System.Windows.Forms.Button()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.btnSearchLoan = New System.Windows.Forms.Button()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.txtSearchLoan = New System.Windows.Forms.TextBox()
-        Me.Print = New System.Windows.Forms.Button()
+        Me.btnPrint = New System.Windows.Forms.Button()
         Me.Process = New System.Windows.Forms.Button()
         Me.lvCollectibles = New System.Windows.Forms.ListView()
         Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
@@ -98,13 +98,13 @@ Partial Class frmCollectibles
         Me.pnlMain.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.pnlMain.Controls.Add(Me.Button1)
+        Me.pnlMain.Controls.Add(Me.btnExport)
         Me.pnlMain.Controls.Add(Me.Label9)
         Me.pnlMain.Controls.Add(Me.LinkLabel1)
         Me.pnlMain.Controls.Add(Me.btnSearchLoan)
         Me.pnlMain.Controls.Add(Me.Label7)
         Me.pnlMain.Controls.Add(Me.txtSearchLoan)
-        Me.pnlMain.Controls.Add(Me.Print)
+        Me.pnlMain.Controls.Add(Me.btnPrint)
         Me.pnlMain.Controls.Add(Me.Process)
         Me.pnlMain.Controls.Add(Me.lvCollectibles)
         Me.pnlMain.Location = New System.Drawing.Point(16, 94)
@@ -112,21 +112,21 @@ Partial Class frmCollectibles
         Me.pnlMain.Size = New System.Drawing.Size(1053, 599)
         Me.pnlMain.TabIndex = 48
         '
-        'Button1
+        'btnExport
         '
-        Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.Button1.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(237, 509)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(108, 60)
-        Me.Button1.TabIndex = 83
-        Me.Button1.Text = "Export"
-        Me.Button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.btnExport.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btnExport.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.btnExport.FlatAppearance.BorderSize = 0
+        Me.btnExport.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnExport.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnExport.ForeColor = System.Drawing.Color.White
+        Me.btnExport.Location = New System.Drawing.Point(237, 509)
+        Me.btnExport.Name = "btnExport"
+        Me.btnExport.Size = New System.Drawing.Size(108, 60)
+        Me.btnExport.TabIndex = 83
+        Me.btnExport.Text = "Export"
+        Me.btnExport.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.btnExport.UseVisualStyleBackColor = False
         '
         'Label9
         '
@@ -180,21 +180,21 @@ Partial Class frmCollectibles
         Me.txtSearchLoan.Size = New System.Drawing.Size(210, 22)
         Me.txtSearchLoan.TabIndex = 78
         '
-        'Print
+        'btnPrint
         '
-        Me.Print.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.Print.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.Print.FlatAppearance.BorderSize = 0
-        Me.Print.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Print.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Print.ForeColor = System.Drawing.Color.White
-        Me.Print.Location = New System.Drawing.Point(123, 509)
-        Me.Print.Name = "Print"
-        Me.Print.Size = New System.Drawing.Size(108, 60)
-        Me.Print.TabIndex = 77
-        Me.Print.Text = "Print"
-        Me.Print.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.Print.UseVisualStyleBackColor = False
+        Me.btnPrint.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btnPrint.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.btnPrint.FlatAppearance.BorderSize = 0
+        Me.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnPrint.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnPrint.ForeColor = System.Drawing.Color.White
+        Me.btnPrint.Location = New System.Drawing.Point(123, 509)
+        Me.btnPrint.Name = "btnPrint"
+        Me.btnPrint.Size = New System.Drawing.Size(108, 60)
+        Me.btnPrint.TabIndex = 77
+        Me.btnPrint.Text = "Print"
+        Me.btnPrint.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.btnPrint.UseVisualStyleBackColor = False
         '
         'Process
         '
@@ -217,7 +217,6 @@ Partial Class frmCollectibles
         Me.lvCollectibles.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.lvCollectibles.CheckBoxes = True
         Me.lvCollectibles.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader3, Me.ColumnHeader4, Me.ColumnHeader5, Me.ColumnHeader1, Me.ColumnHeader10, Me.ColumnHeader11, Me.ColumnHeader12, Me.ColumnHeader2, Me.ColumnHeader6, Me.ColumnHeader7})
         Me.lvCollectibles.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lvCollectibles.FullRowSelect = True
@@ -525,11 +524,11 @@ Partial Class frmCollectibles
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Control
-        Me.Controls.Add(Me.pnlMain)
         Me.Controls.Add(Me.gbxClientCollectible)
         Me.Controls.Add(Me.gbxAdvanceSearch)
         Me.Controls.Add(Me.btnClose)
         Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.pnlMain)
         Me.Name = "frmCollectibles"
         Me.Size = New System.Drawing.Size(1079, 706)
         Me.pnlMain.ResumeLayout(False)
@@ -558,7 +557,7 @@ Partial Class frmCollectibles
     Friend WithEvents ColumnHeader10 As System.Windows.Forms.ColumnHeader
     Friend WithEvents ColumnHeader11 As System.Windows.Forms.ColumnHeader
     Friend WithEvents ColumnHeader12 As System.Windows.Forms.ColumnHeader
-    Friend WithEvents Print As System.Windows.Forms.Button
+    Friend WithEvents btnPrint As System.Windows.Forms.Button
     Friend WithEvents Process As System.Windows.Forms.Button
     Friend WithEvents ColumnHeader2 As System.Windows.Forms.ColumnHeader
     Friend WithEvents ColumnHeader6 As System.Windows.Forms.ColumnHeader
@@ -583,6 +582,6 @@ Partial Class frmCollectibles
     Friend WithEvents ListView2 As System.Windows.Forms.ListView
     Friend WithEvents ColumnHeader8 As System.Windows.Forms.ColumnHeader
     Friend WithEvents ColumnHeader9 As System.Windows.Forms.ColumnHeader
-    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents btnExport As System.Windows.Forms.Button
 
 End Class
