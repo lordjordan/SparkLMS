@@ -43,38 +43,50 @@ Partial Class LoansV2
         Me.btnAddNew = New System.Windows.Forms.Button()
         Me.btnClose = New System.Windows.Forms.Button()
         Me.gbxAddEdit = New System.Windows.Forms.GroupBox()
-        Me.gbxLoanData = New System.Windows.Forms.GroupBox()
         Me.cbxLoanStatus = New System.Windows.Forms.ComboBox()
-        Me.txtTerms = New System.Windows.Forms.TextBox()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label22 = New System.Windows.Forms.Label()
-        Me.btnFind = New System.Windows.Forms.Button()
-        Me.txtLoanRemarks = New System.Windows.Forms.TextBox()
-        Me.Label21 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.txtPrincipal = New System.Windows.Forms.TextBox()
         Me.cbxInterest = New System.Windows.Forms.ComboBox()
         Me.Label16 = New System.Windows.Forms.Label()
+        Me.txtTerms = New System.Windows.Forms.TextBox()
         Me.dtEnd = New System.Windows.Forms.DateTimePicker()
         Me.Label15 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
         Me.dtStart = New System.Windows.Forms.DateTimePicker()
         Me.Label11 = New System.Windows.Forms.Label()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.txtPrincipal = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
+        Me.gbxLoanData = New System.Windows.Forms.GroupBox()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label22 = New System.Windows.Forms.Label()
+        Me.btnFind = New System.Windows.Forms.Button()
+        Me.Label13 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.btnSave = New System.Windows.Forms.Button()
         Me.btnCancel = New System.Windows.Forms.Button()
-        Me.btnSaveAs = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.txtLoanRemarks = New System.Windows.Forms.TextBox()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.gbxShowClient = New System.Windows.Forms.GroupBox()
+        Me.btnClientBack = New System.Windows.Forms.Button()
+        Me.lvClientList = New System.Windows.Forms.ListView()
+        Me.ColumnHeader19 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader10 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader11 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader12 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.btnSearchClient = New System.Windows.Forms.Button()
+        Me.txtSearchClient = New System.Windows.Forms.TextBox()
+        Me.Label28 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.ColumnHeader13 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.pnlMain.SuspendLayout()
         Me.gbxAddEdit.SuspendLayout()
-        Me.gbxLoanData.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
+        Me.gbxLoanData.SuspendLayout()
+        Me.gbxShowClient.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
@@ -276,16 +288,13 @@ Partial Class LoansV2
         '
         'gbxAddEdit
         '
+        Me.gbxAddEdit.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.gbxAddEdit.BackColor = System.Drawing.Color.LightGray
-        Me.gbxAddEdit.Controls.Add(Me.cbxLoanStatus)
+        Me.gbxAddEdit.Controls.Add(Me.gbxShowClient)
         Me.gbxAddEdit.Controls.Add(Me.GroupBox1)
         Me.gbxAddEdit.Controls.Add(Me.gbxLoanData)
         Me.gbxAddEdit.Controls.Add(Me.btnSave)
         Me.gbxAddEdit.Controls.Add(Me.btnCancel)
-        Me.gbxAddEdit.Controls.Add(Me.btnSaveAs)
-        Me.gbxAddEdit.Controls.Add(Me.txtLoanRemarks)
-        Me.gbxAddEdit.Controls.Add(Me.Label21)
-        Me.gbxAddEdit.Controls.Add(Me.Label2)
         Me.gbxAddEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.gbxAddEdit.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gbxAddEdit.Location = New System.Drawing.Point(214, 35)
@@ -293,27 +302,8 @@ Partial Class LoansV2
         Me.gbxAddEdit.Size = New System.Drawing.Size(770, 586)
         Me.gbxAddEdit.TabIndex = 56
         Me.gbxAddEdit.TabStop = False
-        Me.gbxAddEdit.Text = "Add new loan application"
+        Me.gbxAddEdit.Text = "New Loan Application"
         Me.gbxAddEdit.Visible = False
-        '
-        'gbxLoanData
-        '
-        Me.gbxLoanData.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.gbxLoanData.Controls.Add(Me.TextBox2)
-        Me.gbxLoanData.Controls.Add(Me.TextBox4)
-        Me.gbxLoanData.Controls.Add(Me.TextBox3)
-        Me.gbxLoanData.Controls.Add(Me.TextBox1)
-        Me.gbxLoanData.Controls.Add(Me.Label22)
-        Me.gbxLoanData.Controls.Add(Me.btnFind)
-        Me.gbxLoanData.Controls.Add(Me.Label13)
-        Me.gbxLoanData.Controls.Add(Me.Label6)
-        Me.gbxLoanData.Controls.Add(Me.Label4)
-        Me.gbxLoanData.Location = New System.Drawing.Point(11, 28)
-        Me.gbxLoanData.Name = "gbxLoanData"
-        Me.gbxLoanData.Size = New System.Drawing.Size(741, 111)
-        Me.gbxLoanData.TabIndex = 173
-        Me.gbxLoanData.TabStop = False
         '
         'cbxLoanStatus
         '
@@ -321,90 +311,43 @@ Partial Class LoansV2
         Me.cbxLoanStatus.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbxLoanStatus.FormattingEnabled = True
         Me.cbxLoanStatus.Items.AddRange(New Object() {"In process", "Active", "Complete", "Accelarated"})
-        Me.cbxLoanStatus.Location = New System.Drawing.Point(561, 353)
+        Me.cbxLoanStatus.Location = New System.Drawing.Point(567, 14)
         Me.cbxLoanStatus.Name = "cbxLoanStatus"
         Me.cbxLoanStatus.Size = New System.Drawing.Size(155, 28)
         Me.cbxLoanStatus.TabIndex = 173
         Me.cbxLoanStatus.Text = "In Process"
         '
-        'txtTerms
+        'GroupBox1
         '
-        Me.txtTerms.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTerms.Location = New System.Drawing.Point(133, 80)
-        Me.txtTerms.MaxLength = 4
-        Me.txtTerms.Name = "txtTerms"
-        Me.txtTerms.Size = New System.Drawing.Size(90, 26)
-        Me.txtTerms.TabIndex = 172
+        Me.GroupBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox1.Controls.Add(Me.cbxLoanStatus)
+        Me.GroupBox1.Controls.Add(Me.txtPrincipal)
+        Me.GroupBox1.Controls.Add(Me.cbxInterest)
+        Me.GroupBox1.Controls.Add(Me.Label16)
+        Me.GroupBox1.Controls.Add(Me.txtTerms)
+        Me.GroupBox1.Controls.Add(Me.txtLoanRemarks)
+        Me.GroupBox1.Controls.Add(Me.dtEnd)
+        Me.GroupBox1.Controls.Add(Me.Label21)
+        Me.GroupBox1.Controls.Add(Me.Label15)
+        Me.GroupBox1.Controls.Add(Me.Label8)
+        Me.GroupBox1.Controls.Add(Me.dtStart)
+        Me.GroupBox1.Controls.Add(Me.Label2)
+        Me.GroupBox1.Controls.Add(Me.Label11)
+        Me.GroupBox1.Controls.Add(Me.Label9)
+        Me.GroupBox1.Location = New System.Drawing.Point(11, 131)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(741, 191)
+        Me.GroupBox1.TabIndex = 173
+        Me.GroupBox1.TabStop = False
         '
-        'Label8
+        'txtPrincipal
         '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label8.Location = New System.Drawing.Point(19, 86)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(101, 16)
-        Me.Label8.TabIndex = 171
-        Me.Label8.Text = "Terms (months)"
-        Me.Label8.TextAlign = System.Drawing.ContentAlignment.TopRight
-        '
-        'Label22
-        '
-        Me.Label22.AutoSize = True
-        Me.Label22.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label22.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label22.Location = New System.Drawing.Point(488, 30)
-        Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(73, 16)
-        Me.Label22.TabIndex = 167
-        Me.Label22.Text = "Date Hired"
-        Me.Label22.TextAlign = System.Drawing.ContentAlignment.TopRight
-        '
-        'btnFind
-        '
-        Me.btnFind.BackColor = System.Drawing.Color.Gray
-        Me.btnFind.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnFind.ForeColor = System.Drawing.Color.White
-        Me.btnFind.Location = New System.Drawing.Point(284, 21)
-        Me.btnFind.Name = "btnFind"
-        Me.btnFind.Size = New System.Drawing.Size(149, 29)
-        Me.btnFind.TabIndex = 162
-        Me.btnFind.Text = "View All Clients..."
-        Me.btnFind.UseVisualStyleBackColor = False
-        '
-        'txtLoanRemarks
-        '
-        Me.txtLoanRemarks.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtLoanRemarks.Location = New System.Drawing.Point(463, 415)
-        Me.txtLoanRemarks.Multiline = True
-        Me.txtLoanRemarks.Name = "txtLoanRemarks"
-        Me.txtLoanRemarks.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtLoanRemarks.Size = New System.Drawing.Size(253, 89)
-        Me.txtLoanRemarks.TabIndex = 160
-        '
-        'Label21
-        '
-        Me.Label21.AutoSize = True
-        Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label21.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label21.Location = New System.Drawing.Point(460, 391)
-        Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(99, 16)
-        Me.Label21.TabIndex = 159
-        Me.Label21.Text = "Loan Remarks:"
-        Me.Label21.TextAlign = System.Drawing.ContentAlignment.TopRight
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label2.Location = New System.Drawing.Point(460, 359)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(78, 16)
-        Me.Label2.TabIndex = 150
-        Me.Label2.Text = "Loan Status"
-        Me.Label2.TextAlign = System.Drawing.ContentAlignment.TopRight
+        Me.txtPrincipal.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPrincipal.Location = New System.Drawing.Point(133, 14)
+        Me.txtPrincipal.Name = "txtPrincipal"
+        Me.txtPrincipal.Size = New System.Drawing.Size(300, 26)
+        Me.txtPrincipal.TabIndex = 135
         '
         'cbxInterest
         '
@@ -429,6 +372,15 @@ Partial Class LoansV2
         Me.Label16.Text = "Interest rate (%)"
         Me.Label16.TextAlign = System.Drawing.ContentAlignment.TopRight
         '
+        'txtTerms
+        '
+        Me.txtTerms.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtTerms.Location = New System.Drawing.Point(133, 80)
+        Me.txtTerms.MaxLength = 4
+        Me.txtTerms.Name = "txtTerms"
+        Me.txtTerms.Size = New System.Drawing.Size(90, 26)
+        Me.txtTerms.TabIndex = 172
+        '
         'dtEnd
         '
         Me.dtEnd.CustomFormat = "MM/dd/yyyy"
@@ -451,6 +403,18 @@ Partial Class LoansV2
         Me.Label15.Text = "Date end"
         Me.Label15.TextAlign = System.Drawing.ContentAlignment.TopRight
         '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label8.Location = New System.Drawing.Point(19, 86)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(101, 16)
+        Me.Label8.TabIndex = 171
+        Me.Label8.Text = "Terms (months)"
+        Me.Label8.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
         'dtStart
         '
         Me.dtStart.CustomFormat = ""
@@ -472,26 +436,6 @@ Partial Class LoansV2
         Me.Label11.Text = "Date start"
         Me.Label11.TextAlign = System.Drawing.ContentAlignment.TopRight
         '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label13.Location = New System.Drawing.Point(472, 62)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(89, 16)
-        Me.Label13.TabIndex = 139
-        Me.Label13.Text = "Employee I.D"
-        Me.Label13.TextAlign = System.Drawing.ContentAlignment.TopRight
-        '
-        'txtPrincipal
-        '
-        Me.txtPrincipal.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPrincipal.Location = New System.Drawing.Point(133, 14)
-        Me.txtPrincipal.Name = "txtPrincipal"
-        Me.txtPrincipal.Size = New System.Drawing.Size(300, 26)
-        Me.txtPrincipal.TabIndex = 135
-        '
         'Label9
         '
         Me.Label9.AutoSize = True
@@ -503,6 +447,93 @@ Partial Class LoansV2
         Me.Label9.TabIndex = 134
         Me.Label9.Text = "Principal Amount"
         Me.Label9.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
+        'gbxLoanData
+        '
+        Me.gbxLoanData.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.gbxLoanData.Controls.Add(Me.TextBox2)
+        Me.gbxLoanData.Controls.Add(Me.TextBox4)
+        Me.gbxLoanData.Controls.Add(Me.TextBox3)
+        Me.gbxLoanData.Controls.Add(Me.TextBox1)
+        Me.gbxLoanData.Controls.Add(Me.Label22)
+        Me.gbxLoanData.Controls.Add(Me.btnFind)
+        Me.gbxLoanData.Controls.Add(Me.Label13)
+        Me.gbxLoanData.Controls.Add(Me.Label6)
+        Me.gbxLoanData.Controls.Add(Me.Label4)
+        Me.gbxLoanData.Location = New System.Drawing.Point(11, 28)
+        Me.gbxLoanData.Name = "gbxLoanData"
+        Me.gbxLoanData.Size = New System.Drawing.Size(741, 98)
+        Me.gbxLoanData.TabIndex = 173
+        Me.gbxLoanData.TabStop = False
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox2.Location = New System.Drawing.Point(133, 56)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(300, 26)
+        Me.TextBox2.TabIndex = 170
+        '
+        'TextBox4
+        '
+        Me.TextBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox4.Location = New System.Drawing.Point(567, 56)
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.Size = New System.Drawing.Size(155, 26)
+        Me.TextBox4.TabIndex = 170
+        '
+        'TextBox3
+        '
+        Me.TextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox3.Location = New System.Drawing.Point(567, 24)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(155, 26)
+        Me.TextBox3.TabIndex = 170
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1.Location = New System.Drawing.Point(133, 24)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(95, 26)
+        Me.TextBox1.TabIndex = 170
+        '
+        'Label22
+        '
+        Me.Label22.AutoSize = True
+        Me.Label22.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label22.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label22.Location = New System.Drawing.Point(472, 27)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(73, 16)
+        Me.Label22.TabIndex = 167
+        Me.Label22.Text = "Date Hired"
+        Me.Label22.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
+        'btnFind
+        '
+        Me.btnFind.BackColor = System.Drawing.Color.Gray
+        Me.btnFind.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnFind.ForeColor = System.Drawing.Color.White
+        Me.btnFind.Location = New System.Drawing.Point(284, 21)
+        Me.btnFind.Name = "btnFind"
+        Me.btnFind.Size = New System.Drawing.Size(149, 29)
+        Me.btnFind.TabIndex = 162
+        Me.btnFind.Text = "View All Clients..."
+        Me.btnFind.UseVisualStyleBackColor = False
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label13.Location = New System.Drawing.Point(472, 62)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(89, 16)
+        Me.Label13.TabIndex = 139
+        Me.Label13.Text = "Employee I.D"
+        Me.Label13.TextAlign = System.Drawing.ContentAlignment.TopRight
         '
         'Label6
         '
@@ -552,7 +583,7 @@ Partial Class LoansV2
         Me.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCancel.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCancel.ForeColor = System.Drawing.Color.White
-        Me.btnCancel.Location = New System.Drawing.Point(239, 517)
+        Me.btnCancel.Location = New System.Drawing.Point(125, 517)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Size = New System.Drawing.Size(108, 60)
         Me.btnCancel.TabIndex = 123
@@ -560,73 +591,157 @@ Partial Class LoansV2
         Me.btnCancel.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.btnCancel.UseVisualStyleBackColor = False
         '
-        'btnSaveAs
+        'txtLoanRemarks
         '
-        Me.btnSaveAs.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnSaveAs.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.btnSaveAs.FlatAppearance.BorderSize = 0
-        Me.btnSaveAs.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSaveAs.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSaveAs.ForeColor = System.Drawing.Color.White
-        Me.btnSaveAs.Location = New System.Drawing.Point(125, 517)
-        Me.btnSaveAs.Name = "btnSaveAs"
-        Me.btnSaveAs.Size = New System.Drawing.Size(108, 60)
-        Me.btnSaveAs.TabIndex = 124
-        Me.btnSaveAs.Text = "Save As"
-        Me.btnSaveAs.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btnSaveAs.UseVisualStyleBackColor = False
+        Me.txtLoanRemarks.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtLoanRemarks.Location = New System.Drawing.Point(475, 79)
+        Me.txtLoanRemarks.Multiline = True
+        Me.txtLoanRemarks.Name = "txtLoanRemarks"
+        Me.txtLoanRemarks.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.txtLoanRemarks.Size = New System.Drawing.Size(247, 89)
+        Me.txtLoanRemarks.TabIndex = 160
         '
-        'TextBox1
+        'Label21
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(133, 24)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(95, 26)
-        Me.TextBox1.TabIndex = 170
+        Me.Label21.AutoSize = True
+        Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label21.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label21.Location = New System.Drawing.Point(472, 52)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(99, 16)
+        Me.Label21.TabIndex = 159
+        Me.Label21.Text = "Loan Remarks:"
+        Me.Label21.TextAlign = System.Drawing.ContentAlignment.TopRight
         '
-        'TextBox2
+        'Label2
         '
-        Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(133, 56)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(300, 26)
-        Me.TextBox2.TabIndex = 170
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label2.Location = New System.Drawing.Point(472, 20)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(78, 16)
+        Me.Label2.TabIndex = 150
+        Me.Label2.Text = "Loan Status"
+        Me.Label2.TextAlign = System.Drawing.ContentAlignment.TopRight
         '
-        'TextBox3
+        'gbxShowClient
         '
-        Me.TextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(567, 24)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(114, 26)
-        Me.TextBox3.TabIndex = 170
+        Me.gbxShowClient.BackColor = System.Drawing.Color.DarkGray
+        Me.gbxShowClient.Controls.Add(Me.btnClientBack)
+        Me.gbxShowClient.Controls.Add(Me.lvClientList)
+        Me.gbxShowClient.Controls.Add(Me.Button1)
+        Me.gbxShowClient.Controls.Add(Me.btnSearchClient)
+        Me.gbxShowClient.Controls.Add(Me.txtSearchClient)
+        Me.gbxShowClient.Controls.Add(Me.Label28)
+        Me.gbxShowClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.gbxShowClient.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.gbxShowClient.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.gbxShowClient.Location = New System.Drawing.Point(7, 131)
+        Me.gbxShowClient.Name = "gbxShowClient"
+        Me.gbxShowClient.Size = New System.Drawing.Size(753, 446)
+        Me.gbxShowClient.TabIndex = 159
+        Me.gbxShowClient.TabStop = False
+        Me.gbxShowClient.Text = "Select a Client"
+        Me.gbxShowClient.Visible = False
         '
-        'TextBox4
+        'btnClientBack
         '
-        Me.TextBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox4.Location = New System.Drawing.Point(567, 56)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(114, 26)
-        Me.TextBox4.TabIndex = 170
+        Me.btnClientBack.BackColor = System.Drawing.Color.Gray
+        Me.btnClientBack.FlatAppearance.BorderSize = 0
+        Me.btnClientBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnClientBack.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnClientBack.ForeColor = System.Drawing.Color.White
+        Me.btnClientBack.Location = New System.Drawing.Point(638, 22)
+        Me.btnClientBack.Name = "btnClientBack"
+        Me.btnClientBack.Size = New System.Drawing.Size(84, 33)
+        Me.btnClientBack.TabIndex = 163
+        Me.btnClientBack.Text = "Back"
+        Me.btnClientBack.UseVisualStyleBackColor = False
         '
-        'GroupBox1
+        'lvClientList
         '
-        Me.GroupBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.GroupBox1.Controls.Add(Me.txtPrincipal)
-        Me.GroupBox1.Controls.Add(Me.cbxInterest)
-        Me.GroupBox1.Controls.Add(Me.Label16)
-        Me.GroupBox1.Controls.Add(Me.txtTerms)
-        Me.GroupBox1.Controls.Add(Me.dtEnd)
-        Me.GroupBox1.Controls.Add(Me.Label15)
-        Me.GroupBox1.Controls.Add(Me.Label8)
-        Me.GroupBox1.Controls.Add(Me.dtStart)
-        Me.GroupBox1.Controls.Add(Me.Label11)
-        Me.GroupBox1.Controls.Add(Me.Label9)
-        Me.GroupBox1.Location = New System.Drawing.Point(11, 145)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(741, 191)
-        Me.GroupBox1.TabIndex = 173
-        Me.GroupBox1.TabStop = False
+        Me.lvClientList.AutoArrange = False
+        Me.lvClientList.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader19, Me.ColumnHeader10, Me.ColumnHeader11, Me.ColumnHeader12, Me.ColumnHeader13})
+        Me.lvClientList.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lvClientList.FullRowSelect = True
+        Me.lvClientList.GridLines = True
+        Me.lvClientList.Location = New System.Drawing.Point(32, 68)
+        Me.lvClientList.Name = "lvClientList"
+        Me.lvClientList.Size = New System.Drawing.Size(690, 290)
+        Me.lvClientList.TabIndex = 130
+        Me.lvClientList.UseCompatibleStateImageBehavior = False
+        Me.lvClientList.View = System.Windows.Forms.View.Details
+        '
+        'ColumnHeader19
+        '
+        Me.ColumnHeader19.Text = "Client ID"
+        '
+        'ColumnHeader10
+        '
+        Me.ColumnHeader10.Text = "Name"
+        Me.ColumnHeader10.Width = 239
+        '
+        'ColumnHeader11
+        '
+        Me.ColumnHeader11.Text = "Company"
+        Me.ColumnHeader11.Width = 93
+        '
+        'ColumnHeader12
+        '
+        Me.ColumnHeader12.Text = "Branch"
+        Me.ColumnHeader12.Width = 188
+        '
+        'btnSearchClient
+        '
+        Me.btnSearchClient.BackColor = System.Drawing.Color.Gray
+        Me.btnSearchClient.FlatAppearance.BorderSize = 0
+        Me.btnSearchClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnSearchClient.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSearchClient.ForeColor = System.Drawing.Color.White
+        Me.btnSearchClient.Location = New System.Drawing.Point(271, 36)
+        Me.btnSearchClient.Name = "btnSearchClient"
+        Me.btnSearchClient.Size = New System.Drawing.Size(61, 24)
+        Me.btnSearchClient.TabIndex = 58
+        Me.btnSearchClient.Text = "Search"
+        Me.btnSearchClient.UseVisualStyleBackColor = False
+        '
+        'txtSearchClient
+        '
+        Me.txtSearchClient.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtSearchClient.Location = New System.Drawing.Point(99, 36)
+        Me.txtSearchClient.Name = "txtSearchClient"
+        Me.txtSearchClient.Size = New System.Drawing.Size(166, 22)
+        Me.txtSearchClient.TabIndex = 57
+        '
+        'Label28
+        '
+        Me.Label28.AutoSize = True
+        Me.Label28.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label28.Location = New System.Drawing.Point(29, 39)
+        Me.Label28.Name = "Label28"
+        Me.Label28.Size = New System.Drawing.Size(51, 16)
+        Me.Label28.TabIndex = 56
+        Me.Label28.Text = "Search"
+        Me.Label28.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.Gray
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.Color.White
+        Me.Button1.Location = New System.Drawing.Point(310, 364)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(192, 55)
+        Me.Button1.TabIndex = 58
+        Me.Button1.Text = "Select "
+        Me.Button1.UseVisualStyleBackColor = False
+        '
+        'ColumnHeader13
+        '
+        Me.ColumnHeader13.Text = "Employee No."
         '
         'LoansV2
         '
@@ -641,11 +756,12 @@ Partial Class LoansV2
         Me.pnlMain.ResumeLayout(False)
         Me.pnlMain.PerformLayout()
         Me.gbxAddEdit.ResumeLayout(False)
-        Me.gbxAddEdit.PerformLayout()
-        Me.gbxLoanData.ResumeLayout(False)
-        Me.gbxLoanData.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        Me.gbxLoanData.ResumeLayout(False)
+        Me.gbxLoanData.PerformLayout()
+        Me.gbxShowClient.ResumeLayout(False)
+        Me.gbxShowClient.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -693,11 +809,22 @@ Partial Class LoansV2
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents btnSave As System.Windows.Forms.Button
     Friend WithEvents btnCancel As System.Windows.Forms.Button
-    Friend WithEvents btnSaveAs As System.Windows.Forms.Button
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents gbxShowClient As System.Windows.Forms.GroupBox
+    Friend WithEvents btnClientBack As System.Windows.Forms.Button
+    Friend WithEvents lvClientList As System.Windows.Forms.ListView
+    Friend WithEvents ColumnHeader19 As System.Windows.Forms.ColumnHeader
+    Friend WithEvents ColumnHeader10 As System.Windows.Forms.ColumnHeader
+    Friend WithEvents ColumnHeader11 As System.Windows.Forms.ColumnHeader
+    Friend WithEvents ColumnHeader12 As System.Windows.Forms.ColumnHeader
+    Friend WithEvents btnSearchClient As System.Windows.Forms.Button
+    Friend WithEvents txtSearchClient As System.Windows.Forms.TextBox
+    Friend WithEvents Label28 As System.Windows.Forms.Label
+    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents ColumnHeader13 As System.Windows.Forms.ColumnHeader
 
 End Class

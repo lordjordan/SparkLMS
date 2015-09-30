@@ -177,6 +177,12 @@
     <Compile Include="UserControls\Collectibles.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="UserControls\Company.designer.vb">
+      <DependentUpon>Company.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Company.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="UserControls\Loans.Designer.vb">
       <DependentUpon>Loans.vb</DependentUpon>
     </Compile>
@@ -235,6 +241,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\Collectibles.resx">
       <DependentUpon>Collectibles.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Company.resx">
+      <DependentUpon>Company.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\Loans.resx">
       <DependentUpon>Loans.vb</DependentUpon>

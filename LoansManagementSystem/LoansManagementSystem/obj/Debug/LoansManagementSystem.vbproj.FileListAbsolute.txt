@@ -77,3 +77,4 @@ C:\Users\hp\Source\Repos\SparkLMS\LoansManagementSystem\LoansManagementSystem\ob
 C:\Users\hp\Source\Repos\SparkLMS\LoansManagementSystem\LoansManagementSystem\obj\Debug\LoansManagementSystem.vbproj.GenerateResource.Cache
 C:\Users\hp\Source\Repos\SparkLMS\LoansManagementSystem\LoansManagementSystem\obj\Debug\LoansManagementSystem.frmManagePenalties.resources
 C:\Users\hp\Source\Repos\SparkLMS\LoansManagementSystem\LoansManagementSystem\obj\Debug\LoansManagementSystem.LoansV2.resources
+C:\Users\hp\Source\Repos\SparkLMS\LoansManagementSystem\LoansManagementSystem\obj\Debug\LoansManagementSystem.Company.resources

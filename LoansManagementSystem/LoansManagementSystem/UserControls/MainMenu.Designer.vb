@@ -37,6 +37,10 @@ Partial Class MainMenu
         Me.btnLoans = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.btnCompany = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -61,7 +65,7 @@ Partial Class MainMenu
         Me.lblTime.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTime.ForeColor = System.Drawing.Color.White
         Me.lblTime.ImageAlign = System.Drawing.ContentAlignment.BottomRight
-        Me.lblTime.Location = New System.Drawing.Point(813, 421)
+        Me.lblTime.Location = New System.Drawing.Point(1061, 421)
         Me.lblTime.Name = "lblTime"
         Me.lblTime.Size = New System.Drawing.Size(213, 39)
         Me.lblTime.TabIndex = 24
@@ -74,7 +78,7 @@ Partial Class MainMenu
         Me.lblDate.BackColor = System.Drawing.Color.Transparent
         Me.lblDate.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblDate.ForeColor = System.Drawing.Color.White
-        Me.lblDate.Location = New System.Drawing.Point(669, 460)
+        Me.lblDate.Location = New System.Drawing.Point(917, 460)
         Me.lblDate.Name = "lblDate"
         Me.lblDate.Size = New System.Drawing.Size(357, 39)
         Me.lblDate.TabIndex = 25
@@ -126,7 +130,7 @@ Partial Class MainMenu
         Me.btnSettings.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnSettings.ForeColor = System.Drawing.Color.White
         Me.btnSettings.Image = CType(resources.GetObject("btnSettings.Image"), System.Drawing.Image)
-        Me.btnSettings.Location = New System.Drawing.Point(468, 205)
+        Me.btnSettings.Location = New System.Drawing.Point(614, 205)
         Me.btnSettings.Name = "btnSettings"
         Me.btnSettings.Size = New System.Drawing.Size(141, 95)
         Me.btnSettings.TabIndex = 16
@@ -146,7 +150,7 @@ Partial Class MainMenu
         Me.btnSystemUser.Name = "btnSystemUser"
         Me.btnSystemUser.Size = New System.Drawing.Size(141, 95)
         Me.btnSystemUser.TabIndex = 17
-        Me.btnSystemUser.Text = "System User"
+        Me.btnSystemUser.Text = "System Users"
         Me.btnSystemUser.TextAlign = System.Drawing.ContentAlignment.BottomLeft
         Me.btnSystemUser.UseVisualStyleBackColor = False
         '
@@ -158,7 +162,7 @@ Partial Class MainMenu
         Me.btnAttachments.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAttachments.ForeColor = System.Drawing.Color.White
         Me.btnAttachments.Image = CType(resources.GetObject("btnAttachments.Image"), System.Drawing.Image)
-        Me.btnAttachments.Location = New System.Drawing.Point(321, 205)
+        Me.btnAttachments.Location = New System.Drawing.Point(468, 205)
         Me.btnAttachments.Name = "btnAttachments"
         Me.btnAttachments.Size = New System.Drawing.Size(141, 95)
         Me.btnAttachments.TabIndex = 18
@@ -174,7 +178,7 @@ Partial Class MainMenu
         Me.btnBranches.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBranches.ForeColor = System.Drawing.Color.White
         Me.btnBranches.Image = CType(resources.GetObject("btnBranches.Image"), System.Drawing.Image)
-        Me.btnBranches.Location = New System.Drawing.Point(321, 104)
+        Me.btnBranches.Location = New System.Drawing.Point(321, 205)
         Me.btnBranches.Name = "btnBranches"
         Me.btnBranches.Size = New System.Drawing.Size(141, 95)
         Me.btnBranches.TabIndex = 19
@@ -207,7 +211,7 @@ Partial Class MainMenu
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBox1.Location = New System.Drawing.Point(3, -3)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(1126, 557)
+        Me.PictureBox1.Size = New System.Drawing.Size(1374, 557)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 21
         Me.PictureBox1.TabStop = False
@@ -218,11 +222,75 @@ Partial Class MainMenu
         Me.PictureBox2.BackColor = System.Drawing.Color.DodgerBlue
         Me.PictureBox2.BackgroundImage = CType(resources.GetObject("PictureBox2.BackgroundImage"), System.Drawing.Image)
         Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox2.Location = New System.Drawing.Point(1015, 15)
+        Me.PictureBox2.Location = New System.Drawing.Point(1263, 15)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(35, 36)
         Me.PictureBox2.TabIndex = 70
         Me.PictureBox2.TabStop = False
+        '
+        'btnCompany
+        '
+        Me.btnCompany.BackColor = System.Drawing.Color.Tomato
+        Me.btnCompany.FlatAppearance.BorderSize = 0
+        Me.btnCompany.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCompany.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCompany.ForeColor = System.Drawing.Color.White
+        Me.btnCompany.Image = CType(resources.GetObject("btnCompany.Image"), System.Drawing.Image)
+        Me.btnCompany.Location = New System.Drawing.Point(321, 105)
+        Me.btnCompany.Name = "btnCompany"
+        Me.btnCompany.Size = New System.Drawing.Size(141, 95)
+        Me.btnCompany.TabIndex = 19
+        Me.btnCompany.Text = "Companies"
+        Me.btnCompany.TextAlign = System.Drawing.ContentAlignment.BottomLeft
+        Me.btnCompany.UseVisualStyleBackColor = False
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.DarkBlue
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.Color.White
+        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
+        Me.Button1.Location = New System.Drawing.Point(614, 306)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(141, 95)
+        Me.Button1.TabIndex = 18
+        Me.Button1.Text = "Reports"
+        Me.Button1.TextAlign = System.Drawing.ContentAlignment.BottomLeft
+        Me.Button1.UseVisualStyleBackColor = False
+        '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.Color.MediumTurquoise
+        Me.Button2.FlatAppearance.BorderSize = 0
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.ForeColor = System.Drawing.Color.White
+        Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
+        Me.Button2.Location = New System.Drawing.Point(614, 407)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(141, 95)
+        Me.Button2.TabIndex = 19
+        Me.Button2.Text = "Payment History"
+        Me.Button2.TextAlign = System.Drawing.ContentAlignment.BottomLeft
+        Me.Button2.UseVisualStyleBackColor = False
+        '
+        'Button3
+        '
+        Me.Button3.BackColor = System.Drawing.Color.Tomato
+        Me.Button3.FlatAppearance.BorderSize = 0
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.ForeColor = System.Drawing.Color.White
+        Me.Button3.Image = CType(resources.GetObject("Button3.Image"), System.Drawing.Image)
+        Me.Button3.Location = New System.Drawing.Point(614, 104)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(141, 95)
+        Me.Button3.TabIndex = 19
+        Me.Button3.Text = "Extra"
+        Me.Button3.TextAlign = System.Drawing.ContentAlignment.BottomLeft
+        Me.Button3.UseVisualStyleBackColor = False
         '
         'MainMenu
         '
@@ -237,12 +305,16 @@ Partial Class MainMenu
         Me.Controls.Add(Me.btnCollectibles)
         Me.Controls.Add(Me.btnSettings)
         Me.Controls.Add(Me.btnSystemUser)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.btnAttachments)
+        Me.Controls.Add(Me.Button3)
+        Me.Controls.Add(Me.btnCompany)
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.btnBranches)
         Me.Controls.Add(Me.btnLoans)
         Me.Controls.Add(Me.PictureBox1)
         Me.Name = "MainMenu"
-        Me.Size = New System.Drawing.Size(1075, 557)
+        Me.Size = New System.Drawing.Size(1323, 557)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -262,5 +334,9 @@ Partial Class MainMenu
     Friend WithEvents lblDate As System.Windows.Forms.Label
     Friend WithEvents tmrTimeDate As System.Windows.Forms.Timer
     Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
+    Friend WithEvents btnCompany As System.Windows.Forms.Button
+    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents Button3 As System.Windows.Forms.Button
 
 End Class

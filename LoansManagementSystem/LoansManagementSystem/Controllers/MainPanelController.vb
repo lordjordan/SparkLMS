@@ -7,6 +7,7 @@
     Public uscClients As New Clients
     Public uscBranches As New Branches
     Public uscLoans As New LoansV2
+    Public uscCompany As New Company
 
 
     'Public uscClientList As New ClientList

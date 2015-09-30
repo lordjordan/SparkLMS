@@ -45,6 +45,12 @@ Partial Class Branches
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.txtBranchName = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.txtPayrollMaster = New System.Windows.Forms.TextBox()
+        Me.ColumnHeader5 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader6 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.txtCompanyID = New System.Windows.Forms.TextBox()
         Me.pnlMain.SuspendLayout()
         Me.gbxAddEdit.SuspendLayout()
         Me.SuspendLayout()
@@ -78,7 +84,7 @@ Partial Class Branches
         Me.ListView1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader4})
+        Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader4, Me.ColumnHeader5, Me.ColumnHeader6})
         Me.ListView1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ListView1.FullRowSelect = True
         Me.ListView1.GridLines = True
@@ -179,6 +185,10 @@ Partial Class Branches
         '
         Me.gbxAddEdit.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.gbxAddEdit.BackColor = System.Drawing.Color.LightGray
+        Me.gbxAddEdit.Controls.Add(Me.txtCompanyID)
+        Me.gbxAddEdit.Controls.Add(Me.Label8)
+        Me.gbxAddEdit.Controls.Add(Me.txtPayrollMaster)
+        Me.gbxAddEdit.Controls.Add(Me.Label2)
         Me.gbxAddEdit.Controls.Add(Me.txtBranchID)
         Me.gbxAddEdit.Controls.Add(Me.btnCancel)
         Me.gbxAddEdit.Controls.Add(Me.btnSave)
@@ -191,7 +201,7 @@ Partial Class Branches
         Me.gbxAddEdit.Controls.Add(Me.txtBranchName)
         Me.gbxAddEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.gbxAddEdit.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.gbxAddEdit.Location = New System.Drawing.Point(222, 61)
+        Me.gbxAddEdit.Location = New System.Drawing.Point(230, 75)
         Me.gbxAddEdit.Name = "gbxAddEdit"
         Me.gbxAddEdit.Size = New System.Drawing.Size(726, 424)
         Me.gbxAddEdit.TabIndex = 50
@@ -216,7 +226,7 @@ Partial Class Branches
         Me.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCancel.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCancel.ForeColor = System.Drawing.Color.White
-        Me.btnCancel.Location = New System.Drawing.Point(297, 305)
+        Me.btnCancel.Location = New System.Drawing.Point(169, 343)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Size = New System.Drawing.Size(108, 60)
         Me.btnCancel.TabIndex = 26
@@ -232,7 +242,7 @@ Partial Class Branches
         Me.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnSave.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnSave.ForeColor = System.Drawing.Color.White
-        Me.btnSave.Location = New System.Drawing.Point(168, 305)
+        Me.btnSave.Location = New System.Drawing.Point(40, 343)
         Me.btnSave.Name = "btnSave"
         Me.btnSave.Size = New System.Drawing.Size(108, 60)
         Me.btnSave.TabIndex = 27
@@ -309,14 +319,60 @@ Partial Class Branches
         Me.txtBranchName.Size = New System.Drawing.Size(296, 26)
         Me.txtBranchName.TabIndex = 28
         '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(37, 274)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(94, 16)
+        Me.Label2.TabIndex = 60
+        Me.Label2.Text = "Payroll Master"
+        Me.Label2.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
+        'txtPayrollMaster
+        '
+        Me.txtPayrollMaster.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPayrollMaster.Location = New System.Drawing.Point(168, 268)
+        Me.txtPayrollMaster.Name = "txtPayrollMaster"
+        Me.txtPayrollMaster.Size = New System.Drawing.Size(536, 26)
+        Me.txtPayrollMaster.TabIndex = 61
+        '
+        'ColumnHeader5
+        '
+        Me.ColumnHeader5.Text = "Company Id"
+        '
+        'ColumnHeader6
+        '
+        Me.ColumnHeader6.Text = "Payroll Master"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(38, 306)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(82, 16)
+        Me.Label8.TabIndex = 62
+        Me.Label8.Text = "Company ID"
+        Me.Label8.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
+        'txtCompanyID
+        '
+        Me.txtCompanyID.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCompanyID.Location = New System.Drawing.Point(168, 300)
+        Me.txtCompanyID.Name = "txtCompanyID"
+        Me.txtCompanyID.Size = New System.Drawing.Size(536, 26)
+        Me.txtCompanyID.TabIndex = 63
+        '
         'Branches
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.Controls.Add(Me.gbxAddEdit)
+        Me.Controls.Add(Me.pnlMain)
         Me.Controls.Add(Me.btnClose)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.pnlMain)
         Me.Name = "Branches"
         Me.Size = New System.Drawing.Size(893, 502)
         Me.pnlMain.ResumeLayout(False)
@@ -350,5 +406,11 @@ Partial Class Branches
     Friend WithEvents ColumnHeader2 As System.Windows.Forms.ColumnHeader
     Friend WithEvents ColumnHeader3 As System.Windows.Forms.ColumnHeader
     Friend WithEvents ColumnHeader4 As System.Windows.Forms.ColumnHeader
+    Friend WithEvents txtPayrollMaster As System.Windows.Forms.TextBox
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents ColumnHeader5 As System.Windows.Forms.ColumnHeader
+    Friend WithEvents ColumnHeader6 As System.Windows.Forms.ColumnHeader
+    Friend WithEvents txtCompanyID As System.Windows.Forms.TextBox
+    Friend WithEvents Label8 As System.Windows.Forms.Label
 
 End Class

@@ -50,4 +50,7 @@
         Application.Exit()
     End Sub
 
+    Private Sub btnCompany_Click(sender As Object, e As EventArgs) Handles btnCompany.Click
+        showUSC(uscCompany)
+    End Sub
 End Class
