@@ -194,6 +194,12 @@
     <Compile Include="UserControls\Loans.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="UserControls\LoansV2.designer.vb">
+      <DependentUpon>LoansV2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\LoansV2.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="UserControls\MainMenu.Designer.vb">
       <DependentUpon>MainMenu.vb</DependentUpon>
     </Compile>
@@ -246,6 +252,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\Loans.resx">
       <DependentUpon>Loans.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\LoansV2.resx">
+      <DependentUpon>LoansV2.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\MainMenu.resx">
       <DependentUpon>MainMenu.vb</DependentUpon>

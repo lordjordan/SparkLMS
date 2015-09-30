@@ -10,11 +10,11 @@
 
     End Sub
 
-    Private Sub btnClose_Click(sender As Object, e As EventArgs)
+    Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
         showUSC(uscMainmenu)
     End Sub
 
-    Private Sub btnAddbranch_Click(sender As Object, e As EventArgs)
+    Private Sub btnAddbranch_Click(sender As Object, e As EventArgs) Handles btnAddbranch.Click
         AddItemToListView()
     End Sub
 
@@ -35,6 +35,8 @@
         txtBranchName.Text = ""
         txtBranchCon.Text = ""
         txtBranchAd.Text = ""
+        txtCompanyID.Text = ""
+        txtPayrollMaster.Text = ""
     End Sub
     Private Sub LoadListview()
         ListView1.Items.Clear()
@@ -49,6 +51,8 @@
                     itm.SubItems.Add(dr.Item("branch_name").ToString)
                     itm.SubItems.Add(dr.Item("branch_contact").ToString)
                     itm.SubItems.Add(dr.Item("branch_address").ToString)
+                    itm.SubItems.Add(dr.Item("company_id").ToString)
+                    itm.SubItems.Add(dr.Item("payroll_master").ToString)
                 Loop
             Else
                 MsgBox("No record of Branches.", vbInformation + vbOKOnly, "No Branch")
@@ -58,18 +62,21 @@
             MsgBox(ex.ToString)
         End Try
     End Sub
-    Private Sub btnSave_Click(sender As Object, e As EventArgs)
+    Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
         If gbxAddEdit.Text = "Add New Branch Information" Then
             'add
             Dim rec As Integer
             Dim data As New Dictionary(Of String, Object)
 
             Try
+                data.Add("branch_id", txtBranchID.Text)
                 data.Add("branch_name", txtBranchName.Text)
                 data.Add("branch_contact", txtBranchCon.Text)
                 data.Add("branch_address", txtBranchAd.Text)
+                data.Add("company_id", txtCompanyID.Text)
+                data.Add("payroll_master", txtPayrollMaster.Text)
 
-                rec = db.ExecuteNonQuery("INSERT INTO tbl_branches values(NULL,@branch_name,@branch_address,@branch_contact)", data)
+                rec = db.ExecuteNonQuery("INSERT INTO tbl_branches values(NULL,@branch_name,@branch_address,@branch_contact,@company_id,@payroll_master)", data)
 
                 If Not rec < 1 Then
                     showAddEdit(False)
@@ -88,11 +95,14 @@
             Dim data As New Dictionary(Of String, Object)
 
             Try
+                data.Add("branch_id", txtBranchID.Text)
                 data.Add("branch_name", txtBranchName.Text)
                 data.Add("branch_contact", txtBranchCon.Text)
                 data.Add("branch_address", txtBranchAd.Text)
+                data.Add("company_id", txtCompanyID.Text)
+                data.Add("payroll_master", txtPayrollMaster.Text)
 
-                rec = db.ExecuteNonQuery("UPDATE tbl_branches SET branch_name=@branch_name, branch_address=@branch_address, branch_contact=@branch_contact WHERE branch_id=" & txtBranchID.Text, data)
+                rec = db.ExecuteNonQuery("UPDATE tbl_branches SET branch_name=@branch_name, branch_address = @branch_address, branch_contact=@branch_contact, company_id=@company_id, payroll_master=@payroll_master WHERE branch_id=" & txtBranchID.Text, data)
 
                 If Not rec < 1 Then
                     MessageBox.Show("Record updated!", "Important Message", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1)
@@ -111,7 +121,7 @@
 
     End Sub
 
-    Private Sub btnCancel_Click(sender As Object, e As EventArgs)
+    Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
         showAddEdit(False)
     End Sub
 
@@ -119,7 +129,7 @@
         LoadListview()
     End Sub
 
-    Private Sub btnEdit_Click(sender As Object, e As EventArgs)
+    Private Sub btnEdit_Click(sender As Object, e As EventArgs) Handles btnEdit.Click
         EditItemInListView()
     End Sub
     Private Sub EditItemInListView()
@@ -131,12 +141,18 @@
             txtBranchName.Text = ListView1.SelectedItems(0).SubItems(1).Text
             txtBranchCon.Text = ListView1.SelectedItems(0).SubItems(2).Text
             txtBranchAd.Text = ListView1.SelectedItems(0).SubItems(3).Text
+            txtCompanyID.Text = ListView1.SelectedItems(0).SubItems(4).Text
+            txtPayrollMaster.Text = ListView1.SelectedItems(0).SubItems(5).Text
         Else
             MessageBox.Show("Please select record to edit.", "Important Note", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1)
         End If
     End Sub
 
-    Private Sub btnClose_Click_1(sender As Object, e As EventArgs) Handles btnClose.Click
-        showUSC(uscMainmenu)
+    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
+
+    End Sub
+
+    Private Sub ListView1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListView1.SelectedIndexChanged
+
     End Sub
 End Class
