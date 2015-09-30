@@ -58,3 +58,4 @@ C:\Users\jonathan\Source\Repos\SparkLMS\LoansManagementSystem\LoansManagementSys
 C:\Users\jonathan\Source\Repos\SparkLMS\LoansManagementSystem\LoansManagementSystem\obj\Debug\LoansManagementSystem.MainMenu.resources
 C:\Users\jonathan\Source\Repos\SparkLMS\LoansManagementSystem\LoansManagementSystem\obj\Debug\LoansManagementSystem.System_User.resources
 C:\Users\jonathan\Source\Repos\SparkLMS\LoansManagementSystem\LoansManagementSystem\obj\Debug\LoansManagementSystem.vbproj.GenerateResource.Cache
+C:\Users\jonathan\Source\Repos\SparkLMS\LoansManagementSystem\LoansManagementSystem\obj\Debug\LoansManagementSystem.frmManagePenalties.resources
