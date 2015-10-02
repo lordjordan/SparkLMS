@@ -54,6 +54,7 @@ Partial Class frmCollectibles
         Me.cmbArea = New System.Windows.Forms.ComboBox()
         Me.btnCancel = New System.Windows.Forms.Button()
         Me.gbxClientCollectible = New System.Windows.Forms.GroupBox()
+        Me.lblPayableAmount = New System.Windows.Forms.Label()
         Me.lvDuedates = New System.Windows.Forms.ListView()
         Me.ColumnHeader8 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader9 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
@@ -65,7 +66,7 @@ Partial Class frmCollectibles
         Me.lblPA = New System.Windows.Forms.Label()
         Me.btnCancelColl = New System.Windows.Forms.Button()
         Me.btnOk = New System.Windows.Forms.Button()
-        Me.lblPayableAmount = New System.Windows.Forms.Label()
+        Me.ColumnHeader14 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.pnlMain.SuspendLayout()
         Me.gbxAdvanceSearch.SuspendLayout()
         Me.gbxClientCollectible.SuspendLayout()
@@ -219,7 +220,7 @@ Partial Class frmCollectibles
         Me.lvCollectibles.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.lvCollectibles.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader3, Me.ColumnHeader4, Me.ColumnHeader5, Me.ColumnHeader1, Me.ColumnHeader10, Me.ColumnHeader13, Me.ColumnHeader11, Me.ColumnHeader12, Me.ColumnHeader2, Me.ColumnHeader6, Me.ColumnHeader7})
+        Me.lvCollectibles.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader3, Me.ColumnHeader4, Me.ColumnHeader5, Me.ColumnHeader1, Me.ColumnHeader10, Me.ColumnHeader13, Me.ColumnHeader11, Me.ColumnHeader12, Me.ColumnHeader2, Me.ColumnHeader6, Me.ColumnHeader7, Me.ColumnHeader14})
         Me.lvCollectibles.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lvCollectibles.FullRowSelect = True
         Me.lvCollectibles.GridLines = True
@@ -406,6 +407,18 @@ Partial Class frmCollectibles
         Me.gbxClientCollectible.Text = "Client Payment"
         Me.gbxClientCollectible.Visible = False
         '
+        'lblPayableAmount
+        '
+        Me.lblPayableAmount.AutoSize = True
+        Me.lblPayableAmount.BackColor = System.Drawing.Color.Transparent
+        Me.lblPayableAmount.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPayableAmount.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.lblPayableAmount.Location = New System.Drawing.Point(139, 35)
+        Me.lblPayableAmount.Name = "lblPayableAmount"
+        Me.lblPayableAmount.Size = New System.Drawing.Size(0, 20)
+        Me.lblPayableAmount.TabIndex = 170
+        Me.lblPayableAmount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
         'lvDuedates
         '
         Me.lvDuedates.CheckBoxes = True
@@ -527,17 +540,10 @@ Partial Class frmCollectibles
         Me.btnOk.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.btnOk.UseVisualStyleBackColor = False
         '
-        'lblPayableAmount
+        'ColumnHeader14
         '
-        Me.lblPayableAmount.AutoSize = True
-        Me.lblPayableAmount.BackColor = System.Drawing.Color.Transparent
-        Me.lblPayableAmount.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblPayableAmount.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.lblPayableAmount.Location = New System.Drawing.Point(139, 35)
-        Me.lblPayableAmount.Name = "lblPayableAmount"
-        Me.lblPayableAmount.Size = New System.Drawing.Size(0, 20)
-        Me.lblPayableAmount.TabIndex = 170
-        Me.lblPayableAmount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.ColumnHeader14.Text = "ctb_id"
+        Me.ColumnHeader14.Width = 50
         '
         'frmCollectibles
         '
@@ -605,5 +611,6 @@ Partial Class frmCollectibles
     Friend WithEvents btnExport As System.Windows.Forms.Button
     Friend WithEvents ColumnHeader13 As System.Windows.Forms.ColumnHeader
     Friend WithEvents lblPayableAmount As System.Windows.Forms.Label
+    Friend WithEvents ColumnHeader14 As System.Windows.Forms.ColumnHeader
 
 End Class
